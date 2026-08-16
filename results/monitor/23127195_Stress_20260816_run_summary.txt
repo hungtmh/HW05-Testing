@@ -1,0 +1,30 @@
+﻿=== TOM TAT LAN CHAY: 23127195_Stress_20260816 ===
+Test plan      : D:\Kiem_thu\HW5\testplans\23127195_Stress_20260816.jmx
+Bat dau        : 2026-08-16 21:21:00
+Ket thuc       : 2026-08-16 21:27:06
+Thoi luong     : 366 giay
+May chay       : DESKTOP-96ARBFL
+Backend PID    : 8488
+
+--- Du lieu DB ---
+So don hang truoc : 0
+So don hang sau   : 15402
+Don hang phat sinh: 15402
+
+--- Tai nguyen tien trinh backend (node.exe) ---
+RSS luc bat dau      : 69.4 MB
+RSS dinh             : 156.7 MB
+Muc tang RSS         : 87.3 MB
+CPU trung binh       : 2.8 %  (tren tong 20 luong logic)
+CPU dinh             : 5.3 %
+
+--- Tai nguyen tien trinh JMeter (java.exe) ---
+CPU trung binh       : 0.8 %
+(Neu CPU cua JMeter cao xap xi CPU backend thi phai nghi ngo client la nut that co chai,
+ khong phai SUT â€” xem docs/03_human_review_and_fixes.md)
+
+--- Tep ket qua ---
+Log tho    : D:\Kiem_thu\HW5\results\jtl\23127195_Stress_20260816.jtl
+HTML report: D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816
+Giam sat   : D:\Kiem_thu\HW5\results\monitor\23127195_Stress_20260816_resources.csv
+Log JMeter : D:\Kiem_thu\HW5\results\jtl\23127195_Stress_20260816.jmeter.log

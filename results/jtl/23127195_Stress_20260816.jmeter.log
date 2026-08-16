@@ -1,0 +1,1243 @@
+2026-08-16 21:21:00,956 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-08-16 21:21:00,972 INFO o.a.j.JMeter: Loading user properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\user.properties
+2026-08-16 21:21:00,972 INFO o.a.j.JMeter: Loading system properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\system.properties
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: Version 5.6.3
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: java.version=17.0.17
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: os.name=Windows 11
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: os.arch=amd64
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: os.version=10.0
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: file.encoding=Cp1252
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: java.awt.headless=true
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: Max memory     =3221225472
+2026-08-16 21:21:00,980 INFO o.a.j.JMeter: Available Processors =20
+2026-08-16 21:21:00,983 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-08-16 21:21:00,983 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-08-16 21:21:00,983 INFO o.a.j.JMeter: JMeterHome=D:\Kiem_thu\tools\apache-jmeter-5.6.3
+2026-08-16 21:21:00,983 INFO o.a.j.JMeter: user.dir  =D:\Kiem_thu\HW5
+2026-08-16 21:21:00,983 INFO o.a.j.JMeter: PWD       =D:\Kiem_thu\HW5
+2026-08-16 21:21:00,983 INFO o.a.j.JMeter: IP: 192.168.1.8 Name: DESKTOP-96ARBFL FullName: 192.168.1.8
+2026-08-16 21:21:00,997 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816'
+2026-08-16 21:21:00,997 INFO o.a.j.s.FileServer: Default base='D:\Kiem_thu\HW5'
+2026-08-16 21:21:00,997 INFO o.a.j.s.FileServer: Set new base='D:\Kiem_thu\HW5\testplans'
+2026-08-16 21:21:01,126 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-08-16 21:21:01,143 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-08-16 21:21:01,145 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-08-16 21:21:01,148 INFO o.a.j.s.SaveService: Loading file: D:\Kiem_thu\HW5\testplans\23127195_Stress_20260816.jmx
+2026-08-16 21:21:01,194 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:21:01,194 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:21:01,194 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:21:01,194 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:21:01,194 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-08-16 21:21:01,194 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-08-16 21:21:01,234 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-08-16 21:21:01,236 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2026-08-16 21:21:01,236 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: D:\Kiem_thu\HW5\results\jtl\23127195_Stress_20260816.jtl
+2026-08-16 21:21:01,236 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2026-08-16 21:21:01,237 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2026-08-16 21:21:01,240 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2026-08-16 21:21:01,241 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2026-08-16 21:21:01,241 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2026-08-16 21:21:01,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2026-08-16 21:21:01,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2026-08-16 21:21:01,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2026-08-16 21:21:01,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2026-08-16 21:21:01,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2026-08-16 21:21:01,242 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2026-08-16 21:21:01,244 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,244 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,244 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,245 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:21:01,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-16 21:21:01,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2026-08-16 21:21:01,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2026-08-16 21:21:01,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-16 21:21:01,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2026-08-16 21:21:01,246 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2026-08-16 21:21:01,251 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-08-16 21:21:01,251 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-16 21:21:01,251 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-16 21:21:01,251 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-08-16 21:21:01,251 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-08-16 21:21:01,421 INFO o.a.j.JMeter: Running test (1786890061421)
+2026-08-16 21:21:01,437 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TG - STRESS - 500 VU
+2026-08-16 21:21:01,437 INFO o.a.j.e.StandardJMeterEngine: Starting 500 threads for group TG - STRESS - 500 VU.
+2026-08-16 21:21:01,437 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-16 21:21:01,437 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=500 ramp-up=300 delayedStart=false
+2026-08-16 21:21:01,444 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-08-16 21:21:01,444 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-08-16 21:21:01,444 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-08-16 21:21:01,444 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-08-16 21:21:01,457 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-1
+2026-08-16 21:21:01,457 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/checkout_data.csv
+2026-08-16 21:21:01,513 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/search_terms.csv
+2026-08-16 21:21:01,513 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/users.csv
+2026-08-16 21:21:01,529 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-96ARBFL
+2026-08-16 21:21:01,552 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-08-16 21:21:01,624 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-08-16 21:21:01,624 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-08-16 21:21:02,058 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-2
+2026-08-16 21:21:02,471 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    1.0/s Avg:   103 Min:   103 Max:   103 Err:     0 (0.00%) Active: 2 Started: 2 Finished: 0
+2026-08-16 21:21:02,657 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-3
+2026-08-16 21:21:03,250 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-4
+2026-08-16 21:21:03,849 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-5
+2026-08-16 21:21:04,449 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-6
+2026-08-16 21:21:05,047 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-7
+2026-08-16 21:21:05,645 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-8
+2026-08-16 21:21:06,246 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-9
+2026-08-16 21:21:06,844 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-10
+2026-08-16 21:21:07,449 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-11
+2026-08-16 21:21:08,043 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-12
+2026-08-16 21:21:08,644 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-13
+2026-08-16 21:21:09,243 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-14
+2026-08-16 21:21:09,842 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-15
+2026-08-16 21:21:10,440 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-16
+2026-08-16 21:21:11,041 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-17
+2026-08-16 21:21:11,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-18
+2026-08-16 21:21:12,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-19
+2026-08-16 21:21:12,840 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-20
+2026-08-16 21:21:13,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-21
+2026-08-16 21:21:14,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-22
+2026-08-16 21:21:14,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-23
+2026-08-16 21:21:15,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-24
+2026-08-16 21:21:15,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-25
+2026-08-16 21:21:16,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-26
+2026-08-16 21:21:17,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-27
+2026-08-16 21:21:17,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-28
+2026-08-16 21:21:18,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-29
+2026-08-16 21:21:18,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-30
+2026-08-16 21:21:19,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-31
+2026-08-16 21:21:20,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-32
+2026-08-16 21:21:20,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-33
+2026-08-16 21:21:21,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-34
+2026-08-16 21:21:21,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-35
+2026-08-16 21:21:22,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-36
+2026-08-16 21:21:23,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-37
+2026-08-16 21:21:23,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-38
+2026-08-16 21:21:24,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-39
+2026-08-16 21:21:24,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-40
+2026-08-16 21:21:25,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-41
+2026-08-16 21:21:26,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-42
+2026-08-16 21:21:26,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-43
+2026-08-16 21:21:27,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-44
+2026-08-16 21:21:27,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-45
+2026-08-16 21:21:28,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-46
+2026-08-16 21:21:29,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-47
+2026-08-16 21:21:29,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-48
+2026-08-16 21:21:30,003 INFO o.a.j.r.Summariser: summary +    722 in 00:00:28 =   26.2/s Avg:     4 Min:     1 Max:    44 Err:     0 (0.00%) Active: 48 Started: 48 Finished: 0
+2026-08-16 21:21:30,004 INFO o.a.j.r.Summariser: summary =    723 in 00:00:29 =   25.3/s Avg:     4 Min:     1 Max:   103 Err:     0 (0.00%)
+2026-08-16 21:21:30,253 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-49
+2026-08-16 21:21:30,854 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-50
+2026-08-16 21:21:31,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-51
+2026-08-16 21:21:32,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-52
+2026-08-16 21:21:32,639 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-53
+2026-08-16 21:21:33,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-54
+2026-08-16 21:21:33,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-55
+2026-08-16 21:21:34,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-56
+2026-08-16 21:21:35,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-57
+2026-08-16 21:21:35,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-58
+2026-08-16 21:21:36,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-59
+2026-08-16 21:21:36,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-60
+2026-08-16 21:21:37,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-61
+2026-08-16 21:21:38,043 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-62
+2026-08-16 21:21:38,642 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-63
+2026-08-16 21:21:39,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-64
+2026-08-16 21:21:39,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-65
+2026-08-16 21:21:40,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-66
+2026-08-16 21:21:41,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-67
+2026-08-16 21:21:41,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-68
+2026-08-16 21:21:42,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-69
+2026-08-16 21:21:42,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-70
+2026-08-16 21:21:43,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-71
+2026-08-16 21:21:44,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-72
+2026-08-16 21:21:44,640 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-73
+2026-08-16 21:21:45,240 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-74
+2026-08-16 21:21:45,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-75
+2026-08-16 21:21:46,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-76
+2026-08-16 21:21:47,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-77
+2026-08-16 21:21:47,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-78
+2026-08-16 21:21:48,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-79
+2026-08-16 21:21:48,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-80
+2026-08-16 21:21:49,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-81
+2026-08-16 21:21:50,040 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-82
+2026-08-16 21:21:50,639 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-83
+2026-08-16 21:21:51,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-84
+2026-08-16 21:21:51,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-85
+2026-08-16 21:21:52,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-86
+2026-08-16 21:21:53,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-87
+2026-08-16 21:21:53,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-88
+2026-08-16 21:21:54,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-89
+2026-08-16 21:21:54,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-90
+2026-08-16 21:21:55,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-91
+2026-08-16 21:21:56,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-92
+2026-08-16 21:21:56,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-93
+2026-08-16 21:21:57,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-94
+2026-08-16 21:21:57,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-95
+2026-08-16 21:21:58,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-96
+2026-08-16 21:21:59,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-97
+2026-08-16 21:21:59,639 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-98
+2026-08-16 21:22:00,029 INFO o.a.j.r.Summariser: summary +   2459 in 00:00:30 =   81.9/s Avg:     3 Min:     0 Max:    32 Err:     0 (0.00%) Active: 98 Started: 98 Finished: 0
+2026-08-16 21:22:00,030 INFO o.a.j.r.Summariser: summary =   3182 in 00:00:59 =   54.3/s Avg:     3 Min:     0 Max:   103 Err:     0 (0.00%)
+2026-08-16 21:22:00,240 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-99
+2026-08-16 21:22:00,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-100
+2026-08-16 21:22:01,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-101
+2026-08-16 21:22:02,040 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-102
+2026-08-16 21:22:02,639 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-103
+2026-08-16 21:22:03,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-104
+2026-08-16 21:22:03,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-105
+2026-08-16 21:22:04,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-106
+2026-08-16 21:22:05,041 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-107
+2026-08-16 21:22:05,639 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-108
+2026-08-16 21:22:06,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-109
+2026-08-16 21:22:06,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-110
+2026-08-16 21:22:07,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-111
+2026-08-16 21:22:08,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-112
+2026-08-16 21:22:08,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-113
+2026-08-16 21:22:09,240 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-114
+2026-08-16 21:22:09,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-115
+2026-08-16 21:22:10,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-116
+2026-08-16 21:22:11,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-117
+2026-08-16 21:22:11,640 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-118
+2026-08-16 21:22:12,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-119
+2026-08-16 21:22:12,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-120
+2026-08-16 21:22:13,443 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-121
+2026-08-16 21:22:14,044 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-122
+2026-08-16 21:22:14,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-123
+2026-08-16 21:22:15,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-124
+2026-08-16 21:22:15,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-125
+2026-08-16 21:22:16,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-126
+2026-08-16 21:22:17,040 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-127
+2026-08-16 21:22:17,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-128
+2026-08-16 21:22:18,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-129
+2026-08-16 21:22:18,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-130
+2026-08-16 21:22:19,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-131
+2026-08-16 21:22:20,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-132
+2026-08-16 21:22:20,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-133
+2026-08-16 21:22:21,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-134
+2026-08-16 21:22:21,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-135
+2026-08-16 21:22:22,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-136
+2026-08-16 21:22:23,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-137
+2026-08-16 21:22:23,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-138
+2026-08-16 21:22:24,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-139
+2026-08-16 21:22:24,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-140
+2026-08-16 21:22:25,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-141
+2026-08-16 21:22:26,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-142
+2026-08-16 21:22:26,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-143
+2026-08-16 21:22:27,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-144
+2026-08-16 21:22:27,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-145
+2026-08-16 21:22:28,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-146
+2026-08-16 21:22:29,046 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-147
+2026-08-16 21:22:29,646 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-148
+2026-08-16 21:22:30,005 INFO o.a.j.r.Summariser: summary +   4238 in 00:00:30 =  141.4/s Avg:     4 Min:     0 Max:    84 Err:     0 (0.00%) Active: 148 Started: 148 Finished: 0
+2026-08-16 21:22:30,005 INFO o.a.j.r.Summariser: summary =   7420 in 00:01:29 =   83.8/s Avg:     4 Min:     0 Max:   103 Err:     0 (0.00%)
+2026-08-16 21:22:30,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-149
+2026-08-16 21:22:30,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-150
+2026-08-16 21:22:31,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-151
+2026-08-16 21:22:32,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-152
+2026-08-16 21:22:32,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-153
+2026-08-16 21:22:33,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-154
+2026-08-16 21:22:33,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-155
+2026-08-16 21:22:34,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-156
+2026-08-16 21:22:35,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-157
+2026-08-16 21:22:35,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-158
+2026-08-16 21:22:36,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-159
+2026-08-16 21:22:36,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-160
+2026-08-16 21:22:37,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-161
+2026-08-16 21:22:38,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-162
+2026-08-16 21:22:38,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-163
+2026-08-16 21:22:39,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-164
+2026-08-16 21:22:39,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-165
+2026-08-16 21:22:40,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-166
+2026-08-16 21:22:41,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-167
+2026-08-16 21:22:41,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-168
+2026-08-16 21:22:42,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-169
+2026-08-16 21:22:42,845 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-170
+2026-08-16 21:22:43,447 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-171
+2026-08-16 21:22:44,046 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-172
+2026-08-16 21:22:44,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-173
+2026-08-16 21:22:45,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-174
+2026-08-16 21:22:45,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-175
+2026-08-16 21:22:46,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-176
+2026-08-16 21:22:47,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-177
+2026-08-16 21:22:47,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-178
+2026-08-16 21:22:48,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-179
+2026-08-16 21:22:48,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-180
+2026-08-16 21:22:49,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-181
+2026-08-16 21:22:50,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-182
+2026-08-16 21:22:50,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-183
+2026-08-16 21:22:51,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-184
+2026-08-16 21:22:51,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-185
+2026-08-16 21:22:52,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-186
+2026-08-16 21:22:53,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-187
+2026-08-16 21:22:53,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-188
+2026-08-16 21:22:54,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-189
+2026-08-16 21:22:54,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-190
+2026-08-16 21:22:55,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-191
+2026-08-16 21:22:56,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-192
+2026-08-16 21:22:56,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-193
+2026-08-16 21:22:57,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-194
+2026-08-16 21:22:57,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-195
+2026-08-16 21:22:58,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-196
+2026-08-16 21:22:59,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-197
+2026-08-16 21:22:59,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-198
+2026-08-16 21:23:00,001 INFO o.a.j.r.Summariser: summary +   5922 in 00:00:30 =  197.4/s Avg:     4 Min:     0 Max:    51 Err:     0 (0.00%) Active: 198 Started: 198 Finished: 0
+2026-08-16 21:23:00,001 INFO o.a.j.r.Summariser: summary =  13342 in 00:01:59 =  112.5/s Avg:     4 Min:     0 Max:   103 Err:     0 (0.00%)
+2026-08-16 21:23:00,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-199
+2026-08-16 21:23:00,848 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-200
+2026-08-16 21:23:01,449 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-201
+2026-08-16 21:23:02,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-202
+2026-08-16 21:23:02,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-203
+2026-08-16 21:23:03,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-204
+2026-08-16 21:23:03,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-205
+2026-08-16 21:23:04,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-206
+2026-08-16 21:23:05,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-207
+2026-08-16 21:23:05,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-208
+2026-08-16 21:23:06,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-209
+2026-08-16 21:23:06,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-210
+2026-08-16 21:23:07,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-211
+2026-08-16 21:23:08,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-212
+2026-08-16 21:23:08,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-213
+2026-08-16 21:23:09,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-214
+2026-08-16 21:23:09,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-215
+2026-08-16 21:23:10,443 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-216
+2026-08-16 21:23:11,045 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-217
+2026-08-16 21:23:11,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-218
+2026-08-16 21:23:12,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-219
+2026-08-16 21:23:12,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-220
+2026-08-16 21:23:13,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-221
+2026-08-16 21:23:14,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-222
+2026-08-16 21:23:14,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-223
+2026-08-16 21:23:15,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-224
+2026-08-16 21:23:15,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-225
+2026-08-16 21:23:16,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-226
+2026-08-16 21:23:17,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-227
+2026-08-16 21:23:17,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-228
+2026-08-16 21:23:18,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-229
+2026-08-16 21:23:18,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-230
+2026-08-16 21:23:19,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-231
+2026-08-16 21:23:20,043 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-232
+2026-08-16 21:23:20,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-233
+2026-08-16 21:23:21,241 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-234
+2026-08-16 21:23:21,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-235
+2026-08-16 21:23:22,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-236
+2026-08-16 21:23:23,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-237
+2026-08-16 21:23:23,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-238
+2026-08-16 21:23:24,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-239
+2026-08-16 21:23:24,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-240
+2026-08-16 21:23:25,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-241
+2026-08-16 21:23:26,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-242
+2026-08-16 21:23:26,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-243
+2026-08-16 21:23:27,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-244
+2026-08-16 21:23:27,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-245
+2026-08-16 21:23:28,442 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-246
+2026-08-16 21:23:29,042 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-247
+2026-08-16 21:23:29,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-248
+2026-08-16 21:23:30,012 INFO o.a.j.r.Summariser: summary +   7702 in 00:00:30 =  256.6/s Avg:     6 Min:     0 Max:    82 Err:     0 (0.00%) Active: 248 Started: 248 Finished: 0
+2026-08-16 21:23:30,013 INFO o.a.j.r.Summariser: summary =  21044 in 00:02:29 =  141.6/s Avg:     5 Min:     0 Max:   103 Err:     0 (0.00%)
+2026-08-16 21:23:30,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-249
+2026-08-16 21:23:30,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-250
+2026-08-16 21:23:31,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-251
+2026-08-16 21:23:32,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-252
+2026-08-16 21:23:32,639 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-253
+2026-08-16 21:23:33,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-254
+2026-08-16 21:23:33,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-255
+2026-08-16 21:23:34,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-256
+2026-08-16 21:23:35,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-257
+2026-08-16 21:23:35,640 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-258
+2026-08-16 21:23:36,241 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-259
+2026-08-16 21:23:36,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-260
+2026-08-16 21:23:37,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-261
+2026-08-16 21:23:38,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-262
+2026-08-16 21:23:38,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-263
+2026-08-16 21:23:39,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-264
+2026-08-16 21:23:39,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-265
+2026-08-16 21:23:40,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-266
+2026-08-16 21:23:41,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-267
+2026-08-16 21:23:41,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-268
+2026-08-16 21:23:42,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-269
+2026-08-16 21:23:42,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-270
+2026-08-16 21:23:43,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-271
+2026-08-16 21:23:44,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-272
+2026-08-16 21:23:44,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-273
+2026-08-16 21:23:45,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-274
+2026-08-16 21:23:45,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-275
+2026-08-16 21:23:46,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-276
+2026-08-16 21:23:47,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-277
+2026-08-16 21:23:47,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-278
+2026-08-16 21:23:48,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-279
+2026-08-16 21:23:48,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-280
+2026-08-16 21:23:49,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-281
+2026-08-16 21:23:50,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-282
+2026-08-16 21:23:50,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-283
+2026-08-16 21:23:51,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-284
+2026-08-16 21:23:51,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-285
+2026-08-16 21:23:52,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-286
+2026-08-16 21:23:53,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-287
+2026-08-16 21:23:53,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-288
+2026-08-16 21:23:54,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-289
+2026-08-16 21:23:54,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-290
+2026-08-16 21:23:55,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-291
+2026-08-16 21:23:56,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-292
+2026-08-16 21:23:56,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-293
+2026-08-16 21:23:57,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-294
+2026-08-16 21:23:57,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-295
+2026-08-16 21:23:58,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-296
+2026-08-16 21:23:59,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-297
+2026-08-16 21:23:59,652 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-298
+2026-08-16 21:24:00,004 INFO o.a.j.r.Summariser: summary +   9340 in 00:00:30 =  311.4/s Avg:     8 Min:     0 Max:    70 Err:     0 (0.00%) Active: 298 Started: 298 Finished: 0
+2026-08-16 21:24:00,005 INFO o.a.j.r.Summariser: summary =  30384 in 00:02:59 =  170.1/s Avg:     6 Min:     0 Max:   103 Err:     0 (0.00%)
+2026-08-16 21:24:00,252 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-299
+2026-08-16 21:24:00,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-300
+2026-08-16 21:24:01,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-301
+2026-08-16 21:24:02,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-302
+2026-08-16 21:24:02,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-303
+2026-08-16 21:24:03,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-304
+2026-08-16 21:24:03,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-305
+2026-08-16 21:24:04,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-306
+2026-08-16 21:24:05,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-307
+2026-08-16 21:24:05,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-308
+2026-08-16 21:24:06,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-309
+2026-08-16 21:24:06,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-310
+2026-08-16 21:24:07,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-311
+2026-08-16 21:24:08,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-312
+2026-08-16 21:24:08,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-313
+2026-08-16 21:24:09,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-314
+2026-08-16 21:24:09,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-315
+2026-08-16 21:24:10,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-316
+2026-08-16 21:24:11,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-317
+2026-08-16 21:24:11,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-318
+2026-08-16 21:24:12,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-319
+2026-08-16 21:24:12,841 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-320
+2026-08-16 21:24:13,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-321
+2026-08-16 21:24:14,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-322
+2026-08-16 21:24:14,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-323
+2026-08-16 21:24:15,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-324
+2026-08-16 21:24:15,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-325
+2026-08-16 21:24:16,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-326
+2026-08-16 21:24:17,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-327
+2026-08-16 21:24:17,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-328
+2026-08-16 21:24:18,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-329
+2026-08-16 21:24:18,845 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-330
+2026-08-16 21:24:19,445 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-331
+2026-08-16 21:24:20,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-332
+2026-08-16 21:24:20,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-333
+2026-08-16 21:24:21,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-334
+2026-08-16 21:24:21,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-335
+2026-08-16 21:24:22,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-336
+2026-08-16 21:24:23,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-337
+2026-08-16 21:24:23,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-338
+2026-08-16 21:24:24,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-339
+2026-08-16 21:24:24,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-340
+2026-08-16 21:24:25,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-341
+2026-08-16 21:24:26,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-342
+2026-08-16 21:24:26,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-343
+2026-08-16 21:24:27,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-344
+2026-08-16 21:24:27,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-345
+2026-08-16 21:24:28,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-346
+2026-08-16 21:24:29,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-347
+2026-08-16 21:24:29,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-348
+2026-08-16 21:24:30,002 INFO o.a.j.r.Summariser: summary +  11057 in 00:00:30 =  368.6/s Avg:    15 Min:     0 Max:   158 Err:     0 (0.00%) Active: 348 Started: 348 Finished: 0
+2026-08-16 21:24:30,003 INFO o.a.j.r.Summariser: summary =  41441 in 00:03:29 =  198.7/s Avg:     8 Min:     0 Max:   158 Err:     0 (0.00%)
+2026-08-16 21:24:30,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-349
+2026-08-16 21:24:30,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-350
+2026-08-16 21:24:31,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-351
+2026-08-16 21:24:32,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-352
+2026-08-16 21:24:32,644 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-353
+2026-08-16 21:24:33,245 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-354
+2026-08-16 21:24:33,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-355
+2026-08-16 21:24:34,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-356
+2026-08-16 21:24:35,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-357
+2026-08-16 21:24:35,641 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-358
+2026-08-16 21:24:36,241 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-359
+2026-08-16 21:24:36,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-360
+2026-08-16 21:24:37,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-361
+2026-08-16 21:24:38,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-362
+2026-08-16 21:24:38,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-363
+2026-08-16 21:24:39,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-364
+2026-08-16 21:24:39,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-365
+2026-08-16 21:24:40,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-366
+2026-08-16 21:24:41,040 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-367
+2026-08-16 21:24:41,641 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-368
+2026-08-16 21:24:42,241 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-369
+2026-08-16 21:24:42,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-370
+2026-08-16 21:24:43,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-371
+2026-08-16 21:24:44,039 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-372
+2026-08-16 21:24:44,640 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-373
+2026-08-16 21:24:45,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-374
+2026-08-16 21:24:45,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-375
+2026-08-16 21:24:46,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-376
+2026-08-16 21:24:47,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-377
+2026-08-16 21:24:47,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-378
+2026-08-16 21:24:48,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-379
+2026-08-16 21:24:48,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-380
+2026-08-16 21:24:49,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-381
+2026-08-16 21:24:50,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-382
+2026-08-16 21:24:50,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-383
+2026-08-16 21:24:51,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-384
+2026-08-16 21:24:51,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-385
+2026-08-16 21:24:52,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-386
+2026-08-16 21:24:53,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-387
+2026-08-16 21:24:53,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-388
+2026-08-16 21:24:54,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-389
+2026-08-16 21:24:54,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-390
+2026-08-16 21:24:55,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-391
+2026-08-16 21:24:56,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-392
+2026-08-16 21:24:56,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-393
+2026-08-16 21:24:57,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-394
+2026-08-16 21:24:57,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-395
+2026-08-16 21:24:58,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-396
+2026-08-16 21:24:59,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-397
+2026-08-16 21:24:59,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-398
+2026-08-16 21:25:00,000 INFO o.a.j.r.Summariser: summary +  12197 in 00:00:30 =  406.6/s Avg:    43 Min:     0 Max:   290 Err:     0 (0.00%) Active: 398 Started: 398 Finished: 0
+2026-08-16 21:25:00,001 INFO o.a.j.r.Summariser: summary =  53638 in 00:03:59 =  224.8/s Avg:    16 Min:     0 Max:   290 Err:     0 (0.00%)
+2026-08-16 21:25:00,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-399
+2026-08-16 21:25:00,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-400
+2026-08-16 21:25:01,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-401
+2026-08-16 21:25:02,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-402
+2026-08-16 21:25:02,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-403
+2026-08-16 21:25:03,239 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-404
+2026-08-16 21:25:03,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-405
+2026-08-16 21:25:04,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-406
+2026-08-16 21:25:05,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-407
+2026-08-16 21:25:05,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-408
+2026-08-16 21:25:06,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-409
+2026-08-16 21:25:06,847 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-410
+2026-08-16 21:25:07,448 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-411
+2026-08-16 21:25:08,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-412
+2026-08-16 21:25:08,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-413
+2026-08-16 21:25:09,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-414
+2026-08-16 21:25:09,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-415
+2026-08-16 21:25:10,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-416
+2026-08-16 21:25:11,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-417
+2026-08-16 21:25:11,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-418
+2026-08-16 21:25:12,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-419
+2026-08-16 21:25:12,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-420
+2026-08-16 21:25:13,439 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-421
+2026-08-16 21:25:14,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-422
+2026-08-16 21:25:14,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-423
+2026-08-16 21:25:15,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-424
+2026-08-16 21:25:15,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-425
+2026-08-16 21:25:16,440 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-426
+2026-08-16 21:25:17,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-427
+2026-08-16 21:25:17,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-428
+2026-08-16 21:25:18,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-429
+2026-08-16 21:25:18,839 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-430
+2026-08-16 21:25:19,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-431
+2026-08-16 21:25:20,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-432
+2026-08-16 21:25:20,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-433
+2026-08-16 21:25:21,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-434
+2026-08-16 21:25:21,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-435
+2026-08-16 21:25:22,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-436
+2026-08-16 21:25:23,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-437
+2026-08-16 21:25:23,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-438
+2026-08-16 21:25:24,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-439
+2026-08-16 21:25:24,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-440
+2026-08-16 21:25:25,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-441
+2026-08-16 21:25:26,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-442
+2026-08-16 21:25:26,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-443
+2026-08-16 21:25:27,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-444
+2026-08-16 21:25:27,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-445
+2026-08-16 21:25:28,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-446
+2026-08-16 21:25:29,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-447
+2026-08-16 21:25:29,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-448
+2026-08-16 21:25:30,001 INFO o.a.j.r.Summariser: summary +  13227 in 00:00:30 =  440.9/s Avg:    97 Min:     0 Max:   467 Err:     0 (0.00%) Active: 448 Started: 448 Finished: 0
+2026-08-16 21:25:30,001 INFO o.a.j.r.Summariser: summary =  66865 in 00:04:29 =  249.0/s Avg:    32 Min:     0 Max:   467 Err:     0 (0.00%)
+2026-08-16 21:25:30,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-449
+2026-08-16 21:25:30,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-450
+2026-08-16 21:25:31,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-451
+2026-08-16 21:25:32,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-452
+2026-08-16 21:25:32,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-453
+2026-08-16 21:25:33,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-454
+2026-08-16 21:25:33,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-455
+2026-08-16 21:25:34,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-456
+2026-08-16 21:25:35,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-457
+2026-08-16 21:25:35,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-458
+2026-08-16 21:25:36,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-459
+2026-08-16 21:25:36,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-460
+2026-08-16 21:25:37,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-461
+2026-08-16 21:25:38,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-462
+2026-08-16 21:25:38,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-463
+2026-08-16 21:25:39,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-464
+2026-08-16 21:25:39,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-465
+2026-08-16 21:25:40,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-466
+2026-08-16 21:25:41,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-467
+2026-08-16 21:25:41,653 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-468
+2026-08-16 21:25:42,254 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-469
+2026-08-16 21:25:42,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-470
+2026-08-16 21:25:43,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-471
+2026-08-16 21:25:44,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-472
+2026-08-16 21:25:44,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-473
+2026-08-16 21:25:45,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-474
+2026-08-16 21:25:45,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-475
+2026-08-16 21:25:46,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-476
+2026-08-16 21:25:47,038 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-477
+2026-08-16 21:25:47,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-478
+2026-08-16 21:25:48,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-479
+2026-08-16 21:25:48,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-480
+2026-08-16 21:25:49,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-481
+2026-08-16 21:25:50,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-482
+2026-08-16 21:25:50,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-483
+2026-08-16 21:25:51,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-484
+2026-08-16 21:25:51,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-485
+2026-08-16 21:25:52,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-486
+2026-08-16 21:25:53,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-487
+2026-08-16 21:25:53,637 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-488
+2026-08-16 21:25:54,237 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-489
+2026-08-16 21:25:54,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-490
+2026-08-16 21:25:55,437 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-491
+2026-08-16 21:25:56,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-492
+2026-08-16 21:25:56,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-493
+2026-08-16 21:25:57,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-494
+2026-08-16 21:25:57,838 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-495
+2026-08-16 21:25:58,438 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-496
+2026-08-16 21:25:59,037 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-497
+2026-08-16 21:25:59,638 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-498
+2026-08-16 21:26:00,001 INFO o.a.j.r.Summariser: summary +  14139 in 00:00:30 =  471.3/s Avg:   146 Min:     0 Max:   657 Err:     0 (0.00%) Active: 498 Started: 498 Finished: 0
+2026-08-16 21:26:00,002 INFO o.a.j.r.Summariser: summary =  81004 in 00:04:59 =  271.3/s Avg:    52 Min:     0 Max:   657 Err:     0 (0.00%)
+2026-08-16 21:26:00,238 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-499
+2026-08-16 21:26:00,837 INFO o.a.j.t.JMeterThread: Thread started: TG - STRESS - 500 VU 1-500
+2026-08-16 21:26:30,009 INFO o.a.j.r.Summariser: summary +  13624 in 00:00:30 =  454.0/s Avg:   246 Min:     1 Max:  1005 Err:     0 (0.00%) Active: 500 Started: 500 Finished: 0
+2026-08-16 21:26:30,010 INFO o.a.j.r.Summariser: summary =  94628 in 00:05:29 =  288.0/s Avg:    80 Min:     0 Max:  1005 Err:     0 (0.00%)
+2026-08-16 21:26:58,616 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-211
+2026-08-16 21:26:58,863 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-219
+2026-08-16 21:26:58,867 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-428
+2026-08-16 21:26:58,871 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-214
+2026-08-16 21:26:58,882 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-178
+2026-08-16 21:26:58,884 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-66
+2026-08-16 21:26:58,888 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-26
+2026-08-16 21:26:58,889 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-190
+2026-08-16 21:26:58,932 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-391
+2026-08-16 21:26:58,935 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-45
+2026-08-16 21:26:59,070 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-493
+2026-08-16 21:26:59,094 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-379
+2026-08-16 21:26:59,105 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-289
+2026-08-16 21:26:59,114 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-159
+2026-08-16 21:26:59,116 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-205
+2026-08-16 21:26:59,130 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-307
+2026-08-16 21:26:59,149 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-152
+2026-08-16 21:26:59,149 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-293
+2026-08-16 21:26:59,155 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-380
+2026-08-16 21:26:59,158 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-294
+2026-08-16 21:26:59,159 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-111
+2026-08-16 21:26:59,160 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-56
+2026-08-16 21:26:59,170 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-496
+2026-08-16 21:26:59,170 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-395
+2026-08-16 21:26:59,276 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-482
+2026-08-16 21:26:59,282 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-274
+2026-08-16 21:26:59,287 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-88
+2026-08-16 21:26:59,287 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-467
+2026-08-16 21:26:59,289 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-77
+2026-08-16 21:26:59,342 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-82
+2026-08-16 21:26:59,343 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-78
+2026-08-16 21:26:59,367 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-23
+2026-08-16 21:26:59,367 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-480
+2026-08-16 21:26:59,368 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-240
+2026-08-16 21:26:59,369 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-344
+2026-08-16 21:26:59,370 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-354
+2026-08-16 21:26:59,372 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-189
+2026-08-16 21:26:59,467 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-121
+2026-08-16 21:26:59,477 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-106
+2026-08-16 21:26:59,485 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-183
+2026-08-16 21:26:59,485 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-366
+2026-08-16 21:26:59,492 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-451
+2026-08-16 21:26:59,493 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-229
+2026-08-16 21:26:59,494 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-59
+2026-08-16 21:26:59,496 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-83
+2026-08-16 21:26:59,497 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-38
+2026-08-16 21:26:59,498 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-209
+2026-08-16 21:26:59,501 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-358
+2026-08-16 21:26:59,503 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-227
+2026-08-16 21:26:59,506 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-110
+2026-08-16 21:26:59,507 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-182
+2026-08-16 21:26:59,507 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-62
+2026-08-16 21:26:59,508 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-98
+2026-08-16 21:26:59,513 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-216
+2026-08-16 21:26:59,514 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-34
+2026-08-16 21:26:59,515 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-397
+2026-08-16 21:26:59,517 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-369
+2026-08-16 21:26:59,518 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-441
+2026-08-16 21:26:59,519 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-220
+2026-08-16 21:26:59,520 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-94
+2026-08-16 21:26:59,612 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-228
+2026-08-16 21:26:59,617 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-48
+2026-08-16 21:26:59,746 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-383
+2026-08-16 21:26:59,747 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-116
+2026-08-16 21:26:59,750 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-302
+2026-08-16 21:26:59,752 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-155
+2026-08-16 21:26:59,752 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-297
+2026-08-16 21:26:59,753 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-475
+2026-08-16 21:26:59,762 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-280
+2026-08-16 21:26:59,764 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-287
+2026-08-16 21:26:59,768 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-11
+2026-08-16 21:26:59,790 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-49
+2026-08-16 21:26:59,792 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-278
+2026-08-16 21:26:59,796 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-345
+2026-08-16 21:26:59,797 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-69
+2026-08-16 21:26:59,798 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-174
+2026-08-16 21:26:59,800 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-222
+2026-08-16 21:26:59,800 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-423
+2026-08-16 21:26:59,801 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-351
+2026-08-16 21:26:59,802 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-233
+2026-08-16 21:26:59,804 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-361
+2026-08-16 21:26:59,805 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-396
+2026-08-16 21:26:59,806 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-186
+2026-08-16 21:26:59,807 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-460
+2026-08-16 21:26:59,807 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-362
+2026-08-16 21:26:59,814 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-213
+2026-08-16 21:26:59,815 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-232
+2026-08-16 21:26:59,816 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-12
+2026-08-16 21:26:59,816 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-112
+2026-08-16 21:26:59,817 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-284
+2026-08-16 21:26:59,877 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-481
+2026-08-16 21:26:59,897 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-243
+2026-08-16 21:26:59,902 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-100
+2026-08-16 21:26:59,903 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-13
+2026-08-16 21:26:59,903 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-336
+2026-08-16 21:26:59,904 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-311
+2026-08-16 21:26:59,904 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-245
+2026-08-16 21:26:59,905 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-208
+2026-08-16 21:26:59,905 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-70
+2026-08-16 21:26:59,908 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-437
+2026-08-16 21:26:59,909 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-331
+2026-08-16 21:26:59,909 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-388
+2026-08-16 21:26:59,918 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-497
+2026-08-16 21:26:59,922 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-400
+2026-08-16 21:26:59,922 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-343
+2026-08-16 21:26:59,923 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-18
+2026-08-16 21:26:59,924 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-207
+2026-08-16 21:26:59,925 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-329
+2026-08-16 21:26:59,925 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-141
+2026-08-16 21:26:59,925 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-221
+2026-08-16 21:26:59,926 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-291
+2026-08-16 21:26:59,927 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-148
+2026-08-16 21:26:59,927 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-153
+2026-08-16 21:26:59,982 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-36
+2026-08-16 21:26:59,982 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-237
+2026-08-16 21:26:59,983 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-322
+2026-08-16 21:26:59,986 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-68
+2026-08-16 21:26:59,986 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-71
+2026-08-16 21:26:59,986 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-25
+2026-08-16 21:26:59,988 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-500
+2026-08-16 21:26:59,989 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-2
+2026-08-16 21:26:59,989 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-4
+2026-08-16 21:26:59,992 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-168
+2026-08-16 21:27:00,017 INFO o.a.j.r.Summariser: summary +  13371 in 00:00:30 =  445.6/s Avg:   262 Min:     0 Max:   986 Err:     0 (0.00%) Active: 377 Started: 500 Finished: 123
+2026-08-16 21:27:00,017 INFO o.a.j.r.Summariser: summary = 107999 in 00:05:59 =  301.2/s Avg:   103 Min:     0 Max:  1005 Err:     0 (0.00%)
+2026-08-16 21:27:00,017 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-5
+2026-08-16 21:27:00,078 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-230
+2026-08-16 21:27:00,079 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-203
+2026-08-16 21:27:00,079 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-251
+2026-08-16 21:27:00,080 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-491
+2026-08-16 21:27:00,080 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-271
+2026-08-16 21:27:00,081 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-162
+2026-08-16 21:27:00,081 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-308
+2026-08-16 21:27:00,083 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-20
+2026-08-16 21:27:00,083 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-28
+2026-08-16 21:27:00,087 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-143
+2026-08-16 21:27:00,087 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-348
+2026-08-16 21:27:00,088 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-478
+2026-08-16 21:27:00,091 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-326
+2026-08-16 21:27:00,091 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-461
+2026-08-16 21:27:00,092 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-347
+2026-08-16 21:27:00,092 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-430
+2026-08-16 21:27:00,093 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-399
+2026-08-16 21:27:00,120 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-103
+2026-08-16 21:27:00,122 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-201
+2026-08-16 21:27:00,123 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-407
+2026-08-16 21:27:00,123 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-161
+2026-08-16 21:27:00,125 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-295
+2026-08-16 21:27:00,238 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-40
+2026-08-16 21:27:00,239 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-15
+2026-08-16 21:27:00,241 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-473
+2026-08-16 21:27:00,242 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-51
+2026-08-16 21:27:00,244 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-102
+2026-08-16 21:27:00,247 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-215
+2026-08-16 21:27:00,248 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-421
+2026-08-16 21:27:00,248 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-368
+2026-08-16 21:27:00,249 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-417
+2026-08-16 21:27:00,250 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-80
+2026-08-16 21:27:00,251 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-95
+2026-08-16 21:27:00,251 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-58
+2026-08-16 21:27:00,252 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-127
+2026-08-16 21:27:00,252 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-304
+2026-08-16 21:27:00,253 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-53
+2026-08-16 21:27:00,253 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-472
+2026-08-16 21:27:00,254 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-177
+2026-08-16 21:27:00,254 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-115
+2026-08-16 21:27:00,255 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-371
+2026-08-16 21:27:00,257 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-64
+2026-08-16 21:27:00,257 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-337
+2026-08-16 21:27:00,266 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-378
+2026-08-16 21:27:00,266 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-30
+2026-08-16 21:27:00,266 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-468
+2026-08-16 21:27:00,267 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-414
+2026-08-16 21:27:00,267 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-247
+2026-08-16 21:27:00,267 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-118
+2026-08-16 21:27:00,267 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-99
+2026-08-16 21:27:00,341 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-76
+2026-08-16 21:27:00,343 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-138
+2026-08-16 21:27:00,344 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-334
+2026-08-16 21:27:00,344 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-296
+2026-08-16 21:27:00,344 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-270
+2026-08-16 21:27:00,346 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-290
+2026-08-16 21:27:00,354 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-133
+2026-08-16 21:27:00,354 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-486
+2026-08-16 21:27:00,357 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-147
+2026-08-16 21:27:00,359 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-469
+2026-08-16 21:27:00,360 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-74
+2026-08-16 21:27:00,361 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-375
+2026-08-16 21:27:00,362 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-55
+2026-08-16 21:27:00,363 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-170
+2026-08-16 21:27:00,365 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-93
+2026-08-16 21:27:00,370 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-154
+2026-08-16 21:27:00,372 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-335
+2026-08-16 21:27:00,372 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-139
+2026-08-16 21:27:00,374 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-285
+2026-08-16 21:27:00,379 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-60
+2026-08-16 21:27:00,443 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-408
+2026-08-16 21:27:00,443 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-235
+2026-08-16 21:27:00,444 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-420
+2026-08-16 21:27:00,444 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-171
+2026-08-16 21:27:00,445 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-129
+2026-08-16 21:27:00,446 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-374
+2026-08-16 21:27:00,447 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-144
+2026-08-16 21:27:00,447 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-305
+2026-08-16 21:27:00,447 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-376
+2026-08-16 21:27:00,447 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-17
+2026-08-16 21:27:00,449 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-373
+2026-08-16 21:27:00,449 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-140
+2026-08-16 21:27:00,449 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-431
+2026-08-16 21:27:00,450 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-122
+2026-08-16 21:27:00,501 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-248
+2026-08-16 21:27:00,502 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-381
+2026-08-16 21:27:00,503 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-10
+2026-08-16 21:27:00,514 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-452
+2026-08-16 21:27:00,517 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-479
+2026-08-16 21:27:00,532 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-165
+2026-08-16 21:27:00,539 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-306
+2026-08-16 21:27:00,539 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-283
+2026-08-16 21:27:00,540 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-231
+2026-08-16 21:27:00,541 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-320
+2026-08-16 21:27:00,541 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-124
+2026-08-16 21:27:00,543 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-27
+2026-08-16 21:27:00,543 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-353
+2026-08-16 21:27:00,544 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-3
+2026-08-16 21:27:00,544 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-403
+2026-08-16 21:27:00,546 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-145
+2026-08-16 21:27:00,546 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-198
+2026-08-16 21:27:00,551 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-394
+2026-08-16 21:27:00,552 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-413
+2026-08-16 21:27:00,578 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-279
+2026-08-16 21:27:00,640 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-359
+2026-08-16 21:27:00,640 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-265
+2026-08-16 21:27:00,641 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-458
+2026-08-16 21:27:00,644 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-217
+2026-08-16 21:27:00,645 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-312
+2026-08-16 21:27:00,645 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-150
+2026-08-16 21:27:00,646 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-419
+2026-08-16 21:27:00,647 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-470
+2026-08-16 21:27:00,647 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-108
+2026-08-16 21:27:00,648 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-37
+2026-08-16 21:27:00,648 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-426
+2026-08-16 21:27:00,649 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-151
+2026-08-16 21:27:00,649 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-242
+2026-08-16 21:27:00,650 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-263
+2026-08-16 21:27:00,651 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-1
+2026-08-16 21:27:00,652 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-412
+2026-08-16 21:27:00,654 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-164
+2026-08-16 21:27:00,655 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-91
+2026-08-16 21:27:00,655 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-324
+2026-08-16 21:27:00,655 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-19
+2026-08-16 21:27:00,727 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-339
+2026-08-16 21:27:00,730 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-286
+2026-08-16 21:27:00,731 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-43
+2026-08-16 21:27:00,732 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-225
+2026-08-16 21:27:00,732 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-318
+2026-08-16 21:27:00,734 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-319
+2026-08-16 21:27:00,798 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-440
+2026-08-16 21:27:00,799 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-356
+2026-08-16 21:27:00,800 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-195
+2026-08-16 21:27:00,800 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-341
+2026-08-16 21:27:00,802 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-384
+2026-08-16 21:27:00,802 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-16
+2026-08-16 21:27:00,802 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-253
+2026-08-16 21:27:00,804 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-130
+2026-08-16 21:27:00,805 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-392
+2026-08-16 21:27:00,805 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-411
+2026-08-16 21:27:00,807 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-250
+2026-08-16 21:27:00,812 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-438
+2026-08-16 21:27:00,813 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-65
+2026-08-16 21:27:00,814 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-266
+2026-08-16 21:27:00,815 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-298
+2026-08-16 21:27:00,819 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-169
+2026-08-16 21:27:00,819 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-42
+2026-08-16 21:27:00,820 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-260
+2026-08-16 21:27:00,820 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-79
+2026-08-16 21:27:00,821 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-6
+2026-08-16 21:27:00,821 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-57
+2026-08-16 21:27:00,823 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-123
+2026-08-16 21:27:00,823 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-325
+2026-08-16 21:27:00,825 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-429
+2026-08-16 21:27:00,835 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-483
+2026-08-16 21:27:00,880 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-135
+2026-08-16 21:27:00,882 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-61
+2026-08-16 21:27:00,883 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-316
+2026-08-16 21:27:00,884 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-41
+2026-08-16 21:27:00,885 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-261
+2026-08-16 21:27:00,886 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-137
+2026-08-16 21:27:00,886 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-173
+2026-08-16 21:27:00,889 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-385
+2026-08-16 21:27:00,894 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-387
+2026-08-16 21:27:00,894 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-444
+2026-08-16 21:27:00,899 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-435
+2026-08-16 21:27:00,899 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-466
+2026-08-16 21:27:00,899 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-117
+2026-08-16 21:27:00,901 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-63
+2026-08-16 21:27:00,927 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-47
+2026-08-16 21:27:00,975 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-29
+2026-08-16 21:27:00,980 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-269
+2026-08-16 21:27:00,982 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-236
+2026-08-16 21:27:00,983 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-125
+2026-08-16 21:27:00,987 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-401
+2026-08-16 21:27:00,989 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-292
+2026-08-16 21:27:00,989 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-327
+2026-08-16 21:27:00,990 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-476
+2026-08-16 21:27:00,990 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-199
+2026-08-16 21:27:00,993 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-96
+2026-08-16 21:27:00,994 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-89
+2026-08-16 21:27:01,053 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-416
+2026-08-16 21:27:01,061 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-7
+2026-08-16 21:27:01,064 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-490
+2026-08-16 21:27:01,065 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-370
+2026-08-16 21:27:01,065 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-73
+2026-08-16 21:27:01,067 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-277
+2026-08-16 21:27:01,067 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-241
+2026-08-16 21:27:01,069 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-471
+2026-08-16 21:27:01,070 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-425
+2026-08-16 21:27:01,070 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-90
+2026-08-16 21:27:01,078 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-193
+2026-08-16 21:27:01,112 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-166
+2026-08-16 21:27:01,117 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-288
+2026-08-16 21:27:01,118 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-134
+2026-08-16 21:27:01,122 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-328
+2026-08-16 21:27:01,123 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-301
+2026-08-16 21:27:01,123 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-33
+2026-08-16 21:27:01,124 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-389
+2026-08-16 21:27:01,125 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-109
+2026-08-16 21:27:01,127 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-160
+2026-08-16 21:27:01,128 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-191
+2026-08-16 21:27:01,129 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-350
+2026-08-16 21:27:01,130 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-410
+2026-08-16 21:27:01,134 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-8
+2026-08-16 21:27:01,135 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-446
+2026-08-16 21:27:01,135 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-268
+2026-08-16 21:27:01,136 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-382
+2026-08-16 21:27:01,138 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-244
+2026-08-16 21:27:01,139 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-315
+2026-08-16 21:27:01,139 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-258
+2026-08-16 21:27:01,139 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-180
+2026-08-16 21:27:01,140 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-330
+2026-08-16 21:27:01,143 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-424
+2026-08-16 21:27:01,190 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-300
+2026-08-16 21:27:01,191 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-418
+2026-08-16 21:27:01,194 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-188
+2026-08-16 21:27:01,194 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-484
+2026-08-16 21:27:01,194 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-172
+2026-08-16 21:27:01,202 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-477
+2026-08-16 21:27:01,203 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-346
+2026-08-16 21:27:01,203 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-422
+2026-08-16 21:27:01,204 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-136
+2026-08-16 21:27:01,204 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-321
+2026-08-16 21:27:01,204 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-256
+2026-08-16 21:27:01,206 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-447
+2026-08-16 21:27:01,243 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-85
+2026-08-16 21:27:01,276 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-372
+2026-08-16 21:27:01,280 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-239
+2026-08-16 21:27:01,281 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-365
+2026-08-16 21:27:01,282 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-104
+2026-08-16 21:27:01,284 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-442
+2026-08-16 21:27:01,285 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-276
+2026-08-16 21:27:01,286 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-453
+2026-08-16 21:27:01,287 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-206
+2026-08-16 21:27:01,287 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-462
+2026-08-16 21:27:01,288 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-259
+2026-08-16 21:27:01,289 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-398
+2026-08-16 21:27:01,289 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-185
+2026-08-16 21:27:01,290 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-386
+2026-08-16 21:27:01,324 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-194
+2026-08-16 21:27:01,325 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-119
+2026-08-16 21:27:01,340 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-342
+2026-08-16 21:27:01,382 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-364
+2026-08-16 21:27:01,383 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-485
+2026-08-16 21:27:01,384 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-465
+2026-08-16 21:27:01,384 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-101
+2026-08-16 21:27:01,385 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-50
+2026-08-16 21:27:01,386 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-317
+2026-08-16 21:27:01,386 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-114
+2026-08-16 21:27:01,387 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-67
+2026-08-16 21:27:01,387 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-31
+2026-08-16 21:27:01,387 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-24
+2026-08-16 21:27:01,388 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-157
+2026-08-16 21:27:01,389 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-120
+2026-08-16 21:27:01,391 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-187
+2026-08-16 21:27:01,392 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-196
+2026-08-16 21:27:01,394 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-22
+2026-08-16 21:27:01,395 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-499
+2026-08-16 21:27:01,397 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-393
+2026-08-16 21:27:01,397 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-87
+2026-08-16 21:27:01,398 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-267
+2026-08-16 21:27:01,398 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-113
+2026-08-16 21:27:01,398 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-332
+2026-08-16 21:27:01,399 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-200
+2026-08-16 21:27:01,399 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-52
+2026-08-16 21:27:01,400 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-367
+2026-08-16 21:27:01,400 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-181
+2026-08-16 21:27:01,401 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-252
+2026-08-16 21:27:01,401 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-349
+2026-08-16 21:27:01,402 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-427
+2026-08-16 21:27:01,402 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-450
+2026-08-16 21:27:01,403 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-273
+2026-08-16 21:27:01,405 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-498
+2026-08-16 21:27:01,417 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-132
+2026-08-16 21:27:01,426 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-492
+2026-08-16 21:27:01,463 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-21
+2026-08-16 21:27:01,463 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-21
+2026-08-16 21:27:01,465 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-46
+2026-08-16 21:27:01,465 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-46
+2026-08-16 21:27:01,503 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-352
+2026-08-16 21:27:01,506 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-75
+2026-08-16 21:27:01,506 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-75
+2026-08-16 21:27:01,508 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-44
+2026-08-16 21:27:01,509 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-44
+2026-08-16 21:27:01,510 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-32
+2026-08-16 21:27:01,510 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-32
+2026-08-16 21:27:01,512 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-434
+2026-08-16 21:27:01,518 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-126
+2026-08-16 21:27:01,519 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-126
+2026-08-16 21:27:01,531 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-179
+2026-08-16 21:27:01,531 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-179
+2026-08-16 21:27:01,532 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-167
+2026-08-16 21:27:01,532 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-167
+2026-08-16 21:27:01,533 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-107
+2026-08-16 21:27:01,533 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-107
+2026-08-16 21:27:01,552 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-197
+2026-08-16 21:27:01,552 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-197
+2026-08-16 21:27:01,553 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-255
+2026-08-16 21:27:01,553 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-128
+2026-08-16 21:27:01,553 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-128
+2026-08-16 21:27:01,554 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-340
+2026-08-16 21:27:01,554 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-223
+2026-08-16 21:27:01,554 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-223
+2026-08-16 21:27:01,556 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-149
+2026-08-16 21:27:01,556 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-149
+2026-08-16 21:27:01,557 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-39
+2026-08-16 21:27:01,557 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-39
+2026-08-16 21:27:01,557 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-105
+2026-08-16 21:27:01,557 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-105
+2026-08-16 21:27:01,558 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-35
+2026-08-16 21:27:01,558 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-35
+2026-08-16 21:27:01,559 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-92
+2026-08-16 21:27:01,559 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-92
+2026-08-16 21:27:01,561 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-275
+2026-08-16 21:27:01,561 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-275
+2026-08-16 21:27:01,563 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-86
+2026-08-16 21:27:01,563 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-86
+2026-08-16 21:27:01,566 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-184
+2026-08-16 21:27:01,566 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-184
+2026-08-16 21:27:01,566 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-463
+2026-08-16 21:27:01,567 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-454
+2026-08-16 21:27:01,567 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-264
+2026-08-16 21:27:01,567 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-264
+2026-08-16 21:27:01,567 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-281
+2026-08-16 21:27:01,568 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-281
+2026-08-16 21:27:01,568 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-360
+2026-08-16 21:27:01,568 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-158
+2026-08-16 21:27:01,568 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-158
+2026-08-16 21:27:01,568 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-254
+2026-08-16 21:27:01,568 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-254
+2026-08-16 21:27:01,569 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-131
+2026-08-16 21:27:01,569 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-131
+2026-08-16 21:27:01,569 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-432
+2026-08-16 21:27:01,570 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-9
+2026-08-16 21:27:01,570 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-9
+2026-08-16 21:27:01,570 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-456
+2026-08-16 21:27:01,570 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-405
+2026-08-16 21:27:01,571 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-224
+2026-08-16 21:27:01,571 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-224
+2026-08-16 21:27:01,571 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-218
+2026-08-16 21:27:01,571 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-218
+2026-08-16 21:27:01,572 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-84
+2026-08-16 21:27:01,572 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-84
+2026-08-16 21:27:01,574 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-142
+2026-08-16 21:27:01,574 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-142
+2026-08-16 21:27:01,574 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-54
+2026-08-16 21:27:01,574 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-54
+2026-08-16 21:27:01,576 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-163
+2026-08-16 21:27:01,576 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-163
+2026-08-16 21:27:01,581 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-474
+2026-08-16 21:27:01,582 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-175
+2026-08-16 21:27:01,582 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-175
+2026-08-16 21:27:01,585 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-272
+2026-08-16 21:27:01,585 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-272
+2026-08-16 21:27:01,595 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-249
+2026-08-16 21:27:01,595 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-249
+2026-08-16 21:27:01,595 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-97
+2026-08-16 21:27:01,595 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-97
+2026-08-16 21:27:01,595 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-192
+2026-08-16 21:27:01,595 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-192
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-333
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-333
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-262
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-262
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-238
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-238
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-314
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-314
+2026-08-16 21:27:01,597 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-210
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-210
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-202
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-202
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-226
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-226
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-212
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-212
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-204
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-204
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-303
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-303
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-404
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-404
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-402
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-402
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-494
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-72
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-72
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-309
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-309
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-443
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-234
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-234
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-146
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-146
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-415
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-176
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-176
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-257
+2026-08-16 21:27:01,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-257
+2026-08-16 21:27:01,623 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-323
+2026-08-16 21:27:01,623 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-323
+2026-08-16 21:27:01,623 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-409
+2026-08-16 21:27:01,623 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-409
+2026-08-16 21:27:01,623 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-433
+2026-08-16 21:27:01,623 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-433
+2026-08-16 21:27:01,650 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-14
+2026-08-16 21:27:01,651 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-14
+2026-08-16 21:27:01,651 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-449
+2026-08-16 21:27:01,651 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-449
+2026-08-16 21:27:01,651 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-81
+2026-08-16 21:27:01,651 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-81
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-156
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-156
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-282
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-282
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-455
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-455
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-246
+2026-08-16 21:27:01,653 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-246
+2026-08-16 21:27:01,654 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-357
+2026-08-16 21:27:01,654 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-357
+2026-08-16 21:27:01,654 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-338
+2026-08-16 21:27:01,654 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-338
+2026-08-16 21:27:01,655 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-489
+2026-08-16 21:27:01,655 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-489
+2026-08-16 21:27:01,655 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-488
+2026-08-16 21:27:01,655 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-488
+2026-08-16 21:27:01,659 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-299
+2026-08-16 21:27:01,659 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-299
+2026-08-16 21:27:01,659 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-439
+2026-08-16 21:27:01,660 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-439
+2026-08-16 21:27:01,669 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-406
+2026-08-16 21:27:01,669 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-406
+2026-08-16 21:27:01,669 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-495
+2026-08-16 21:27:01,669 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-495
+2026-08-16 21:27:01,669 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-363
+2026-08-16 21:27:01,669 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-363
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-459
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-459
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-310
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-310
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-390
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-390
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-436
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-436
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-313
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-313
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-457
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-457
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-445
+2026-08-16 21:27:01,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-445
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-377
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-377
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-355
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-355
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-487
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-487
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-464
+2026-08-16 21:27:01,685 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-464
+2026-08-16 21:27:01,693 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - STRESS - 500 VU 1-448
+2026-08-16 21:27:01,693 INFO o.a.j.t.JMeterThread: Thread finished: TG - STRESS - 500 VU 1-448
+2026-08-16 21:27:01,693 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-08-16 21:27:01,696 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/checkout_data.csv
+2026-08-16 21:27:01,696 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/search_terms.csv
+2026-08-16 21:27:01,696 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/users.csv
+2026-08-16 21:27:01,703 INFO o.a.j.r.Summariser: summary +    741 in 00:00:02 =  439.5/s Avg:   239 Min:    41 Max:   523 Err:     0 (0.00%) Active: 0 Started: 500 Finished: 500
+2026-08-16 21:27:01,703 INFO o.a.j.r.Summariser: summary = 108740 in 00:06:00 =  301.8/s Avg:   103 Min:     0 Max:  1005 Err:     0 (0.00%)
+2026-08-16 21:27:01,703 INFO o.a.j.JMeter: Generating Dashboard
+2026-08-16 21:27:01,703 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2026-08-16 21:27:01,769 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2026-08-16 21:27:03,109 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2026-08-16 21:27:03,109 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2026-08-16 21:27:03,111 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2026-08-16 21:27:03,111 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2026-08-16 21:27:03,123 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2026-08-16 21:27:03,126 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2026-08-16 21:27:03,126 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2026-08-16 21:27:03,126 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2026-08-16 21:27:03,683 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2026-08-16 21:27:03,693 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2026-08-16 21:27:03,693 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2026-08-16 21:27:03,693 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2026-08-16 21:27:04,190 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2026-08-16 21:27:04,190 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 761180 samples
+2026-08-16 21:27:04,190 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2026-08-16 21:27:04,190 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2026-08-16 21:27:04,190 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2026-08-16 21:27:04,196 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2026-08-16 21:27:04,196 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2026-08-16 21:27:04,196 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2026-08-16 21:27:04,201 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 2335440 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 467088 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 155696 samples
+2026-08-16 21:27:04,204 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 155696 samples produced in 2s 405 ms on channel 0
+2026-08-16 21:27:04,204 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2026-08-16 21:27:04,269 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2026-08-16 21:27:04,269 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2026-08-16 21:27:04,269 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2026-08-16 21:27:04,269 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2026-08-16 21:27:04,269 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816\statistics.json
+2026-08-16 21:27:04,288 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2026-08-16 21:27:04,297 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816
+2026-08-16 21:27:04,420 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816, creating folder structure
+2026-08-16 21:27:04,421 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\report-template' to 'D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816', got message: D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816, found non empty folder with following content [D:\Kiem_thu\HW5\results\html\23127195_Stress_20260816\statistics.json], will be ignored
+2026-08-16 21:27:04,585 INFO o.a.j.JMeter: Dashboard generated
