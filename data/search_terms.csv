@@ -1,0 +1,11 @@
+keyword,expected_hits,note
+iPhone,1,khop chinh xac 1 san pham
+Samsung,1,khop 1 san pham
+MacBook,1,khop 1 san pham
+AirPods,1,khop 1 san pham
+Keychron,1,khop 1 san pham
+Pro,3,khop nhieu san pham - LIKE '%Pro%'
+Galaxy,1,khop 1 san pham
+Ultra,1,khop 1 san pham
+M3,1,khop 1 san pham
+Tai nghe,1,keyword co khoang trang - kiem tra URL encoding
