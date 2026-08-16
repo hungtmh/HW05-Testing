@@ -1,0 +1,273 @@
+2026-08-16 21:14:33,469 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-08-16 21:14:33,487 INFO o.a.j.JMeter: Loading user properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\user.properties
+2026-08-16 21:14:33,487 INFO o.a.j.JMeter: Loading system properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\system.properties
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: Version 5.6.3
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: java.version=17.0.17
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: os.name=Windows 11
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: os.arch=amd64
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: os.version=10.0
+2026-08-16 21:14:33,496 INFO o.a.j.JMeter: file.encoding=Cp1252
+2026-08-16 21:14:33,498 INFO o.a.j.JMeter: java.awt.headless=true
+2026-08-16 21:14:33,498 INFO o.a.j.JMeter: Max memory     =3221225472
+2026-08-16 21:14:33,498 INFO o.a.j.JMeter: Available Processors =20
+2026-08-16 21:14:33,503 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-08-16 21:14:33,503 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-08-16 21:14:33,503 INFO o.a.j.JMeter: JMeterHome=D:\Kiem_thu\tools\apache-jmeter-5.6.3
+2026-08-16 21:14:33,503 INFO o.a.j.JMeter: user.dir  =D:\Kiem_thu\HW5
+2026-08-16 21:14:33,503 INFO o.a.j.JMeter: PWD       =D:\Kiem_thu\HW5
+2026-08-16 21:14:33,504 INFO o.a.j.JMeter: IP: 192.168.1.8 Name: DESKTOP-96ARBFL FullName: 192.168.1.8
+2026-08-16 21:14:33,514 INFO o.a.j.JMeter: Setting property 'jmeter.reportgenerator.outputdir' to:'D:\Kiem_thu\HW5\results\html\23127195_Load_20260816'
+2026-08-16 21:14:33,514 INFO o.a.j.s.FileServer: Default base='D:\Kiem_thu\HW5'
+2026-08-16 21:14:33,514 INFO o.a.j.s.FileServer: Set new base='D:\Kiem_thu\HW5\testplans'
+2026-08-16 21:14:33,647 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-08-16 21:14:33,667 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-08-16 21:14:33,669 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-08-16 21:14:33,669 INFO o.a.j.s.SaveService: Loading file: D:\Kiem_thu\HW5\testplans\23127195_Load_20260816.jmx
+2026-08-16 21:14:33,714 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:14:33,714 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:14:33,714 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:14:33,714 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 21:14:33,714 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-08-16 21:14:33,714 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-08-16 21:14:33,758 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-08-16 21:14:33,761 INFO o.a.j.r.d.ReportGenerator: ReportGenerator will use for Parsing the separator: ','
+2026-08-16 21:14:33,761 INFO o.a.j.r.d.ReportGenerator: Will generate report at end of test from  results file: D:\Kiem_thu\HW5\results\jtl\23127195_Load_20260816.jtl
+2026-08-16 21:14:33,761 INFO o.a.j.r.d.ReportGenerator: Reading report generator properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\reportgenerator.properties
+2026-08-16 21:14:33,761 INFO o.a.j.r.d.ReportGenerator: Merging with JMeter properties
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.temp_dir' not found, using default value 'temp' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.apdex_per_transaction' not found, using default value 'null' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: apdex_per_transaction is empty, not APDEX per transaction customization
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.sample_filter' not found, using default value 'null' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.report_title' not found, using default value 'null' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.start_date' not found, using default value 'null' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.end_date' not found, using default value 'null' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.date_format' not found, using default value 'null' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Will use date range start date: null, end date: null
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.totalTPS.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.activeThreadsOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.timeVsThreads.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimeDistribution.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.transactionsPerSecond.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentiles.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimePercentilesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.responseTimesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.connectTimeOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.graph.latenciesOverTime.exclude_controllers' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.series_filter' not found, using default value '' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.json.show_controllers_only' not found, using default value 'false' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.filters_only_sample_series' not found, using default value 'true' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.series_filter' not found, using default value '' instead.
+2026-08-16 21:14:33,764 INFO o.a.j.r.c.ReportGeneratorConfiguration: Property 'jmeter.reportgenerator.exporter.html.show_controllers_only' not found, using default value 'false' instead.
+2026-08-16 21:14:33,778 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-08-16 21:14:33,779 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-16 21:14:33,779 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-16 21:14:33,782 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-08-16 21:14:33,782 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-08-16 21:14:33,958 INFO o.a.j.JMeter: Running test (1786889673958)
+2026-08-16 21:14:33,964 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TG - LOAD - 60 VU
+2026-08-16 21:14:33,964 INFO o.a.j.e.StandardJMeterEngine: Starting 60 threads for group TG - LOAD - 60 VU.
+2026-08-16 21:14:33,964 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-16 21:14:33,964 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=60 ramp-up=60 delayedStart=false
+2026-08-16 21:14:33,977 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-08-16 21:14:33,977 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-08-16 21:14:33,977 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-08-16 21:14:33,977 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-08-16 21:14:33,993 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-1
+2026-08-16 21:14:33,994 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/checkout_data.csv
+2026-08-16 21:14:34,012 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-08-16 21:14:34,012 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-08-16 21:14:34,046 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/search_terms.csv
+2026-08-16 21:14:34,047 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/users.csv
+2026-08-16 21:14:34,064 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-96ARBFL
+2026-08-16 21:14:34,066 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-08-16 21:14:34,770 INFO o.a.j.r.Summariser: summary +      1 in 00:00:01 =    1.2/s Avg:    25 Min:    25 Max:    25 Err:     0 (0.00%) Active: 1 Started: 1 Finished: 0
+2026-08-16 21:14:34,993 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-2
+2026-08-16 21:14:35,980 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-3
+2026-08-16 21:14:36,982 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-4
+2026-08-16 21:14:37,979 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-5
+2026-08-16 21:14:38,978 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-6
+2026-08-16 21:14:39,977 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-7
+2026-08-16 21:14:40,975 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-8
+2026-08-16 21:14:41,975 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-9
+2026-08-16 21:14:42,975 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-10
+2026-08-16 21:14:43,973 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-11
+2026-08-16 21:14:44,973 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-12
+2026-08-16 21:14:45,971 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-13
+2026-08-16 21:14:46,972 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-14
+2026-08-16 21:14:47,969 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-15
+2026-08-16 21:14:48,967 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-16
+2026-08-16 21:14:49,968 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-17
+2026-08-16 21:14:50,967 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-18
+2026-08-16 21:14:51,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-19
+2026-08-16 21:14:52,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-20
+2026-08-16 21:14:53,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-21
+2026-08-16 21:14:54,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-22
+2026-08-16 21:14:55,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-23
+2026-08-16 21:14:56,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-24
+2026-08-16 21:14:57,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-25
+2026-08-16 21:14:58,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-26
+2026-08-16 21:14:59,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-27
+2026-08-16 21:15:00,054 INFO o.a.j.r.Summariser: summary +    360 in 00:00:25 =   14.2/s Avg:     4 Min:     1 Max:    30 Err:     0 (0.00%) Active: 27 Started: 27 Finished: 0
+2026-08-16 21:15:00,054 INFO o.a.j.r.Summariser: summary =    361 in 00:00:26 =   13.8/s Avg:     4 Min:     1 Max:    30 Err:     0 (0.00%)
+2026-08-16 21:15:00,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-28
+2026-08-16 21:15:01,968 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-29
+2026-08-16 21:15:02,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-30
+2026-08-16 21:15:03,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-31
+2026-08-16 21:15:04,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-32
+2026-08-16 21:15:05,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-33
+2026-08-16 21:15:06,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-34
+2026-08-16 21:15:07,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-35
+2026-08-16 21:15:08,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-36
+2026-08-16 21:15:09,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-37
+2026-08-16 21:15:10,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-38
+2026-08-16 21:15:11,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-39
+2026-08-16 21:15:12,966 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-40
+2026-08-16 21:15:13,978 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-41
+2026-08-16 21:15:14,979 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-42
+2026-08-16 21:15:15,966 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-43
+2026-08-16 21:15:16,968 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-44
+2026-08-16 21:15:17,966 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-45
+2026-08-16 21:15:18,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-46
+2026-08-16 21:15:19,966 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-47
+2026-08-16 21:15:20,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-48
+2026-08-16 21:15:21,966 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-49
+2026-08-16 21:15:22,966 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-50
+2026-08-16 21:15:23,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-51
+2026-08-16 21:15:24,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-52
+2026-08-16 21:15:25,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-53
+2026-08-16 21:15:26,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-54
+2026-08-16 21:15:27,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-55
+2026-08-16 21:15:28,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-56
+2026-08-16 21:15:29,964 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-57
+2026-08-16 21:15:30,034 INFO o.a.j.r.Summariser: summary +   1392 in 00:00:30 =   46.4/s Avg:     4 Min:     0 Max:    32 Err:     0 (0.00%) Active: 57 Started: 57 Finished: 0
+2026-08-16 21:15:30,035 INFO o.a.j.r.Summariser: summary =   1753 in 00:00:56 =   31.3/s Avg:     4 Min:     0 Max:    32 Err:     0 (0.00%)
+2026-08-16 21:15:30,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-58
+2026-08-16 21:15:31,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-59
+2026-08-16 21:15:32,965 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-60
+2026-08-16 21:16:00,005 INFO o.a.j.r.Summariser: summary +   2082 in 00:00:30 =   69.5/s Avg:     3 Min:     0 Max:    33 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:16:00,006 INFO o.a.j.r.Summariser: summary =   3835 in 00:01:26 =   44.6/s Avg:     3 Min:     0 Max:    33 Err:     0 (0.00%)
+2026-08-16 21:16:30,074 INFO o.a.j.r.Summariser: summary +   2097 in 00:00:30 =   69.7/s Avg:     3 Min:     0 Max:    40 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:16:30,075 INFO o.a.j.r.Summariser: summary =   5932 in 00:01:56 =   51.1/s Avg:     3 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-08-16 21:17:00,127 INFO o.a.j.r.Summariser: summary +   2067 in 00:00:30 =   68.8/s Avg:     3 Min:     0 Max:    27 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:17:00,128 INFO o.a.j.r.Summariser: summary =   7999 in 00:02:26 =   54.7/s Avg:     3 Min:     0 Max:    40 Err:     0 (0.00%)
+2026-08-16 21:17:30,001 INFO o.a.j.r.Summariser: summary +   2094 in 00:00:30 =   70.1/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:17:30,002 INFO o.a.j.r.Summariser: summary =  10093 in 00:02:56 =   57.3/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%)
+2026-08-16 21:18:00,007 INFO o.a.j.r.Summariser: summary +   2061 in 00:00:30 =   68.7/s Avg:     3 Min:     0 Max:    49 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:18:00,007 INFO o.a.j.r.Summariser: summary =  12154 in 00:03:26 =   59.0/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%)
+2026-08-16 21:18:30,013 INFO o.a.j.r.Summariser: summary +   2161 in 00:00:30 =   72.0/s Avg:     3 Min:     0 Max:    42 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:18:30,013 INFO o.a.j.r.Summariser: summary =  14315 in 00:03:56 =   60.6/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%)
+2026-08-16 21:19:00,024 INFO o.a.j.r.Summariser: summary +   2084 in 00:00:30 =   69.4/s Avg:     3 Min:     0 Max:    46 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:19:00,025 INFO o.a.j.r.Summariser: summary =  16399 in 00:04:26 =   61.6/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%)
+2026-08-16 21:19:30,007 INFO o.a.j.r.Summariser: summary +   2044 in 00:00:30 =   68.2/s Avg:     3 Min:     0 Max:    40 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 21:19:30,007 INFO o.a.j.r.Summariser: summary =  18443 in 00:04:56 =   62.3/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%)
+2026-08-16 21:19:31,328 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-23
+2026-08-16 21:19:31,331 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-34
+2026-08-16 21:19:31,356 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-33
+2026-08-16 21:19:31,488 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-22
+2026-08-16 21:19:31,691 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-26
+2026-08-16 21:19:31,715 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-52
+2026-08-16 21:19:31,804 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-37
+2026-08-16 21:19:32,013 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-46
+2026-08-16 21:19:32,088 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-20
+2026-08-16 21:19:32,212 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-27
+2026-08-16 21:19:32,279 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-49
+2026-08-16 21:19:32,316 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-2
+2026-08-16 21:19:32,320 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-41
+2026-08-16 21:19:32,376 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-15
+2026-08-16 21:19:32,423 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-60
+2026-08-16 21:19:32,491 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-55
+2026-08-16 21:19:32,538 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-40
+2026-08-16 21:19:32,552 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-7
+2026-08-16 21:19:32,559 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-29
+2026-08-16 21:19:32,608 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-11
+2026-08-16 21:19:32,686 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-43
+2026-08-16 21:19:32,723 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-21
+2026-08-16 21:19:32,838 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-3
+2026-08-16 21:19:32,869 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-48
+2026-08-16 21:19:32,887 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-28
+2026-08-16 21:19:32,961 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-13
+2026-08-16 21:19:32,994 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-4
+2026-08-16 21:19:33,061 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-44
+2026-08-16 21:19:33,063 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-47
+2026-08-16 21:19:33,088 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-10
+2026-08-16 21:19:33,088 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-12
+2026-08-16 21:19:33,093 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-32
+2026-08-16 21:19:33,110 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-24
+2026-08-16 21:19:33,118 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-39
+2026-08-16 21:19:33,132 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-5
+2026-08-16 21:19:33,155 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-53
+2026-08-16 21:19:33,194 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-30
+2026-08-16 21:19:33,221 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-54
+2026-08-16 21:19:33,288 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-31
+2026-08-16 21:19:33,297 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-38
+2026-08-16 21:19:33,369 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-56
+2026-08-16 21:19:33,516 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-59
+2026-08-16 21:19:33,526 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-36
+2026-08-16 21:19:33,542 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-17
+2026-08-16 21:19:33,552 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-16
+2026-08-16 21:19:33,573 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-50
+2026-08-16 21:19:33,606 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-42
+2026-08-16 21:19:33,631 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-58
+2026-08-16 21:19:33,655 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-45
+2026-08-16 21:19:33,676 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-19
+2026-08-16 21:19:33,692 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-9
+2026-08-16 21:19:33,737 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-25
+2026-08-16 21:19:33,759 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-1
+2026-08-16 21:19:33,789 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-8
+2026-08-16 21:19:33,843 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-35
+2026-08-16 21:19:33,855 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-51
+2026-08-16 21:19:33,870 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-14
+2026-08-16 21:19:33,922 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-6
+2026-08-16 21:19:33,956 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-18
+2026-08-16 21:19:33,984 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-57
+2026-08-16 21:19:33,984 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-08-16 21:19:33,985 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/checkout_data.csv
+2026-08-16 21:19:33,985 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/search_terms.csv
+2026-08-16 21:19:33,985 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/users.csv
+2026-08-16 21:19:33,991 INFO o.a.j.r.Summariser: summary +    306 in 00:00:04 =   76.8/s Avg:     3 Min:     0 Max:    33 Err:     0 (0.00%) Active: 0 Started: 60 Finished: 60
+2026-08-16 21:19:33,992 INFO o.a.j.r.Summariser: summary =  18749 in 00:05:00 =   62.5/s Avg:     3 Min:     0 Max:    55 Err:     0 (0.00%)
+2026-08-16 21:19:33,992 INFO o.a.j.JMeter: Generating Dashboard
+2026-08-16 21:19:33,992 INFO o.a.j.r.d.ReportGenerator: Flushing result collector before report Generation
+2026-08-16 21:19:34,048 INFO o.a.j.r.p.NormalizerSampleConsumer: Using format, 'ms', to parse timeStamp field
+2026-08-16 21:19:34,427 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): beginDate produced 0 samples
+2026-08-16 21:19:34,427 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.AggregateConsumer#stopProducing(): endDate produced 0 samples
+2026-08-16 21:19:34,428 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ApdexSummaryConsumer#stopProducing(): apdexSummary produced 0 samples
+2026-08-16 21:19:34,428 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.RequestsSummaryConsumer#stopProducing(): requestsSummary produced 0 samples
+2026-08-16 21:19:34,438 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.StatisticsSummaryConsumer#stopProducing(): statisticsSummary produced 0 samples
+2026-08-16 21:19:34,441 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.Top5ErrorsBySamplerConsumer#stopProducing(): top5ErrorsBySampler produced 0 samples
+2026-08-16 21:19:34,441 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.ErrorsSummaryConsumer#stopProducing(): errorsSummary produced 0 samples
+2026-08-16 21:19:34,441 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.HitsPerSecondGraphConsumer#stopProducing(): hitsPerSecond produced 0 samples
+2026-08-16 21:19:34,584 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyVSRequestGraphConsumer#stopProducing(): latencyVsRequest produced 0 samples
+2026-08-16 21:19:34,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.SyntheticResponseTimeDistributionGraphConsumer#stopProducing(): syntheticResponseTimeDistribution produced 0 samples
+2026-08-16 21:19:34,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.BytesThroughputGraphConsumer#stopProducing(): bytesThroughputOverTime produced 0 samples
+2026-08-16 21:19:34,586 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.CodesPerSecondGraphConsumer#stopProducing(): codesPerSecond produced 0 samples
+2026-08-16 21:19:34,724 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeVSRequestGraphConsumer#stopProducing(): responseTimeVsRequest produced 0 samples
+2026-08-16 21:19:34,726 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): startIntervalControlerFilter produced 131243 samples
+2026-08-16 21:19:34,726 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TotalTPSGraphConsumer#stopProducing(): totalTPS produced 0 samples
+2026-08-16 21:19:34,726 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ActiveThreadsGraphConsumer#stopProducing(): activeThreadsOverTime produced 0 samples
+2026-08-16 21:19:34,726 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TimeVSThreadGraphConsumer#stopProducing(): timeVsThreads produced 0 samples
+2026-08-16 21:19:34,728 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeDistributionGraphConsumer#stopProducing(): responseTimeDistribution produced 0 samples
+2026-08-16 21:19:34,728 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.TransactionsPerSecondGraphConsumer#stopProducing(): transactionsPerSecond produced 0 samples
+2026-08-16 21:19:34,728 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesGraphConsumer#stopProducing(): responseTimePercentiles produced 0 samples
+2026-08-16 21:19:34,732 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimePercentilesOverTimeGraphConsumer#stopProducing(): responseTimePercentilesOverTime produced 0 samples
+2026-08-16 21:19:34,735 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ResponseTimeOverTimeGraphConsumer#stopProducing(): responseTimesOverTime produced 0 samples
+2026-08-16 21:19:34,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.ConnectTimeOverTimeGraphConsumer#stopProducing(): connectTimeOverTime produced 0 samples
+2026-08-16 21:19:34,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.graph.impl.LatencyOverTimeGraphConsumer#stopProducing(): latenciesOverTime produced 0 samples
+2026-08-16 21:19:34,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): nameFilter produced 402450 samples
+2026-08-16 21:19:34,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.FilterConsumer#stopProducing(): dateRangeFilter produced 80490 samples
+2026-08-16 21:19:34,737 INFO o.a.j.r.p.AbstractSampleConsumer: class org.apache.jmeter.report.processor.NormalizerSampleConsumer#stopProducing(): normalizer produced 26830 samples
+2026-08-16 21:19:34,738 INFO o.a.j.r.p.CsvFileSampleSource: produce(): 26830 samples produced in 672ms on channel 0
+2026-08-16 21:19:34,738 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'json' of className:'org.apache.jmeter.report.dashboard.JsonExporter'
+2026-08-16 21:19:34,787 INFO o.a.j.r.d.JsonExporter: Found data for consumer statisticsSummary in context
+2026-08-16 21:19:34,787 INFO o.a.j.r.d.JsonExporter: Creating statistics for overall
+2026-08-16 21:19:34,787 INFO o.a.j.r.d.JsonExporter: Creating statistics for other transactions
+2026-08-16 21:19:34,787 INFO o.a.j.r.d.JsonExporter: Checking output folder
+2026-08-16 21:19:34,788 INFO o.a.j.r.d.JsonExporter: Writing statistics JSON to D:\Kiem_thu\HW5\results\html\23127195_Load_20260816\statistics.json
+2026-08-16 21:19:34,812 INFO o.a.j.r.d.ReportGenerator: Exporting data using exporter:'html' of className:'org.apache.jmeter.report.dashboard.HtmlTemplateExporter'
+2026-08-16 21:19:34,814 INFO o.a.j.r.d.HtmlTemplateExporter: Will generate dashboard in folder: D:\Kiem_thu\HW5\results\html\23127195_Load_20260816
+2026-08-16 21:19:34,950 INFO o.a.j.r.d.HtmlTemplateExporter: Report will be generated in: D:\Kiem_thu\HW5\results\html\23127195_Load_20260816, creating folder structure
+2026-08-16 21:19:34,952 INFO o.a.j.r.d.TemplateVisitor: Copying folder from 'D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\report-template' to 'D:\Kiem_thu\HW5\results\html\23127195_Load_20260816', got message: D:\Kiem_thu\HW5\results\html\23127195_Load_20260816, found non empty folder with following content [D:\Kiem_thu\HW5\results\html\23127195_Load_20260816\statistics.json], will be ignored
+2026-08-16 21:19:35,100 INFO o.a.j.JMeter: Dashboard generated

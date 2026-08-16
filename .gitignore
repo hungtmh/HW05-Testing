@@ -1,4 +1,6 @@
-jmeter.log
-*.log
+# Log tam cua JMeter khi mo bang GUI (sinh o thu muc lam viec hien tai)
+/jmeter.log
 .jmeter-tmp/
 temp/
+
+# results/jtl/*.jmeter.log la BANG CHUNG bat buoc nop, khong duoc bo qua.
