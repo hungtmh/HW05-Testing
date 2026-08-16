@@ -117,21 +117,31 @@ netsh int ipv4 show dynamicport tcp
 
 ---
 
-## Lỗi 6 — Trung bình: bẫy đọc số — sample của Transaction Controller bị tính vào throughput
+## Lỗi 6 — Trung bình: bẫy đọc số trong chính file `.jtl` thô
 
 **Không phải lỗi cấu hình, mà là lỗi diễn giải** — nhưng cực dễ mắc nên ghi lại đây.
 
-JMeter ghi **cả Transaction Controller** thành bản ghi trong `.jtl`. Một vòng lặp của workflow này tạo ra:
+JMeter ghi **cả Transaction Controller** thành bản ghi trong file `.jtl`. Một vòng lặp của workflow này tạo ra:
 
 - **7** request HTTP thật
 - **3** sample của Transaction Controller (TC-01, TC-02, TC-03)
 - **= 10 bản ghi** trong `.jtl`
 
-Nếu lấy thẳng con số của summariser JMeter làm "số request/giây" thì **thổi phồng thông lượng lên 10/7 ≈ 43%**. Ví dụ dòng `summary = ... 69.7/s` của kịch bản Load thực chất chỉ tương ứng ~48,8 request HTTP/giây.
+Với kịch bản Stress: file `.jtl` có **155.696 bản ghi**, nhưng chỉ **108.740** trong đó là request HTTP thật; 46.956 bản ghi còn lại là Transaction Controller. Ai đếm số dòng của file thô rồi chia cho thời lượng sẽ **thổi phồng thông lượng lên 10/7 ≈ 43%**.
 
-**Cách sửa:** `scripts/analyze_jtl.py` tách hẳn hai nhóm và in riêng, luôn ghi rõ số bản ghi nào là request thật, số nào là Transaction Controller.
+**Điểm cần nói cho chính xác:** bản thân JMeter **không** mắc lỗi này. Đã kiểm chứng:
 
-**Vì sao đáng ghi:** đây là một trong những chỉ số mà AI phân tích log dễ đọc sai nhất ở Task 2 — xem `docs/06_ai_analysis_and_misinterpretation_hunt.md`.
+| Nguồn số liệu | Số mẫu báo cáo | Có gồm Transaction Controller? |
+|---|---|---|
+| File `.jtl` thô (đếm dòng) | 155.696 | **Có** |
+| Dòng `summary =` cuối của console | 108.740 | Không |
+| Ô Total của HTML report (`statistics.json`) | 108.740 | Không |
+
+Nghĩa là cái bẫy chỉ bung ra khi **tự phân tích file thô** — đúng tình huống của Task 2, nơi file `.jtl` được đưa thẳng cho AI đọc.
+
+**Cách sửa:** `scripts/analyze_jtl.py` tách hẳn hai nhóm và in riêng, luôn ghi rõ bao nhiêu bản ghi là request thật, bao nhiêu là Transaction Controller.
+
+**Vì sao đáng ghi:** đây là một trong những chỉ số mà AI phân tích log dễ đọc sai nhất ở Task 2 — xem `docs/06_ai_analysis_and_misinterpretation_hunt.md` §1.
 
 ---
 
