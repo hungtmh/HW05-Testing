@@ -1,0 +1,4 @@
+jmeter.log
+*.log
+.jmeter-tmp/
+temp/
