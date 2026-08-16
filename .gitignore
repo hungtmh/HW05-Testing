@@ -4,3 +4,8 @@
 temp/
 
 # results/jtl/*.jmeter.log la BANG CHUNG bat buoc nop, khong duoc bo qua.
+
+# Artefact tam thoi sinh ra luc chay, khong phai bang chung
+results/monitor/backend.pid
+results/monitor/backend_stdout.log
+results/monitor/backend_stderr.log

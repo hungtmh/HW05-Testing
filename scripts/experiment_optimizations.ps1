@@ -1,4 +1,4 @@
-<#
+﻿<#
   experiment_optimizations.ps1 — Kiểm chứng BẰNG THỰC NGHIỆM các đề xuất tối ưu của AI.
 
   Task 2 yêu cầu phân loại từng đề xuất tối ưu là khả thi hay ảo tưởng. Phân loại trên
@@ -34,36 +34,12 @@ $outDir = Join-Path $Repo "results\experiments"
 New-Item -ItemType Directory -Force $outDir | Out-Null
 $db = Join-Path $SutBackend "database.sqlite"
 
-function Invoke-Sqlite([string]$Sql) {
-  Push-Location $SutBackend
-  try {
-    $escaped = $Sql.Replace('"', '\"')
-    node -e "const s=require('sqlite3');const db=new s.Database('database.sqlite');db.exec(\"$escaped\",(e)=>{if(e){console.error('SQLERR '+e.message);process.exit(1)}db.close();});"
-  } finally { Pop-Location }
+function Db([string]$Cmd, [string]$Arg = "") {
+  # Goi scripts/db_tool.js thay vi nhung JS vao chuoi node -e:
+  # PowerShell tu phan tich cac ky tu (), [], => ben trong chuoi va lam vo cu phap.
+  if ($Arg -ne "") { return (node (Join-Path $Repo "scripts\db_tool.js") $Cmd $Arg | Select-Object -Last 1) }
+  return (node (Join-Path $Repo "scripts\db_tool.js") $Cmd | Select-Object -Last 1)
 }
-
-function Add-SeedOrders([int]$N) {
-  Push-Location $SutBackend
-  try {
-    node -e @"
-const s = require('sqlite3');
-const db = new s.Database('database.sqlite');
-db.serialize(() => {
-  db.all('SELECT id FROM users WHERE email LIKE ?', ['perf%'], (e, rows) => {
-    if (e || !rows.length) { console.error('Khong tim thay tai khoan perf'); process.exit(1); }
-    const ids = rows.map(r => r.id);
-    db.run('BEGIN TRANSACTION');
-    const st = db.prepare('INSERT INTO orders (user_id, total_amount, status, shipping_address) VALUES (?,?,?,?)');
-    for (let i = 0; i < $N; i++) st.run(ids[i % ids.length], 1000000 + i, 'pending', 'seed ' + i);
-    st.finalize(() => db.run('COMMIT', () => {
-      db.get('SELECT COUNT(*) c FROM orders', [], (e2, r) => { console.log('orders=' + r.c); db.close(); });
-    }));
-  });
-});
-"@
-  } finally { Pop-Location }
-}
-
 function Measure-Config([string]$Name) {
   $jtl = Join-Path $outDir "exp_$Name.jtl"
   Remove-Item $jtl -ErrorAction SilentlyContinue
@@ -92,20 +68,17 @@ foreach ($c in $configs) {
 
   # 2. Bat WAL TRUOC khi nap du lieu (journal_mode la thuoc tinh ben vung cua file DB)
   if ($c.Wal) {
-    Invoke-Sqlite "PRAGMA journal_mode=WAL;"
-    Push-Location $SutBackend
-    $mode = node -e "const s=require('sqlite3');const db=new s.Database('database.sqlite');db.get('PRAGMA journal_mode',[],(e,r)=>{console.log(r.journal_mode);db.close();});"
-    Pop-Location
-    Write-Host "  journal_mode = $mode"
+    Db "set-wal" | Out-Null
+    Write-Host "  journal_mode = $(Db 'journal-mode')"
   }
 
   # 3. Nap san 40.000 don de bang orders du lon cho viec thieu index co y nghia
-  $cnt = Add-SeedOrders -N $SeedOrders
+  $cnt = Db "seed-orders" "$SeedOrders"
   Write-Host "  da nap du lieu: $cnt"
 
   # 4. Them index (sau khi nap du lieu, giong tinh huong that khi vao production)
   if ($c.Index) {
-    Invoke-Sqlite "CREATE INDEX IF NOT EXISTS idx_orders_user_id ON orders(user_id);"
+    Db "create-index" | Out-Null
     Write-Host "  da tao index idx_orders_user_id"
   }
 
