@@ -1,0 +1,49 @@
+﻿=== PROBE LOI SUT - 2026-08-16 21:48:59 - http://localhost:3000 ===
+Token nguoi dung thuong: OK, user id=3
+------------------------------------------------------------------------------
+BUG-01 | Nguong khoa tai khoan la 2 lan sai, khong phai 3 (server.js:54 cong +2)
+  lan sai thu 1: HTTP 401
+  lan sai thu 2: HTTP 401
+  lan sai thu 3: HTTP 403
+  dang nhap bang MAT KHAU DUNG: HTTP 403  -> DA BI KHOA (chi sau 2 lan sai)
+------------------------------------------------------------------------------
+BUG-02 | Cong thuc giam gia theo phan tram bi sai dau (server.js:399)
+         discount = floor(total * (1 - discount_value)) thay vi total * discount_value/100
+  POST /api/apply-coupon {code:SAVE10, total_amount:1000000}
+  HTTP 200 | {"success":true,"coupon_id":1,"discount_amount":-9000000,"final_amount":10000000,"message":"Áp dụng thành công! Giảm 10%"}
+  -> discount_amount = -9000000 (ky vong 100000), final_amount = 10000000 (ky vong 900000)
+  -> KHACH HANG BI TINH TIEN NHIEU HON sau khi ap ma GIAM GIA
+------------------------------------------------------------------------------
+BUG-03 | GET /api/orders/:id KHONG co middleware xac thuc (server.js:344)
+  Da tao don hang id=21866 bang tai khoan perf01
+  GET /api/orders/21866 KHONG kem token: HTTP 200
+  Body: {"id":21866,"user_id":3,"total_amount":999999,"status":"pending","shipping_address":"probe","created_at":"2026-08-16 14:49:00"}
+  -> LO DU LIEU: doc duoc don hang cua nguoi khac ma khong can dang nhap (IDOR)
+------------------------------------------------------------------------------
+BUG-04 | PUT /api/users/me cho phep tu nang quyen len admin (server.js:119-129)
+  role truoc: user
+  role sau : admin
+  -> LEO THANG DAC QUYEN: nguoi dung thuong tu dat minh thanh admin
+  (da tra role ve 'user')
+------------------------------------------------------------------------------
+BUG-05 | GET /api/products/:id tra 200 kem body rong cho id khong ton tai (server.js:161)
+  GET /api/products/999999 -> HTTP 200 | body: '{}'  (ky vong 404)
+------------------------------------------------------------------------------
+BUG-06 | Kieu du lieu price khong nhat quan theo tinh chan le cua id (server.js:162)
+  id=1 (id le ) -> price tra ve kieu SO
+  id=2 (id chan) -> price tra ve kieu CHUOI
+  id=3 (id le ) -> price tra ve kieu SO
+  id=4 (id chan) -> price tra ve kieu CHUOI
+------------------------------------------------------------------------------
+BUG-07 | May trang thai don hang cho phep chuyen canceled -> delivered (server.js:550)
+  Don 21867 sau khi huy: status = canceled
+  Chuyen canceled -> delivered: HTTP 200 | {"message":"Order status updated"}
+  status hien tai: delivered
+  -> SAI LOGIC: don da HUY van chuyen sang DA GIAO duoc
+------------------------------------------------------------------------------
+BUG-08 | SQL injection o GET /api/products?search (server.js:144 noi chuoi truc tiep)
+  ?search=iPhone            -> 1 san pham
+  ?search=%' OR '1'='1     -> 5 san pham
+  -> INJECTION THANH CONG: menh de WHERE bi vo hieu hoa, tra ve toan bo bang
+------------------------------------------------------------------------------
+=== KET THUC PROBE ===
