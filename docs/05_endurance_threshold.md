@@ -1,6 +1,6 @@
 # 05 — Ngưỡng chịu đựng của phần cứng (Endurance / Soak)
 
-**MSSV:** 23127195 · **Máy:** `DESKTOP-96ARBFL` (i7-13700H, 14 nhân / 20 luồng, 13,75 GB RAM)
+**MSSV:** 23127195 · **Máy:** `DESKTOP-96ARBFL` — i7-13700H, 14 nhân / 20 luồng, 16 GB RAM (13,75 GB khả dụng cho OS)
 **Kịch bản:** `23127195_Soak_20260816.jmx` — 150 VU, ramp-up 30 s, giữ tải 870 s (**tổng 15 phút**), think-time 1–3 s
 
 ---
@@ -108,12 +108,12 @@ Tổng hợp cả bốn lần chạy chính thức và các lần calibration:
 - 8 giờ → thêm ~845 MB
 - 24 giờ → thêm ~2,5 GB
 
-Node 22 trên máy 13,75 GB RAM có giới hạn heap cũ (old space) mặc định vào khoảng **2 GB** nếu không truyền `--max-old-space-size`. Với tốc độ trên, tiến trình sẽ chạm trần heap sau **khoảng 19–20 giờ** chạy liên tục ở mức tải này, rồi bị `FATAL ERROR: JavaScript heap out of memory`.
+Node 22 trên máy 16 GB RAM (13,75 GB khả dụng cho OS) có giới hạn heap cũ (old space) mặc định vào khoảng **2 GB** nếu không truyền `--max-old-space-size`. Với tốc độ trên, tiến trình sẽ chạm trần heap sau **khoảng 19–20 giờ** chạy liên tục ở mức tải này, rồi bị `FATAL ERROR: JavaScript heap out of memory`.
 
 > **Nói rõ đây là phép ngoại suy tuyến tính**, dựa trên 13 phút quan sát ở tải cố định. Nó giả định tốc độ rò rỉ không đổi và giới hạn heap mặc định của Node. Muốn khẳng định chắc chắn thì phải chạy soak thật nhiều giờ — nằm ngoài phạm vi 10 giờ của bài tập này. Con số đáng tin duy nhất **đo được trực tiếp** là 1,76 MB/phút và trần 130 MB sau 15 phút.
 
 ### Vì sao trần thực tế không phải là RAM
 
-Máy có 13,75 GB RAM nhưng tiến trình backend chỉ dùng 130 MB ở tải cao nhất. **RAM không bao giờ là nút thắt ở đây.** Nút thắt là **một core CPU duy nhất** — hệ quả của mô hình đơn luồng Node không dùng cluster. Máy còn dư 19 luồng logic hoàn toàn rảnh trong lúc backend nghẹt.
+Máy có 16 GB RAM (13,75 GB khả dụng cho OS) nhưng tiến trình backend chỉ dùng 130 MB ở tải cao nhất. **RAM không bao giờ là nút thắt ở đây.** Nút thắt là **một core CPU duy nhất** — hệ quả của mô hình đơn luồng Node không dùng cluster. Máy còn dư 19 luồng logic hoàn toàn rảnh trong lúc backend nghẹt.
 
 Đây chính là lý do phần tối ưu ở `docs/06` §4 xếp **Node cluster** là hướng có tiềm năng lớn nhất — nhưng kèm điều kiện phải sửa `userCarts` trước, vì trạng thái đang nằm trong RAM của một tiến trình và sẽ vỡ ngay khi tách nhiều worker.

@@ -48,7 +48,7 @@ login → products?search → products/{id} → cart → apply-coupon → checko
 | **Tốc độ rò rỉ bộ nhớ** | **1,76 MB/phút** = 1,05 KB mỗi vòng lặp (do `userCarts` không được giải phóng) |
 | **Thời gian hồi phục sau sốc** | **10–15 giây** để p95 về lại đường cơ sở sau khi bỏ tải 340 VU |
 
-**Nút thắt thật sự:** một core CPU duy nhất. Máy có 20 luồng logic và 13,75 GB RAM, nhưng backend là Node đơn luồng nên chỉ dùng được **1 core** và 130 MB RAM — 19 luồng còn lại rảnh hoàn toàn trong lúc hệ thống nghẹt.
+**Nút thắt thật sự:** một core CPU duy nhất. Máy có 20 luồng logic và 16 GB RAM (13,75 GB khả dụng cho OS), nhưng backend là Node đơn luồng nên chỉ dùng được **1 core** và 130 MB RAM — 19 luồng còn lại rảnh hoàn toàn trong lúc hệ thống nghẹt.
 
 ### Số lỗi / vấn đề hiệu năng
 

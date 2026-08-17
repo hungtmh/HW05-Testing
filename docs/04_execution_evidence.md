@@ -15,7 +15,7 @@
 | CPU | 13th Gen Intel® Core™ i7-13700H |
 | Số nhân / luồng | **14 nhân / 20 luồng logic** |
 | Xung nhịp cơ bản | 2.400 MHz |
-| RAM | **13,75 GB** |
+| RAM | **16 GB cài đặt** / **13,75 GB khả dụng cho OS** *(dxdiag: `Memory: 16384MB`, `Available OS Memory: 14076MB`)* |
 | GPU | Intel® Iris® Xe Graphics |
 | Ổ đĩa | WD PC SN740 SDDPMQD-512G-1101 (477 GB NVMe SSD) |
 | Hệ điều hành | Microsoft Windows 11 Home Single Language, phiên bản 10.0.26200 (Build 26200) |
