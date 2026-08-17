@@ -1,0 +1,1114 @@
+﻿=====================================================================
+GIT COMMIT LOG - HW05 Performance Testing
+MSSV      : 23127195
+Repo      : https://github.com/hungtmh/HW05-Testing
+Xuat luc  : 2026-08-17 20:25:38
+=====================================================================
+
+De bai muc 12 yeu cau moi buoc cua quy trinh la mot commit rieng.
+Duoi day la toan bo lich su commit, moi nhat truoc.
+
+--- DANH SACH NGAN GON ---
+
+f5a9293  2026-08-17 20:25  docs: bao cao chinh, README tong hop va danh muc doi chieu nop bai
+cadb3de  2026-08-17 20:24  docs(task2): phan loai de xuat toi uu co kiem chung A/B thuc nghiem
+394e8cc  2026-08-16 21:54  docs: nguong chiu dung cua phan cung + AI Critique 300 tu
+bfb4191  2026-08-16 21:54  test(soak): ket qua soak 150 VU trong 15 phut + output probe loi
+a2c46f1  2026-08-16 21:47  docs(task2): san loi dien giai - 6 cho AI doc sai chi so, kem lenh kiem chung
+909099b  2026-08-16 21:43  docs(audit): AI Audit Report day du 14 buoc prompt + script thuc nghiem toi uu
+b168707  2026-08-16 21:38  docs: bang chung thuc thi, kich ban quay video, sua lai Loi 6 cho chinh xac
+b8ede22  2026-08-16 21:35  test(spike): ket qua chay Spike - do duoc thoi gian hoi phuc 10-15 giay
+424b3b6  2026-08-16 21:34  test(stress): ket qua chay Stress ramp len 500 VU - tim duoc diem goi
+435757f  2026-08-16 21:29  chore: khong bo qua results/jtl/*.jmeter.log
+3198b92  2026-08-16 21:28  test(load): ket qua chay Load 60 VU - log tho, HTML report, giam sat tai nguyen
+790b5bd  2026-08-16 21:27  feat(skill): Agent Skill performance-testing-jmeter tai su dung duoc
+10212e7  2026-08-16 21:27  docs(task3): de xuat mo hinh Continuous Performance Testing
+1e4bd1e  2026-08-16 21:21  docs(task1): ra soat cua con nguoi - 7 loi da phat hien va sua
+a9382f9  2026-08-16 21:21  docs(task1): chuoi 10 prompt dieu khien AI thiet ke test plan
+b04cd8e  2026-08-16 21:21  chore(scripts): dieu phoi lan chay + cong cu phan tich .jtl doc lap
+94d0f3a  2026-08-16 21:13  feat(testplan): Soak - 150 VU trong 15 phut, Aggregate Graph
+bef0662  2026-08-16 21:12  feat(testplan): Spike - 40 VU nen cong cu soc 300 VU trong 60s, View Results Tree
+19f208f  2026-08-16 21:12  feat(testplan): Stress - ramp tuyen tinh len 500 VU, Aggregate Report
+5a78b96  2026-08-16 21:12  feat(testplan): Load - 60 VU, ramp 60s, hold 240s, Summary Report
+7c6f8bc  2026-08-16 20:45  feat(data): CSV du lieu dau vao + script seed/reset lockout
+5f605fa  2026-08-16 20:41  docs(scope): khao sat SUT va chot 3 nhom endpoint
+c10fa83  2026-08-16 18:33  chore: khoi tao repo HW05 Performance Testing
+
+
+--- CHI TIET DAY DU (kem thong ke file thay doi) ---
+
+commit f5a929388ba24859d5400609529964389412f8d0
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-17 20:25:20 +0700
+
+    docs: bao cao chinh, README tong hop va danh muc doi chieu nop bai
+    
+    - docs/00_MAIN_REPORT.md: bao cao chinh, tong hop ca 3 task kem so lieu 4 lan chay
+    - docs/08_bug_report.md: 8 loi da kiem chung qua API that va 4 van de hieu nang
+    - docs/10_submission_checklist.md: doi chieu tung gach dau dong cua muc 14 de bai
+      voi file tuong ung, ghi ro 4 viec sinh vien can tu lam
+    - README.md: test summary report, nguong chiu dung, bang tu danh gia 89/100
+    - docs/04: dien so lieu that cho Spike va Soak, them duong cong theo do dong thoi
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ README.md                       | 170 +++++++++++++++++++++++-----
+ docs/00_MAIN_REPORT.md          | 237 ++++++++++++++++++++++++++++++++++++++++
+ docs/04_execution_evidence.md   |  44 ++++++--
+ docs/08_bug_report.md           | 213 ++++++++++++++++++++++++++++++++++++
+ docs/10_submission_checklist.md | 110 +++++++++++++++++++
+ 5 files changed, 736 insertions(+), 38 deletions(-)
+
+commit cadb3ded14bedd1ab68968446ada0f40ad8263b3
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-17 20:24:07 +0700
+
+    docs(task2): phan loai de xuat toi uu co kiem chung A/B thuc nghiem
+    
+    Thiet ke: 40000 don nap san, 60 VU trong 60s, xen ke 3 luot A/B/A/B/A/B,
+    ep journal_mode va xac nhan lai truoc moi phep do.
+    
+    KET QUA
+    - Them index orders(user_id): +10.0 phan tram throughput, my-orders p95 giam 25.8 phan tram
+      -> KHA THI, va con 2 bang chung doc lap tu harness chinh (soak troi x1.89 vs cart x1.25;
+         calibration chenh 2.17 lan theo khoi luong du lieu)
+    - Bat SQLite WAL: +11.5 phan tram throughput, checkout p95 giam 27.8 phan tram
+      -> KHA THI. Dang chu y: WAL cai thien checkout nhieu hon my-orders, dung nhu du doan
+         ve co che vi checkout la endpoint ghi
+    - Tang UV_THREADPOOL_SIZE tu 4 len 16: chenh 0.7 phan tram, nam trong nhieu
+      -> KHONG CO TAC DUNG (lap luan dung nhung nham nut that)
+    - Connection pool cho SQLite: AO TUONG. SQLite la DB nhung, khong co server de pool
+      ket noi toi. Mo nhieu ket noi ghi chi lam tang tranh chap khoa va sinh SQLITE_BUSY
+    - Redis cache cho san pham: dung ky thuat nhung SAI UU TIEN. Endpoint san pham p95
+      13-14ms trong khi checkout 22ms; them tien trinh nua vao may co nut that la mot core
+    - Node cluster: KHA THI CO DIEU KIEN, phai chuyen userCarts ra khoi RAM tien trinh truoc
+    
+    BA SAI LAM VE PHUONG PHAP DA MAC VA SUA (ghi lai day du trong docs/06 muc 4.2)
+    1. Chay phan tich Python nang va git commit trong luc dang do -> cung cau hinh cho
+       300 rps va 375 rps o hai lan khac nhau
+    2. journal_mode=WAL BEN VUNG trong file DB, song sot qua DROP TABLE va qua restart,
+       nen moi lan baseline sau mot cau hinh WAL thuc chat van dang chay WAL. Phat hien
+       bang cach kiem tra file sidecar database.sqlite-wal. Day la loai loi lam phep so
+       sanh A/B vo nghia MA KHONG HE BAO LOI
+    3. JMeter ghi tiep vao file .jtl cu khi khong xoa duoc, tron du lieu hai lan chay
+       (file co timestamp trai 5.15 gio)
+    
+    DO TIN CAY: baseline lech chi 1.0 phan tram trong tung phien, va hai phien doc lap
+    cho baseline khop nhau trong 1 phan tram (286.4-289.3 so voi 286.2-289.7 req/s).
+    Muc cai thien do duoc lon hon nhieu nay khoang mot bac.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/06_ai_analysis_and_misinterpretation_hunt.md  |   156 +
+ results/experiments/exp_1_baseline.jmeter.log      |   199 +
+ results/experiments/exp_1_baseline.jtl             | 28826 +++++++++++++++++
+ results/experiments/exp_2_index.jmeter.log         |   207 +
+ results/experiments/exp_2_index.jtl                | 29751 +++++++++++++++++
+ results/experiments/exp_3_wal.jmeter.log           |   198 +
+ results/experiments/exp_3_wal.jtl                  | 28362 ++++++++++++++++
+ results/experiments/exp_4_both.jmeter.log          |   200 +
+ results/experiments/exp_4_both.jtl                 | 29512 +++++++++++++++++
+ results/experiments/exp_5_threadpool_16.jmeter.log |   190 +
+ results/experiments/exp_5_threadpool_16.jtl        | 32307 +++++++++++++++++++
+ results/experiments/exp_5_threadpool_4.jmeter.log  |   192 +
+ results/experiments/exp_5_threadpool_4.jtl         | 32100 ++++++++++++++++++
+ .../exp_6_baseline_lap1_200446.jmeter.log          |   203 +
+ results/experiments/exp_6_baseline_lap1_200446.jtl | 24531 ++++++++++++++
+ .../exp_6_baseline_lap2_200446.jmeter.log          |   205 +
+ results/experiments/exp_6_baseline_lap2_200446.jtl | 24764 ++++++++++++++
+ .../exp_6_baseline_lap3_200446.jmeter.log          |   205 +
+ results/experiments/exp_6_baseline_lap3_200446.jtl | 24786 ++++++++++++++
+ .../experiments/exp_6_wal_lap1_200446.jmeter.log   |   204 +
+ results/experiments/exp_6_wal_lap1_200446.jtl      | 27510 ++++++++++++++++
+ .../experiments/exp_6_wal_lap2_200446.jmeter.log   |   219 +
+ results/experiments/exp_6_wal_lap2_200446.jtl      | 26943 ++++++++++++++++
+ .../experiments/exp_6_wal_lap3_200446.jmeter.log   |   191 +
+ results/experiments/exp_6_wal_lap3_200446.jtl      | 28104 ++++++++++++++++
+ .../exp_7_baseline_lap1_201305.jmeter.log          |   220 +
+ results/experiments/exp_7_baseline_lap1_201305.jtl | 20086 ++++++++++++
+ .../exp_7_baseline_lap2_201305.jmeter.log          |   209 +
+ results/experiments/exp_7_baseline_lap2_201305.jtl | 24809 ++++++++++++++
+ .../exp_7_baseline_lap3_201305.jmeter.log          |   193 +
+ results/experiments/exp_7_baseline_lap3_201305.jtl | 24523 ++++++++++++++
+ .../experiments/exp_7_index_lap1_201305.jmeter.log |   212 +
+ results/experiments/exp_7_index_lap1_201305.jtl    | 30248 +++++++++++++++++
+ .../experiments/exp_7_index_lap2_201305.jmeter.log |   196 +
+ results/experiments/exp_7_index_lap2_201305.jtl    | 27440 ++++++++++++++++
+ .../experiments/exp_7_index_lap3_201305.jmeter.log |   193 +
+ results/experiments/exp_7_index_lap3_201305.jtl    | 26793 +++++++++++++++
+ scripts/db_tool.js                                 |    13 +-
+ scripts/experiment_index_repeat.ps1                |   100 +
+ scripts/experiment_threadpool.ps1                  |    78 +
+ scripts/experiment_wal_repeat.ps1                  |   102 +
+ 41 files changed, 495479 insertions(+), 1 deletion(-)
+
+commit 394e8cc7d984314d56dc456b02721efed9b8a834
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:54:57 +0700
+
+    docs: nguong chiu dung cua phan cung + AI Critique 300 tu
+    
+    docs/05 tach bach duoc hai co che suy giam bang cach so p95 dau va cuoi theo
+    tung endpoint:
+      my-orders  doc bang orders khong index  -> troi x1.89   nang nhat
+      cart       khong cham DB                -> troi x1.25   muc troi NEN
+      checkout   ghi dia                      -> troi x1.11   it nhat
+    Vi cart khong cham DB, x1.25 chinh la muc troi nen do event loop va GC. Phan
+    vuot len cua my-orders quy duoc ve khoi luong du lieu. Dieu nay cung bac bo gia
+    thuyet nut that la I O ghi dia, vi checkout lai troi it nhat.
+    
+    Nguong chot: tai on dinh 150 VU va 173 req moi giay; diem goi khoang 350 VU;
+    tran CPU 106 phan tram cua mot core; tran bo nho do duoc 130 MB; ro ri 1.76 MB
+    moi phut.
+    
+    Kem db_tool.js tach rieng thao tac SQLite, vi nhung JS vao chuoi node -e trong
+    PowerShell lien tuc vo cu phap.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .gitignore                           |   5 ++
+ docs/05_endurance_threshold.md       | 119 ++++++++++++++++++++++++++++++++++
+ docs/AI_CRITIQUE.md                  |  15 +++++
+ scripts/db_tool.js                   | 122 +++++++++++++++++++++++++++++++++++
+ scripts/experiment_optimizations.ps1 |  47 +++-----------
+ 5 files changed, 271 insertions(+), 37 deletions(-)
+
+commit bfb41915689d950dfb2b0019190c92b2254e7a5e
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:54:08 +0700
+
+    test(soak): ket qua soak 150 VU trong 15 phut + output probe loi
+    
+    153366 request HTTP, 0 loi, throughput giu nguyen 173.4 req/s suot 15 phut.
+    Nhung hai chi so troi deu trong khi tai HOAN TOAN co dinh:
+      - RSS 69.7 -> 130 MB. Doan sau khi tai da on dinh van tang 106.4 -> 129.3 MB,
+        tuc 1.76 MB moi phut = 1.05 KB moi vong lap. So handle dung yen o 359 nen
+        khong phai ro ri file descriptor, dung la ro ri heap tu userCarts.
+      - Do tre trung binh 4.5 -> 7.4 ms (tang 64 phan tram).
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .../content/css/dashboard.css                      |     48 +
+ .../content/css/jquery-ui.min.css                  |      7 +
+ .../content/css/jquery-ui.structure.min.css        |      5 +
+ .../content/css/jquery-ui.theme.min.css            |      5 +
+ .../23127195_Soak_20260816/content/css/legends.css |     61 +
+ .../content/css/theme.blue.css                     |    233 +
+ .../content/js/curvedLines.js                      |    483 +
+ .../content/js/customGraph.js                      |     50 +
+ .../content/js/dashboard-commons.js                |    462 +
+ .../23127195_Soak_20260816/content/js/dashboard.js |    235 +
+ .../23127195_Soak_20260816/content/js/graph.js     |   1416 +
+ .../23127195_Soak_20260816/content/js/hashtable.js |    402 +
+ .../content/js/jquery-ui.min.js                    |     13 +
+ .../content/js/jquery.cookie.js                    |    117 +
+ .../content/js/jquery.flot.stack.js                |     83 +
+ .../content/js/jquery.numberformatter-1.2.3.min.js |      1 +
+ .../content/js/jquery.tablesorter.min.js           |      2 +
+ .../content/pages/CustomsGraphs.html               |    176 +
+ .../content/pages/OverTime.html                    |    512 +
+ .../content/pages/ResponseTimes.html               |    373 +
+ .../content/pages/Throughput.html                  |    463 +
+ .../content/pages/icon-apache.png                  |    Bin 0 -> 4944 bytes
+ results/html/23127195_Soak_20260816/index.html     |    203 +
+ .../sbadmin2-1.0.7/README.md                       |     27 +
+ .../sbadmin2-1.0.7/bower.json                      |     39 +
+ .../bower_components/bootstrap/.bower.json         |     48 +
+ .../bower_components/bootstrap/README.md           |    134 +
+ .../bootstrap/dist/css/bootstrap.min.css           |      6 +
+ .../dist/fonts/glyphicons-halflings-regular.eot    |    Bin 0 -> 20127 bytes
+ .../dist/fonts/glyphicons-halflings-regular.svg    |    288 +
+ .../dist/fonts/glyphicons-halflings-regular.ttf    |    Bin 0 -> 45404 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff   |    Bin 0 -> 23424 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff2  |    Bin 0 -> 18028 bytes
+ .../bootstrap/dist/js/bootstrap.min.js             |      7 +
+ .../bower_components/flot-axislabels/.bower.json   |     14 +
+ .../bower_components/flot-axislabels/README.md     |    101 +
+ .../flot-axislabels/jquery.flot.axislabels.js      |    466 +
+ .../bower_components/flot.tooltip/.bower.json      |     24 +
+ .../bower_components/flot.tooltip/bower.json       |     13 +
+ .../flot.tooltip/js/excanvas.min.js                |      1 +
+ .../flot.tooltip/js/jquery.flot.js                 |   3168 +
+ .../flot.tooltip/js/jquery.flot.tooltip.js         |    490 +
+ .../flot.tooltip/js/jquery.flot.tooltip.min.js     |     12 +
+ .../flot.tooltip/js/jquery.flot.tooltip.source.js  |    479 +
+ .../bower_components/flot/.bower.json              |     19 +
+ .../bower_components/flot/.travis.yml              |      3 +
+ .../sbadmin2-1.0.7/bower_components/flot/API.md    |   1498 +
+ .../bower_components/flot/CONTRIBUTING.md          |     98 +
+ .../sbadmin2-1.0.7/bower_components/flot/FAQ.md    |     75 +
+ .../sbadmin2-1.0.7/bower_components/flot/Makefile  |     12 +
+ .../sbadmin2-1.0.7/bower_components/flot/NEWS.md   |   1026 +
+ .../bower_components/flot/PLUGINS.md               |    143 +
+ .../sbadmin2-1.0.7/bower_components/flot/README.md |    110 +
+ .../bower_components/flot/component.json           |      8 +
+ .../bower_components/flot/excanvas.js              |   1428 +
+ .../bower_components/flot/excanvas.min.js          |      1 +
+ .../bower_components/flot/flot.jquery.json         |     27 +
+ .../bower_components/flot/jquery.colorhelpers.js   |    180 +
+ .../bower_components/flot/jquery.flot.canvas.js    |    345 +
+ .../flot/jquery.flot.categories.js                 |    190 +
+ .../bower_components/flot/jquery.flot.crosshair.js |    176 +
+ .../bower_components/flot/jquery.flot.errorbars.js |    353 +
+ .../flot/jquery.flot.fillbetween.js                |    226 +
+ .../bower_components/flot/jquery.flot.image.js     |    241 +
+ .../bower_components/flot/jquery.flot.js           |   3168 +
+ .../bower_components/flot/jquery.flot.navigate.js  |    346 +
+ .../bower_components/flot/jquery.flot.pie.js       |    820 +
+ .../bower_components/flot/jquery.flot.resize.js    |     59 +
+ .../bower_components/flot/jquery.flot.selection.js |    360 +
+ .../bower_components/flot/jquery.flot.stack.js     |    188 +
+ .../bower_components/flot/jquery.flot.symbol.js    |     71 +
+ .../bower_components/flot/jquery.flot.threshold.js |    142 +
+ .../bower_components/flot/jquery.flot.time.js      |    432 +
+ .../bower_components/flot/package.json             |     11 +
+ .../bower_components/font-awesome/.bower.json      |     36 +
+ .../bower_components/font-awesome/.npmignore       |     42 +
+ .../bower_components/font-awesome/bower.json       |     23 +
+ .../font-awesome/css/font-awesome.css              |   1672 +
+ .../font-awesome/css/font-awesome.min.css          |      4 +
+ .../font-awesome/fonts/FontAwesome.otf             |    Bin 0 -> 85908 bytes
+ .../font-awesome/fonts/fontawesome-webfont.eot     |    Bin 0 -> 56006 bytes
+ .../font-awesome/fonts/fontawesome-webfont.svg     |    520 +
+ .../font-awesome/fonts/fontawesome-webfont.ttf     |    Bin 0 -> 112160 bytes
+ .../font-awesome/fonts/fontawesome-webfont.woff    |    Bin 0 -> 65452 bytes
+ .../font-awesome/less/bordered-pulled.less         |     16 +
+ .../bower_components/font-awesome/less/core.less   |     11 +
+ .../bower_components/font-awesome/less/extras.less |      2 +
+ .../font-awesome/less/fixed-width.less             |      6 +
+ .../font-awesome/less/font-awesome.less            |     17 +
+ .../bower_components/font-awesome/less/icons.less  |    552 +
+ .../bower_components/font-awesome/less/larger.less |     13 +
+ .../bower_components/font-awesome/less/list.less   |     19 +
+ .../bower_components/font-awesome/less/mixins.less |     25 +
+ .../bower_components/font-awesome/less/path.less   |     14 +
+ .../font-awesome/less/rotated-flipped.less         |     20 +
+ .../font-awesome/less/spinning.less                |     29 +
+ .../font-awesome/less/stacked.less                 |     20 +
+ .../font-awesome/less/variables.less               |    561 +
+ .../font-awesome/scss/_bordered-pulled.scss        |     16 +
+ .../bower_components/font-awesome/scss/_core.scss  |     11 +
+ .../font-awesome/scss/_extras.scss                 |     44 +
+ .../font-awesome/scss/_fixed-width.scss            |      6 +
+ .../bower_components/font-awesome/scss/_icons.scss |    552 +
+ .../font-awesome/scss/_larger.scss                 |     13 +
+ .../bower_components/font-awesome/scss/_list.scss  |     19 +
+ .../font-awesome/scss/_mixins.scss                 |     25 +
+ .../bower_components/font-awesome/scss/_path.scss  |     14 +
+ .../font-awesome/scss/_rotated-flipped.scss        |     20 +
+ .../font-awesome/scss/_spinning.scss               |     29 +
+ .../font-awesome/scss/_stacked.scss                |     20 +
+ .../font-awesome/scss/_variables.scss              |    561 +
+ .../font-awesome/scss/font-awesome.scss            |     17 +
+ .../bower_components/jquery/.bower.json            |     37 +
+ .../bower_components/jquery/bower.json             |     27 +
+ .../bower_components/jquery/dist/jquery.js         |  10364 +
+ .../bower_components/jquery/dist/jquery.min.js     |      2 +
+ .../bower_components/jquery/dist/jquery.min.map    |      1 +
+ .../bower_components/metisMenu/.bower.json         |     45 +
+ .../bower_components/metisMenu/README.md           |    113 +
+ .../metisMenu/dist/metisMenu.min.css               |     10 +
+ .../metisMenu/dist/metisMenu.min.js                |      9 +
+ .../sbadmin2-1.0.7/dist/css/sb-admin-2.css         |    431 +
+ .../sbadmin2-1.0.7/dist/js/sb-admin-2.js           |     36 +
+ .../sbadmin2-1.0.7/less/mixins.less                |      1 +
+ .../sbadmin2-1.0.7/less/sb-admin-2.less            |    366 +
+ .../sbadmin2-1.0.7/less/variables.less             |     14 +
+ .../html/23127195_Soak_20260816/statistics.json    |    178 +
+ results/jtl/23127195_Soak_20260816.jmeter.log      |    494 +
+ results/jtl/23127195_Soak_20260816.jtl             | 219218 ++++++++++++++++++
+ results/jtl/23127195_Soak_20260816_stats.json      |    254 +
+ .../monitor/23127195_Soak_20260816_resources.csv   |    163 +
+ .../monitor/23127195_Soak_20260816_run_summary.txt |     30 +
+ results/monitor/bug_probe_output.txt               |     49 +
+ 133 files changed, 259214 insertions(+)
+
+commit a2c46f103e0f6bae0bcefedf419a08e02db1d77d
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:47:13 +0700
+
+    docs(task2): san loi dien giai - 6 cho AI doc sai chi so, kem lenh kiem chung
+    
+    Pha 1 chi dua cho AI so lieu tom tat (o Total, dong summary console, run_summary).
+    Pha 2 mo file .jtl tho ra kiem lai tung khang dinh. Ket qua: 5 trong 6 nhan dinh
+    dau tien cua AI sai hoac gay hieu lam.
+    
+    M1 p95=641ms  -> that ra 442ms (o Total dung cua so truot 20000 mau)
+    M2 CPU 5.3 phan tram -> khong phai la rong, ma la 106 phan tram cua mot core,
+       CPU CHINH LA nut that. Bang chung cung co: POST /api/cart khong cham DB
+       nhung p95 van 194ms, tuc do tre den tu xep hang event loop chu khong phai I/O
+    M3 0 phan tram loi -> khong dong nghia chiu duoc 500 VU: p95 xau di 49 lan,
+       diem goi that nam o khoang 350 VU
+    M4 ro ri bo nho nghiem trong -> co ro ri that nhung suy ra tu kich ban tai bien thien
+    M5 tran throughput 302 req/s -> that ra 211-621 req/s tuy khoi luong du lieu
+    M6 bay chua bung: dem dong file .jtl tho ra 155696 thay vi 108740 request that
+    
+    Moi muc deu kem lenh chay duoc de nguoi cham tu kiem tra tren log da commit.
+    Kem probe_bugs.ps1 de kiem chung cac loi chuc nang truoc khi bao cao.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/06_ai_analysis_and_misinterpretation_hunt.md | 217 ++++++++++++++++++++++
+ scripts/probe_bugs.ps1                            | 134 +++++++++++++
+ 2 files changed, 351 insertions(+)
+
+commit 909099be3fe0fd31e34d231e63c86a15e7182742
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:43:19 +0700
+
+    docs(audit): AI Audit Report day du 14 buoc prompt + script thuc nghiem toi uu
+    
+    - Ghi nguyen van P0 tu sinh vien va P1-P14 cac buoc trien khai, kem dau ra thuc te
+      va con so do duoc cua tung buoc
+    - Noi thang gioi han phuong phap: phan tich va phe binh phan tich cung mot phien,
+      cung mot model, nen khong phai hai nguon doc lap. Gia tri nam o cho moi loi neu ra
+      deu kem lenh kiem chung chay duoc tren file .jtl tho
+    - P11 ghi lai phat hien: o Total cua HTML report dung cua so truot 20000 mau gan nhat,
+      nen bao p95=641ms trong khi p95 that tren toan bo 108740 mau la 442ms
+    - experiment_optimizations.ps1: do A/B 4 cau hinh (baseline / index / WAL / ca hai)
+      tren cung 40000 don nap san, de phan loai de xuat toi uu bang so lieu chu khong tren giay
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/AI_AUDIT_REPORT.md              | 354 +++++++++++++++++++++++++++++++++++
+ scripts/experiment_optimizations.ps1 | 141 ++++++++++++++
+ 2 files changed, 495 insertions(+)
+
+commit b1687076b47b8675ee724996ae6ec8065a3a71aa
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:38:58 +0700
+
+    docs: bang chung thuc thi, kich ban quay video, sua lai Loi 6 cho chinh xac
+    
+    - docs/04: cau hinh phan cung DESKTOP-96ARBFL, quy trinh 8 buoc moi lan chay,
+      cach xu ly lockout va vi sao phai ghi thang SQLite (khong co duong HTTP nao go khoa)
+    - docs/09: kich ban thuyet minh chi tiet cho video demo 8-9 phut
+    - evidence/README: huong dan chup anh dung yeu cau tool va resource monitor cung khung hinh
+    - SUA docs/03 Loi 6: khang dinh cu rang summariser cua JMeter thoi phong throughput
+      43 phan tram la SAI. Da kiem chung: console va HTML report deu bao 108740, dung bang
+      so request HTTP that. Chi file .jtl tho moi chua them 46956 ban ghi Transaction
+      Controller. Bay chi bung ra khi tu phan tich file tho, dung tinh huong cua Task 2.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/03_human_review_and_fixes.md |  20 +++--
+ docs/04_execution_evidence.md     | 165 ++++++++++++++++++++++++++++++++++++++
+ docs/09_demo_video_script.md      | 145 +++++++++++++++++++++++++++++++++
+ evidence/README.md                |  70 ++++++++++++++++
+ 4 files changed, 395 insertions(+), 5 deletions(-)
+
+commit b8ede224cbff60c3fabab45883aad03b0ed5e0c0
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:35:00 +0700
+
+    test(spike): ket qua chay Spike - do duoc thoi gian hoi phuc 10-15 giay
+    
+    43363 request HTTP, 0 loi. Ba pha tach bach ro rang trong cung mot lan chay:
+      pha on dinh   (t=0-90s)   :  46 req/s, avg  3.6ms, p95   9ms, 40 VU
+      pha soc       (t=90-150s) : 621 req/s, avg  311ms, p95 604ms, 340 VU
+      pha hoi phuc  (t=150-155s): avg 8.0ms  p95 23ms
+                    (t=160-165s): avg 3.6ms  p95  9ms  <-- ve dung baseline
+    Thoi gian hoi phuc: 10-15 giay sau khi bo tai soc. Chi do duoc nho thiet ke
+    hai Thread Group chong nhau, tai nen chay tiep sau khi cu soc ket thuc.
+    Backend CPU dinh 5.7 phan tram = 114 phan tram cua mot core. RSS 70.1 -> 146 MB.
+    
+    Luu y de doi chieu: throughput luc soc (621 req/s) CAO HON luc Stress (458 req/s)
+    vi bang orders luc do moi co ~600 ban ghi, trong khi cuoi ban Stress da hon 13000.
+    Tran thong luong phu thuoc khoi luong du lieu, khong phai mot hang so.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .../content/css/dashboard.css                      |    48 +
+ .../content/css/jquery-ui.min.css                  |     7 +
+ .../content/css/jquery-ui.structure.min.css        |     5 +
+ .../content/css/jquery-ui.theme.min.css            |     5 +
+ .../content/css/legends.css                        |    61 +
+ .../content/css/theme.blue.css                     |   233 +
+ .../content/js/curvedLines.js                      |   483 +
+ .../content/js/customGraph.js                      |    50 +
+ .../content/js/dashboard-commons.js                |   462 +
+ .../content/js/dashboard.js                        |   235 +
+ .../23127195_Spike_20260816/content/js/graph.js    |  1416 +
+ .../content/js/hashtable.js                        |   402 +
+ .../content/js/jquery-ui.min.js                    |    13 +
+ .../content/js/jquery.cookie.js                    |   117 +
+ .../content/js/jquery.flot.stack.js                |    83 +
+ .../content/js/jquery.numberformatter-1.2.3.min.js |     1 +
+ .../content/js/jquery.tablesorter.min.js           |     2 +
+ .../content/pages/CustomsGraphs.html               |   176 +
+ .../content/pages/OverTime.html                    |   512 +
+ .../content/pages/ResponseTimes.html               |   373 +
+ .../content/pages/Throughput.html                  |   463 +
+ .../content/pages/icon-apache.png                  |   Bin 0 -> 4944 bytes
+ results/html/23127195_Spike_20260816/index.html    |   203 +
+ .../sbadmin2-1.0.7/README.md                       |    27 +
+ .../sbadmin2-1.0.7/bower.json                      |    39 +
+ .../bower_components/bootstrap/.bower.json         |    48 +
+ .../bower_components/bootstrap/README.md           |   134 +
+ .../bootstrap/dist/css/bootstrap.min.css           |     6 +
+ .../dist/fonts/glyphicons-halflings-regular.eot    |   Bin 0 -> 20127 bytes
+ .../dist/fonts/glyphicons-halflings-regular.svg    |   288 +
+ .../dist/fonts/glyphicons-halflings-regular.ttf    |   Bin 0 -> 45404 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff   |   Bin 0 -> 23424 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff2  |   Bin 0 -> 18028 bytes
+ .../bootstrap/dist/js/bootstrap.min.js             |     7 +
+ .../bower_components/flot-axislabels/.bower.json   |    14 +
+ .../bower_components/flot-axislabels/README.md     |   101 +
+ .../flot-axislabels/jquery.flot.axislabels.js      |   466 +
+ .../bower_components/flot.tooltip/.bower.json      |    24 +
+ .../bower_components/flot.tooltip/bower.json       |    13 +
+ .../flot.tooltip/js/excanvas.min.js                |     1 +
+ .../flot.tooltip/js/jquery.flot.js                 |  3168 +
+ .../flot.tooltip/js/jquery.flot.tooltip.js         |   490 +
+ .../flot.tooltip/js/jquery.flot.tooltip.min.js     |    12 +
+ .../flot.tooltip/js/jquery.flot.tooltip.source.js  |   479 +
+ .../bower_components/flot/.bower.json              |    19 +
+ .../bower_components/flot/.travis.yml              |     3 +
+ .../sbadmin2-1.0.7/bower_components/flot/API.md    |  1498 +
+ .../bower_components/flot/CONTRIBUTING.md          |    98 +
+ .../sbadmin2-1.0.7/bower_components/flot/FAQ.md    |    75 +
+ .../sbadmin2-1.0.7/bower_components/flot/Makefile  |    12 +
+ .../sbadmin2-1.0.7/bower_components/flot/NEWS.md   |  1026 +
+ .../bower_components/flot/PLUGINS.md               |   143 +
+ .../sbadmin2-1.0.7/bower_components/flot/README.md |   110 +
+ .../bower_components/flot/component.json           |     8 +
+ .../bower_components/flot/excanvas.js              |  1428 +
+ .../bower_components/flot/excanvas.min.js          |     1 +
+ .../bower_components/flot/flot.jquery.json         |    27 +
+ .../bower_components/flot/jquery.colorhelpers.js   |   180 +
+ .../bower_components/flot/jquery.flot.canvas.js    |   345 +
+ .../flot/jquery.flot.categories.js                 |   190 +
+ .../bower_components/flot/jquery.flot.crosshair.js |   176 +
+ .../bower_components/flot/jquery.flot.errorbars.js |   353 +
+ .../flot/jquery.flot.fillbetween.js                |   226 +
+ .../bower_components/flot/jquery.flot.image.js     |   241 +
+ .../bower_components/flot/jquery.flot.js           |  3168 +
+ .../bower_components/flot/jquery.flot.navigate.js  |   346 +
+ .../bower_components/flot/jquery.flot.pie.js       |   820 +
+ .../bower_components/flot/jquery.flot.resize.js    |    59 +
+ .../bower_components/flot/jquery.flot.selection.js |   360 +
+ .../bower_components/flot/jquery.flot.stack.js     |   188 +
+ .../bower_components/flot/jquery.flot.symbol.js    |    71 +
+ .../bower_components/flot/jquery.flot.threshold.js |   142 +
+ .../bower_components/flot/jquery.flot.time.js      |   432 +
+ .../bower_components/flot/package.json             |    11 +
+ .../bower_components/font-awesome/.bower.json      |    36 +
+ .../bower_components/font-awesome/.npmignore       |    42 +
+ .../bower_components/font-awesome/bower.json       |    23 +
+ .../font-awesome/css/font-awesome.css              |  1672 +
+ .../font-awesome/css/font-awesome.min.css          |     4 +
+ .../font-awesome/fonts/FontAwesome.otf             |   Bin 0 -> 85908 bytes
+ .../font-awesome/fonts/fontawesome-webfont.eot     |   Bin 0 -> 56006 bytes
+ .../font-awesome/fonts/fontawesome-webfont.svg     |   520 +
+ .../font-awesome/fonts/fontawesome-webfont.ttf     |   Bin 0 -> 112160 bytes
+ .../font-awesome/fonts/fontawesome-webfont.woff    |   Bin 0 -> 65452 bytes
+ .../font-awesome/less/bordered-pulled.less         |    16 +
+ .../bower_components/font-awesome/less/core.less   |    11 +
+ .../bower_components/font-awesome/less/extras.less |     2 +
+ .../font-awesome/less/fixed-width.less             |     6 +
+ .../font-awesome/less/font-awesome.less            |    17 +
+ .../bower_components/font-awesome/less/icons.less  |   552 +
+ .../bower_components/font-awesome/less/larger.less |    13 +
+ .../bower_components/font-awesome/less/list.less   |    19 +
+ .../bower_components/font-awesome/less/mixins.less |    25 +
+ .../bower_components/font-awesome/less/path.less   |    14 +
+ .../font-awesome/less/rotated-flipped.less         |    20 +
+ .../font-awesome/less/spinning.less                |    29 +
+ .../font-awesome/less/stacked.less                 |    20 +
+ .../font-awesome/less/variables.less               |   561 +
+ .../font-awesome/scss/_bordered-pulled.scss        |    16 +
+ .../bower_components/font-awesome/scss/_core.scss  |    11 +
+ .../font-awesome/scss/_extras.scss                 |    44 +
+ .../font-awesome/scss/_fixed-width.scss            |     6 +
+ .../bower_components/font-awesome/scss/_icons.scss |   552 +
+ .../font-awesome/scss/_larger.scss                 |    13 +
+ .../bower_components/font-awesome/scss/_list.scss  |    19 +
+ .../font-awesome/scss/_mixins.scss                 |    25 +
+ .../bower_components/font-awesome/scss/_path.scss  |    14 +
+ .../font-awesome/scss/_rotated-flipped.scss        |    20 +
+ .../font-awesome/scss/_spinning.scss               |    29 +
+ .../font-awesome/scss/_stacked.scss                |    20 +
+ .../font-awesome/scss/_variables.scss              |   561 +
+ .../font-awesome/scss/font-awesome.scss            |    17 +
+ .../bower_components/jquery/.bower.json            |    37 +
+ .../bower_components/jquery/bower.json             |    27 +
+ .../bower_components/jquery/dist/jquery.js         | 10364 ++++
+ .../bower_components/jquery/dist/jquery.min.js     |     2 +
+ .../bower_components/jquery/dist/jquery.min.map    |     1 +
+ .../bower_components/metisMenu/.bower.json         |    45 +
+ .../bower_components/metisMenu/README.md           |   113 +
+ .../metisMenu/dist/metisMenu.min.css               |    10 +
+ .../metisMenu/dist/metisMenu.min.js                |     9 +
+ .../sbadmin2-1.0.7/dist/css/sb-admin-2.css         |   431 +
+ .../sbadmin2-1.0.7/dist/js/sb-admin-2.js           |    36 +
+ .../sbadmin2-1.0.7/less/mixins.less                |     1 +
+ .../sbadmin2-1.0.7/less/sb-admin-2.less            |   366 +
+ .../sbadmin2-1.0.7/less/variables.less             |    14 +
+ .../html/23127195_Spike_20260816/statistics.json   |   178 +
+ results/jtl/23127195_Spike_20260816.jmeter.log     |  1006 +
+ results/jtl/23127195_Spike_20260816.jtl            | 62098 +++++++++++++++++++
+ results/jtl/23127195_Spike_20260816_stats.json     |   334 +
+ .../monitor/23127195_Spike_20260816_resources.csv  |    52 +
+ .../23127195_Spike_20260816_run_summary.txt        |    30 +
+ 132 files changed, 102526 insertions(+)
+
+commit 424b3b64da1b0bbbac8613fab3056c311bdbe47d
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:34:43 +0700
+
+    test(stress): ket qua chay Stress ramp len 500 VU - tim duoc diem goi
+    
+    108740 request HTTP trong 360s, 0 loi ngay ca o 500 VU. He thong suy giam co
+    kiem soat chu khong sap.
+    Duong cong theo do dong thoi (gom tu cot allThreads cua log tho):
+      300-349 VU : avg  17.9ms  p95   55ms
+      350-399 VU : avg  48.3ms  p95  147ms   <-- diem goi
+      400-449 VU : avg 104.5ms  p95  276ms
+      450-499 VU : avg 157.0ms  p95  443ms
+    Throughput bao hoa quanh 458 req/s = 65 vong lap/s, khop dung du doan calibration.
+    Backend CPU dinh 5.3 phan tram tren 20 luong = 106 phan tram cua mot core,
+    xac nhan tran den tu mo hinh don luong cua Node.
+    JMeter chi dung 0.8 phan tram CPU -> client khong phai nut that co chai.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .../content/css/dashboard.css                      |     48 +
+ .../content/css/jquery-ui.min.css                  |      7 +
+ .../content/css/jquery-ui.structure.min.css        |      5 +
+ .../content/css/jquery-ui.theme.min.css            |      5 +
+ .../content/css/legends.css                        |     61 +
+ .../content/css/theme.blue.css                     |    233 +
+ .../content/js/curvedLines.js                      |    483 +
+ .../content/js/customGraph.js                      |     50 +
+ .../content/js/dashboard-commons.js                |    462 +
+ .../content/js/dashboard.js                        |    235 +
+ .../23127195_Stress_20260816/content/js/graph.js   |   1416 +
+ .../content/js/hashtable.js                        |    402 +
+ .../content/js/jquery-ui.min.js                    |     13 +
+ .../content/js/jquery.cookie.js                    |    117 +
+ .../content/js/jquery.flot.stack.js                |     83 +
+ .../content/js/jquery.numberformatter-1.2.3.min.js |      1 +
+ .../content/js/jquery.tablesorter.min.js           |      2 +
+ .../content/pages/CustomsGraphs.html               |    176 +
+ .../content/pages/OverTime.html                    |    512 +
+ .../content/pages/ResponseTimes.html               |    373 +
+ .../content/pages/Throughput.html                  |    463 +
+ .../content/pages/icon-apache.png                  |    Bin 0 -> 4944 bytes
+ results/html/23127195_Stress_20260816/index.html   |    203 +
+ .../sbadmin2-1.0.7/README.md                       |     27 +
+ .../sbadmin2-1.0.7/bower.json                      |     39 +
+ .../bower_components/bootstrap/.bower.json         |     48 +
+ .../bower_components/bootstrap/README.md           |    134 +
+ .../bootstrap/dist/css/bootstrap.min.css           |      6 +
+ .../dist/fonts/glyphicons-halflings-regular.eot    |    Bin 0 -> 20127 bytes
+ .../dist/fonts/glyphicons-halflings-regular.svg    |    288 +
+ .../dist/fonts/glyphicons-halflings-regular.ttf    |    Bin 0 -> 45404 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff   |    Bin 0 -> 23424 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff2  |    Bin 0 -> 18028 bytes
+ .../bootstrap/dist/js/bootstrap.min.js             |      7 +
+ .../bower_components/flot-axislabels/.bower.json   |     14 +
+ .../bower_components/flot-axislabels/README.md     |    101 +
+ .../flot-axislabels/jquery.flot.axislabels.js      |    466 +
+ .../bower_components/flot.tooltip/.bower.json      |     24 +
+ .../bower_components/flot.tooltip/bower.json       |     13 +
+ .../flot.tooltip/js/excanvas.min.js                |      1 +
+ .../flot.tooltip/js/jquery.flot.js                 |   3168 +
+ .../flot.tooltip/js/jquery.flot.tooltip.js         |    490 +
+ .../flot.tooltip/js/jquery.flot.tooltip.min.js     |     12 +
+ .../flot.tooltip/js/jquery.flot.tooltip.source.js  |    479 +
+ .../bower_components/flot/.bower.json              |     19 +
+ .../bower_components/flot/.travis.yml              |      3 +
+ .../sbadmin2-1.0.7/bower_components/flot/API.md    |   1498 +
+ .../bower_components/flot/CONTRIBUTING.md          |     98 +
+ .../sbadmin2-1.0.7/bower_components/flot/FAQ.md    |     75 +
+ .../sbadmin2-1.0.7/bower_components/flot/Makefile  |     12 +
+ .../sbadmin2-1.0.7/bower_components/flot/NEWS.md   |   1026 +
+ .../bower_components/flot/PLUGINS.md               |    143 +
+ .../sbadmin2-1.0.7/bower_components/flot/README.md |    110 +
+ .../bower_components/flot/component.json           |      8 +
+ .../bower_components/flot/excanvas.js              |   1428 +
+ .../bower_components/flot/excanvas.min.js          |      1 +
+ .../bower_components/flot/flot.jquery.json         |     27 +
+ .../bower_components/flot/jquery.colorhelpers.js   |    180 +
+ .../bower_components/flot/jquery.flot.canvas.js    |    345 +
+ .../flot/jquery.flot.categories.js                 |    190 +
+ .../bower_components/flot/jquery.flot.crosshair.js |    176 +
+ .../bower_components/flot/jquery.flot.errorbars.js |    353 +
+ .../flot/jquery.flot.fillbetween.js                |    226 +
+ .../bower_components/flot/jquery.flot.image.js     |    241 +
+ .../bower_components/flot/jquery.flot.js           |   3168 +
+ .../bower_components/flot/jquery.flot.navigate.js  |    346 +
+ .../bower_components/flot/jquery.flot.pie.js       |    820 +
+ .../bower_components/flot/jquery.flot.resize.js    |     59 +
+ .../bower_components/flot/jquery.flot.selection.js |    360 +
+ .../bower_components/flot/jquery.flot.stack.js     |    188 +
+ .../bower_components/flot/jquery.flot.symbol.js    |     71 +
+ .../bower_components/flot/jquery.flot.threshold.js |    142 +
+ .../bower_components/flot/jquery.flot.time.js      |    432 +
+ .../bower_components/flot/package.json             |     11 +
+ .../bower_components/font-awesome/.bower.json      |     36 +
+ .../bower_components/font-awesome/.npmignore       |     42 +
+ .../bower_components/font-awesome/bower.json       |     23 +
+ .../font-awesome/css/font-awesome.css              |   1672 +
+ .../font-awesome/css/font-awesome.min.css          |      4 +
+ .../font-awesome/fonts/FontAwesome.otf             |    Bin 0 -> 85908 bytes
+ .../font-awesome/fonts/fontawesome-webfont.eot     |    Bin 0 -> 56006 bytes
+ .../font-awesome/fonts/fontawesome-webfont.svg     |    520 +
+ .../font-awesome/fonts/fontawesome-webfont.ttf     |    Bin 0 -> 112160 bytes
+ .../font-awesome/fonts/fontawesome-webfont.woff    |    Bin 0 -> 65452 bytes
+ .../font-awesome/less/bordered-pulled.less         |     16 +
+ .../bower_components/font-awesome/less/core.less   |     11 +
+ .../bower_components/font-awesome/less/extras.less |      2 +
+ .../font-awesome/less/fixed-width.less             |      6 +
+ .../font-awesome/less/font-awesome.less            |     17 +
+ .../bower_components/font-awesome/less/icons.less  |    552 +
+ .../bower_components/font-awesome/less/larger.less |     13 +
+ .../bower_components/font-awesome/less/list.less   |     19 +
+ .../bower_components/font-awesome/less/mixins.less |     25 +
+ .../bower_components/font-awesome/less/path.less   |     14 +
+ .../font-awesome/less/rotated-flipped.less         |     20 +
+ .../font-awesome/less/spinning.less                |     29 +
+ .../font-awesome/less/stacked.less                 |     20 +
+ .../font-awesome/less/variables.less               |    561 +
+ .../font-awesome/scss/_bordered-pulled.scss        |     16 +
+ .../bower_components/font-awesome/scss/_core.scss  |     11 +
+ .../font-awesome/scss/_extras.scss                 |     44 +
+ .../font-awesome/scss/_fixed-width.scss            |      6 +
+ .../bower_components/font-awesome/scss/_icons.scss |    552 +
+ .../font-awesome/scss/_larger.scss                 |     13 +
+ .../bower_components/font-awesome/scss/_list.scss  |     19 +
+ .../font-awesome/scss/_mixins.scss                 |     25 +
+ .../bower_components/font-awesome/scss/_path.scss  |     14 +
+ .../font-awesome/scss/_rotated-flipped.scss        |     20 +
+ .../font-awesome/scss/_spinning.scss               |     29 +
+ .../font-awesome/scss/_stacked.scss                |     20 +
+ .../font-awesome/scss/_variables.scss              |    561 +
+ .../font-awesome/scss/font-awesome.scss            |     17 +
+ .../bower_components/jquery/.bower.json            |     37 +
+ .../bower_components/jquery/bower.json             |     27 +
+ .../bower_components/jquery/dist/jquery.js         |  10364 ++
+ .../bower_components/jquery/dist/jquery.min.js     |      2 +
+ .../bower_components/jquery/dist/jquery.min.map    |      1 +
+ .../bower_components/metisMenu/.bower.json         |     45 +
+ .../bower_components/metisMenu/README.md           |    113 +
+ .../metisMenu/dist/metisMenu.min.css               |     10 +
+ .../metisMenu/dist/metisMenu.min.js                |      9 +
+ .../sbadmin2-1.0.7/dist/css/sb-admin-2.css         |    431 +
+ .../sbadmin2-1.0.7/dist/js/sb-admin-2.js           |     36 +
+ .../sbadmin2-1.0.7/less/mixins.less                |      1 +
+ .../sbadmin2-1.0.7/less/sb-admin-2.less            |    366 +
+ .../sbadmin2-1.0.7/less/variables.less             |     14 +
+ .../html/23127195_Stress_20260816/statistics.json  |    178 +
+ results/jtl/23127195_Stress_20260816.jmeter.log    |   1243 +
+ results/jtl/23127195_Stress_20260816.jtl           | 155697 ++++++++++++++++++
+ results/jtl/23127195_Stress_20260816_stats.json    |    346 +
+ .../monitor/23127195_Stress_20260816_resources.csv |     59 +
+ .../23127195_Stress_20260816_run_summary.txt       |     30 +
+ 132 files changed, 196381 insertions(+)
+
+commit 435757fe371747ae9a62cf2c5378979904bcfefa
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:29:22 +0700
+
+    chore: khong bo qua results/jtl/*.jmeter.log
+    
+    De bai yeu cau nop log tho day du. .gitignore cu dung mau *.log nen da loai nham
+    ca log cua JMeter trong results/. Thu hep lai chi bo qua /jmeter.log o thu muc goc
+    (file tam sinh ra khi mo JMeter bang GUI).
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .gitignore                                    |   6 +-
+ results/jtl/23127195_Load_20260816.jmeter.log | 273 ++++++++++++++++++++++++++
+ 2 files changed, 277 insertions(+), 2 deletions(-)
+
+commit 3198b922bb3a4ce7681a07382f7617322ce9d53e
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:28:56 +0700
+
+    test(load): ket qua chay Load 60 VU - log tho, HTML report, giam sat tai nguyen
+    
+    18749 request HTTP trong 300s, 0 loi, p95 = 9ms, throughput on dinh 69.6 req/s.
+    Backend RSS 69.7 -> 106 MB, CPU dinh 1.2 phan tram tren 20 luong logic.
+    DB bat dau tu 0 don, ket thuc 2663 don.
+    Duong co so khoe manh de doi chieu voi Stress va Spike.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .../content/css/dashboard.css                      |    48 +
+ .../content/css/jquery-ui.min.css                  |     7 +
+ .../content/css/jquery-ui.structure.min.css        |     5 +
+ .../content/css/jquery-ui.theme.min.css            |     5 +
+ .../23127195_Load_20260816/content/css/legends.css |    61 +
+ .../content/css/theme.blue.css                     |   233 +
+ .../content/js/curvedLines.js                      |   483 +
+ .../content/js/customGraph.js                      |    50 +
+ .../content/js/dashboard-commons.js                |   462 +
+ .../23127195_Load_20260816/content/js/dashboard.js |   235 +
+ .../23127195_Load_20260816/content/js/graph.js     |  1416 +
+ .../23127195_Load_20260816/content/js/hashtable.js |   402 +
+ .../content/js/jquery-ui.min.js                    |    13 +
+ .../content/js/jquery.cookie.js                    |   117 +
+ .../content/js/jquery.flot.stack.js                |    83 +
+ .../content/js/jquery.numberformatter-1.2.3.min.js |     1 +
+ .../content/js/jquery.tablesorter.min.js           |     2 +
+ .../content/pages/CustomsGraphs.html               |   176 +
+ .../content/pages/OverTime.html                    |   512 +
+ .../content/pages/ResponseTimes.html               |   373 +
+ .../content/pages/Throughput.html                  |   463 +
+ .../content/pages/icon-apache.png                  |   Bin 0 -> 4944 bytes
+ results/html/23127195_Load_20260816/index.html     |   203 +
+ .../sbadmin2-1.0.7/README.md                       |    27 +
+ .../sbadmin2-1.0.7/bower.json                      |    39 +
+ .../bower_components/bootstrap/.bower.json         |    48 +
+ .../bower_components/bootstrap/README.md           |   134 +
+ .../bootstrap/dist/css/bootstrap.min.css           |     6 +
+ .../dist/fonts/glyphicons-halflings-regular.eot    |   Bin 0 -> 20127 bytes
+ .../dist/fonts/glyphicons-halflings-regular.svg    |   288 +
+ .../dist/fonts/glyphicons-halflings-regular.ttf    |   Bin 0 -> 45404 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff   |   Bin 0 -> 23424 bytes
+ .../dist/fonts/glyphicons-halflings-regular.woff2  |   Bin 0 -> 18028 bytes
+ .../bootstrap/dist/js/bootstrap.min.js             |     7 +
+ .../bower_components/flot-axislabels/.bower.json   |    14 +
+ .../bower_components/flot-axislabels/README.md     |   101 +
+ .../flot-axislabels/jquery.flot.axislabels.js      |   466 +
+ .../bower_components/flot.tooltip/.bower.json      |    24 +
+ .../bower_components/flot.tooltip/bower.json       |    13 +
+ .../flot.tooltip/js/excanvas.min.js                |     1 +
+ .../flot.tooltip/js/jquery.flot.js                 |  3168 +++
+ .../flot.tooltip/js/jquery.flot.tooltip.js         |   490 +
+ .../flot.tooltip/js/jquery.flot.tooltip.min.js     |    12 +
+ .../flot.tooltip/js/jquery.flot.tooltip.source.js  |   479 +
+ .../bower_components/flot/.bower.json              |    19 +
+ .../bower_components/flot/.travis.yml              |     3 +
+ .../sbadmin2-1.0.7/bower_components/flot/API.md    |  1498 ++
+ .../bower_components/flot/CONTRIBUTING.md          |    98 +
+ .../sbadmin2-1.0.7/bower_components/flot/FAQ.md    |    75 +
+ .../sbadmin2-1.0.7/bower_components/flot/Makefile  |    12 +
+ .../sbadmin2-1.0.7/bower_components/flot/NEWS.md   |  1026 +
+ .../bower_components/flot/PLUGINS.md               |   143 +
+ .../sbadmin2-1.0.7/bower_components/flot/README.md |   110 +
+ .../bower_components/flot/component.json           |     8 +
+ .../bower_components/flot/excanvas.js              |  1428 +
+ .../bower_components/flot/excanvas.min.js          |     1 +
+ .../bower_components/flot/flot.jquery.json         |    27 +
+ .../bower_components/flot/jquery.colorhelpers.js   |   180 +
+ .../bower_components/flot/jquery.flot.canvas.js    |   345 +
+ .../flot/jquery.flot.categories.js                 |   190 +
+ .../bower_components/flot/jquery.flot.crosshair.js |   176 +
+ .../bower_components/flot/jquery.flot.errorbars.js |   353 +
+ .../flot/jquery.flot.fillbetween.js                |   226 +
+ .../bower_components/flot/jquery.flot.image.js     |   241 +
+ .../bower_components/flot/jquery.flot.js           |  3168 +++
+ .../bower_components/flot/jquery.flot.navigate.js  |   346 +
+ .../bower_components/flot/jquery.flot.pie.js       |   820 +
+ .../bower_components/flot/jquery.flot.resize.js    |    59 +
+ .../bower_components/flot/jquery.flot.selection.js |   360 +
+ .../bower_components/flot/jquery.flot.stack.js     |   188 +
+ .../bower_components/flot/jquery.flot.symbol.js    |    71 +
+ .../bower_components/flot/jquery.flot.threshold.js |   142 +
+ .../bower_components/flot/jquery.flot.time.js      |   432 +
+ .../bower_components/flot/package.json             |    11 +
+ .../bower_components/font-awesome/.bower.json      |    36 +
+ .../bower_components/font-awesome/.npmignore       |    42 +
+ .../bower_components/font-awesome/bower.json       |    23 +
+ .../font-awesome/css/font-awesome.css              |  1672 ++
+ .../font-awesome/css/font-awesome.min.css          |     4 +
+ .../font-awesome/fonts/FontAwesome.otf             |   Bin 0 -> 85908 bytes
+ .../font-awesome/fonts/fontawesome-webfont.eot     |   Bin 0 -> 56006 bytes
+ .../font-awesome/fonts/fontawesome-webfont.svg     |   520 +
+ .../font-awesome/fonts/fontawesome-webfont.ttf     |   Bin 0 -> 112160 bytes
+ .../font-awesome/fonts/fontawesome-webfont.woff    |   Bin 0 -> 65452 bytes
+ .../font-awesome/less/bordered-pulled.less         |    16 +
+ .../bower_components/font-awesome/less/core.less   |    11 +
+ .../bower_components/font-awesome/less/extras.less |     2 +
+ .../font-awesome/less/fixed-width.less             |     6 +
+ .../font-awesome/less/font-awesome.less            |    17 +
+ .../bower_components/font-awesome/less/icons.less  |   552 +
+ .../bower_components/font-awesome/less/larger.less |    13 +
+ .../bower_components/font-awesome/less/list.less   |    19 +
+ .../bower_components/font-awesome/less/mixins.less |    25 +
+ .../bower_components/font-awesome/less/path.less   |    14 +
+ .../font-awesome/less/rotated-flipped.less         |    20 +
+ .../font-awesome/less/spinning.less                |    29 +
+ .../font-awesome/less/stacked.less                 |    20 +
+ .../font-awesome/less/variables.less               |   561 +
+ .../font-awesome/scss/_bordered-pulled.scss        |    16 +
+ .../bower_components/font-awesome/scss/_core.scss  |    11 +
+ .../font-awesome/scss/_extras.scss                 |    44 +
+ .../font-awesome/scss/_fixed-width.scss            |     6 +
+ .../bower_components/font-awesome/scss/_icons.scss |   552 +
+ .../font-awesome/scss/_larger.scss                 |    13 +
+ .../bower_components/font-awesome/scss/_list.scss  |    19 +
+ .../font-awesome/scss/_mixins.scss                 |    25 +
+ .../bower_components/font-awesome/scss/_path.scss  |    14 +
+ .../font-awesome/scss/_rotated-flipped.scss        |    20 +
+ .../font-awesome/scss/_spinning.scss               |    29 +
+ .../font-awesome/scss/_stacked.scss                |    20 +
+ .../font-awesome/scss/_variables.scss              |   561 +
+ .../font-awesome/scss/font-awesome.scss            |    17 +
+ .../bower_components/jquery/.bower.json            |    37 +
+ .../bower_components/jquery/bower.json             |    27 +
+ .../bower_components/jquery/dist/jquery.js         | 10364 +++++++
+ .../bower_components/jquery/dist/jquery.min.js     |     2 +
+ .../bower_components/jquery/dist/jquery.min.map    |     1 +
+ .../bower_components/metisMenu/.bower.json         |    45 +
+ .../bower_components/metisMenu/README.md           |   113 +
+ .../metisMenu/dist/metisMenu.min.css               |    10 +
+ .../metisMenu/dist/metisMenu.min.js                |     9 +
+ .../sbadmin2-1.0.7/dist/css/sb-admin-2.css         |   431 +
+ .../sbadmin2-1.0.7/dist/js/sb-admin-2.js           |    36 +
+ .../sbadmin2-1.0.7/less/mixins.less                |     1 +
+ .../sbadmin2-1.0.7/less/sb-admin-2.less            |   366 +
+ .../sbadmin2-1.0.7/less/variables.less             |    14 +
+ .../html/23127195_Load_20260816/statistics.json    |   178 +
+ results/jtl/23127195_Load_20260816.jtl             | 26831 +++++++++++++++++++
+ results/jtl/23127195_Load_20260816_stats.json      |   224 +
+ .../monitor/23127195_Load_20260816_resources.csv   |    74 +
+ .../monitor/23127195_Load_20260816_run_summary.txt |    30 +
+ 131 files changed, 66165 insertions(+)
+
+commit 790b5bdfa969f17435378ae80112a06d8e89d0e7
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:27:57 +0700
+
+    feat(skill): Agent Skill performance-testing-jmeter tai su dung duoc
+    
+    Quy trinh 8 buoc, ma hoa san cac bay da thuc su mac phai:
+    - Buoc 4 calibration bat buoc; khi error rate tang thi phai mo .jtl tho kiem tra
+      cot responseCode truoc khi ket luan SUT qua tai
+    - Buoc 6 nhac cach doc CPU cho dung: runtime single-thread tren may N nhan co tran
+      CPU chi la 100/N phan tram, nen 5 phan tram tren may 20 luong la da bao hoa mot core
+    - Buoc 7 tach sample Transaction Controller khoi throughput
+    - Buoc 8 checklist cong kiem tra tinh hop le truoc khi ket luan bat cu dieu gi
+    Kem 6 script chay duoc; ap sang SUT khac chi can doi duong dan, endpoint va CSV.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ skill/performance-testing-jmeter/SKILL.md          | 140 ++++++++++++
+ .../scripts/analyze_jtl.py                         | 234 +++++++++++++++++++++
+ .../scripts/gen_variants.ps1                       | 164 +++++++++++++++
+ .../scripts/reset_lockout.js                       |  60 ++++++
+ .../scripts/reset_sut.ps1                          |  71 +++++++
+ .../scripts/run_scenario.ps1                       | 177 ++++++++++++++++
+ .../scripts/seed_users.js                          |  77 +++++++
+ 7 files changed, 923 insertions(+)
+
+commit 10212e7ea9116b74f4c44c8a6acb498e2afbb2b2
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:27:57 +0700
+
+    docs(task3): de xuat mo hinh Continuous Performance Testing
+    
+    - Flow chart Mermaid: phan loai thay doi -> 3 tang kiem thu -> chuan bi moi truong
+      dong nhat -> CONG KIEM TRA TINH HOP LE PHEP DO -> so sanh baseline dong -> bao cao
+    - Diem khac biet chinh: cong kiem tra tinh hop le dat TRUOC buoc so nguong.
+      Neu khong co no, lan calibration 100 VU trong bai se bi bao thanh SUT suy giam
+      nghiem trong, trong khi thuc te la client can ephemeral port
+    - Phat hien suy giam dung baseline dong (50 lan chay gan nhat) voi dieu kien kep:
+      vuot 1.2 lan VA vuot 3 do lech chuan, xac nhan 2 trong 3 lan lap
+    - Danh doi dinh luong: khoang 8.5 gio runner moi tuan, kem 4 cach giam chi phi
+    - Neu ro phan bo lot: suy giam troi tu tu bi baseline dong hap thu, can canh bao
+      xu huong 90 ngay
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/07_continuous_performance_testing.md | 192 ++++++++++++++++++++++++++++++
+ 1 file changed, 192 insertions(+)
+
+commit 1e4bd1e644b79a3da08f6bf194852965da6734d2
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:21:34 +0700
+
+    docs(task1): ra soat cua con nguoi - 7 loi da phat hien va sua
+    
+    Moi loi deu kem bang chung do duoc, khong phai nhan dinh chung chung:
+    1. same_user_on_next_iteration=false lam can ephemeral port phia client
+       (15.82% loi la BindException, 12570 socket TIME_WAIT / 16384 port) - KHONG phai SUT sap
+    2. Khong reset moi truong: 21404 don ton dong lam throughput tut 2.17 lan
+    3. Nguong lockout thuc te la 2 lan sai, khong phai 3 nhu de bai mo ta
+    4. Assertion login qua yeu, khong phan biet duoc 401 (loi du lieu test)
+       voi 403 (nhiem trang thai tu lan chay truoc)
+    5. View Results Tree giu moi mau se an het heap o 340 VU
+    6. Sample cua Transaction Controller bi tinh vao throughput (thoi phong 43%)
+    7. Ba loi ky thuat phat hien khi chay thu (treo script, CRLF/LF, kieu price)
+    
+    Kem phan quy nguyen nhan thanh 3 nhom: chat luong prompt / gioi han mo hinh /
+    dac thu SUT.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/03_human_review_and_fixes.md | 158 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 158 insertions(+)
+
+commit a9382f9eb88423ce4aaea2256addf6364f74146e
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:21:18 +0700
+
+    docs(task1): chuoi 10 prompt dieu khien AI thiet ke test plan
+    
+    Ghi nguyen van P0 (prompt goc cua sinh vien) va P1-P10 (cac buoc trien khai).
+    Diem cot loi la P5: bat buoc kiem chung tham so bang calibration that thay vi
+    tin con so AI de xuat o P4. Calibration lat nguoc hai gia dinh sai va cho ra
+    tran cong suat tham chieu 652 sample/s tren DB sach.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/02_ai_test_design_prompts.md | 238 ++++++++++++++++++++++++++++++++++++++
+ 1 file changed, 238 insertions(+)
+
+commit b04cd8ed28acec6db9a5f5e7ba88016617fca6c1
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:21:18 +0700
+
+    chore(scripts): dieu phoi lan chay + cong cu phan tich .jtl doc lap
+    
+    - run_scenario.ps1: reset SUT -> go lockout -> bat giam sat tai nguyen song song
+      (CPU/RAM ca backend LAN JMeter) -> chay JMeter CLI xuat .jtl + HTML -> dem don
+      hang truoc/sau -> xuat file tom tat
+    - analyze_jtl.py: tinh lai percentile tu log tho bang nearest-rank, TACH RIENG
+      sample cua Transaction Controller khoi request HTTP that (neu cong gop thi
+      throughput bi thoi len 10/7 = 43%), phan loai loi theo responseCode va failureMessage
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ scripts/analyze_jtl.py   | 234 +++++++++++++++++++++++++++++++++++++++++++++++
+ scripts/run_scenario.ps1 | 177 +++++++++++++++++++++++++++++++++++
+ 2 files changed, 411 insertions(+)
+
+commit 94d0f3a047534a400fa4956e112ef14afa48ba6f
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:13:04 +0700
+
+    feat(testplan): Soak - 150 VU trong 15 phut, Aggregate Graph
+    
+    - 150 VU (khoang 37% cong suat tren DB sach) giu tai 900s de lo ra hai co che tich luy:
+      (a) userCarts khong duoc giai phong sau checkout, gay ro ri bo nho
+      (b) bang orders phinh to ma khong co index user_id, my-orders cham dan
+    - Listener Aggregate Graph la loai report view thu 4, khong trung 3 loai da dung
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ testplans/23127195_Soak_20260816.jmx | 434 +++++++++++++++++++++++++++++++++++
+ 1 file changed, 434 insertions(+)
+
+commit bef066292c58ce17ffde7b1f227fd1972bbd3e6f
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:12:53 +0700
+
+    feat(testplan): Spike - 40 VU nen cong cu soc 300 VU trong 60s, View Results Tree
+    
+    - Hai Thread Group chong nhau trong mot lan chay:
+      nhom nen 40 VU chay suot 240s
+      nhom soc 300 VU khoi dong tre 90s, ramp chi 5s, giu 60s, think-time 0.3-0.8s
+    - Nho tai nen chay tiep sau khi cu soc ket thuc nen do duoc THOI GIAN HOI PHUC,
+      thu ma mot Thread Group don le khong do duoc
+    - View Results Tree dat error_logging=true (chi giu mau LOI) de khong an het heap
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ testplans/23127195_Spike_20260816.jmx | 749 ++++++++++++++++++++++++++++++++++
+ 1 file changed, 749 insertions(+)
+
+commit 19f208f6d943566996a01c5a16a47ed89dabe67f
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:12:41 +0700
+
+    feat(testplan): Stress - ramp tuyen tinh len 500 VU, Aggregate Report
+    
+    - Cung workflow E2E voi ban Load (sinh tu scripts/gen_variants.ps1 de dam bao
+      ba kich ban khong bi lech nhau khi sua workflow)
+    - 500 VU / ramp 300s / hold 60s: tai chao ~80 vong lap/s, vuot tran do duoc (~65/s) ~23%
+    - Ramp-up dai co chu dich: bien lan chay thanh phep quet lien tuc theo do dong thoi,
+      dung cot allThreads trong .jtl de dung lai duong cong latency-vs-VU va tim diem goi
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ scripts/gen_variants.ps1               | 164 +++++++++++++
+ testplans/23127195_Stress_20260816.jmx | 433 +++++++++++++++++++++++++++++++++
+ 2 files changed, 597 insertions(+)
+
+commit 5a78b963f0ebb3b4664d6e1cbe9b6d6f9445519a
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 21:12:08 +0700
+
+    feat(testplan): Load - 60 VU, ramp 60s, hold 240s, Summary Report
+    
+    Workflow E2E day du 3 nhom endpoint trong 1 vong lap:
+      login -> products?search -> products/{id} -> cart -> apply-coupon -> checkout -> my-orders
+    - 3 CSV Data Set (users / search_terms / checkout_data), du lieu hoa toan bo request
+    - 3 Transaction Controller theo nhom endpoint, includeTimers=false de tach think-time
+    - JSR223 Assertion phan biet 401 (sai credential) va 403 (lockout) o buoc login
+    - JSR223 PostProcessor chuan hoa price (server tra string khi id chan) truoc khi tinh total
+    - same_user_on_next_iteration=true: giu keep-alive qua cac vong lap, tranh can
+      ephemeral port phia client (da do duoc 12570 socket TIME_WAIT / 16384 port kha dung)
+    - Tham so 60 VU chon tu calibration: tran ~652 sample/s tren DB sach
+    
+    Kem scripts/reset_sut.ps1 dua SUT ve trang thai sach truoc moi kich ban.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ scripts/reset_sut.ps1                |  71 ++++++
+ testplans/23127195_Load_20260816.jmx | 451 +++++++++++++++++++++++++++++++++++
+ 2 files changed, 522 insertions(+)
+
+commit 7c6f8bce3270c968a042b21e55c627fe9bdc57a5
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 20:45:59 +0700
+
+    feat(data): CSV du lieu dau vao + script seed/reset lockout
+    
+    - data/users.csv: 60 tai khoan tai (perf01..perf60)
+    - data/search_terms.csv: 10 tu khoa, gom keyword co khoang trang de kiem tra encoding
+    - data/checkout_data.csv: quantity/coupon/dia chi giao hang
+    - scripts/seed_users.js: nap tai khoan qua POST /api/register + verify login
+      (bat buoc chay lai sau moi lan restart backend vi initDatabase() DROP TABLE)
+    - scripts/reset_lockout.js: go khoa tai khoan bang cach ghi thang SQLite
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ data/checkout_data.csv   | 11 +++++++
+ data/search_terms.csv    | 11 +++++++
+ data/users.csv           | 61 ++++++++++++++++++++++++++++++++++++++
+ scripts/reset_lockout.js | 60 +++++++++++++++++++++++++++++++++++++
+ scripts/seed_users.js    | 77 ++++++++++++++++++++++++++++++++++++++++++++++++
+ 5 files changed, 220 insertions(+)
+
+commit 5f605fa023e1170bb76bdd1e64d407348ea06011
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 20:41:40 +0700
+
+    docs(scope): khao sat SUT va chot 3 nhom endpoint
+    
+    - Doc server.js/database.js de xac dinh chi phi DB thuc te cua tung endpoint
+    - Chot workflow E2E: login -> search -> detail -> cart -> coupon -> checkout -> orders
+    - Probe thuc nghiem: lockout kich hoat sau 2 lan sai (login_attempts + 2), khong phai 3
+    - Ghi nhan: SQLite khong WAL, khong index, cart in-memory khong giai phong
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ docs/01_scope_and_endpoint_selection.md | 124 ++++++++++++++++++++++++++++++++
+ 1 file changed, 124 insertions(+)
+
+commit c10fa836c9fbce37e7a2ca9ad4dc51d077ad901f
+Author: hungtmh <hungtmh20002@gmail.com>
+Date:   2026-08-16 18:33:34 +0700
+
+    chore: khoi tao repo HW05 Performance Testing
+    
+    Them README (cau truc, test summary, self-assessment), .gitignore
+    va de bai 2026.HW05.Performance Testing_En.pdf.
+    
+    Co-Authored-By: Claude Opus 5 <noreply@anthropic.com>
+
+ .gitignore                           |   4 ++++
+ 2026.HW05.Performance Testing_En.pdf | Bin 0 -> 494519 bytes
+ README.md                            |  40 +++++++++++++++++++++++++++++++++++
+ 3 files changed, 44 insertions(+)
+
+
+--- GHI CHU ---
+Commit cuoi cung (them chinh file git_commit_log.txt nay) duong nhien khong the
+xuat hien trong danh sach tren. Xem lich su day du va moi nhat tai:
+https://github.com/hungtmh/HW05-Testing/commits/main
+

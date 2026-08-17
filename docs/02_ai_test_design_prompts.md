@@ -1,4 +1,6 @@
-# 02 — Task 1: Thiết kế test plan bằng AI (chuỗi prompt đầy đủ)
+# 02 — Task 1: Thiết kế test plan bằng AI (chuỗi prompt)
+
+> **Phạm vi tài liệu này:** ghi lại chuỗi prompt của **Task 1** — từ `P0` đến `P10`. Các prompt tiếp theo (`P11`–`P14`: đối chiếu HTML report với log thô, phân tích Task 2, kiểm chứng đề xuất tối ưu bằng thực nghiệm, tổng hợp báo cáo) nằm trong `docs/AI_AUDIT_REPORT.md`, nơi ghi đầy đủ cả 14 bước.
 
 **MSSV:** 23127195 · **Ngày:** 2026-08-16 · **Công cụ AI:** Claude Opus 5 (Claude Code CLI, chạy cục bộ trên máy DESKTOP-96ARBFL)
 
