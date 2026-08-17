@@ -215,3 +215,159 @@ Công bằng mà nói, có những chỗ AI đúng và hữu ích:
 | M4 | Rò rỉ bộ nhớ nghiêm trọng | Có rò rỉ nhưng chậm; suy ra từ kịch bản sai | Trung bình | Dùng kịch bản tải biến thiên để kết luận về rò rỉ |
 | M5 | Trần throughput 302 req/s | 211–621 req/s tuỳ khối lượng dữ liệu | Trung bình | Trung bình gộp cả ramp-up, bỏ qua yếu tố dữ liệu |
 | M6 | *(chưa bung ở pha 1)* | 155.696 bản ghi ≠ 108.740 request | Trung bình | Sample của Transaction Controller nằm trong file thô |
+
+---
+
+## 4. Phân loại đề xuất tối ưu: khả thi hay ảo tưởng
+
+Đề bài yêu cầu phân loại từng đề xuất là **khả thi** hay **ảo tưởng**. Phân loại trên giấy thì ai cũng làm được, nên hai đề xuất quan trọng nhất đã được **kiểm chứng bằng phép đo A/B thật**.
+
+### 4.1 Thiết lập phép đo
+
+| Hạng mục | Giá trị |
+|---|---|
+| Dữ liệu | **40.000 đơn hàng nạp sẵn**, chia đều 60 tài khoản (~667 đơn/tài khoản) |
+| Tải | 60 VU, think-time 0,2–0,5 s, chạy 60 s |
+| Trước mỗi phép đo | Reset SUT về trạng thái sạch, **ép `journal_mode`** rồi kiểm tra lại |
+| Thiết kế | **Xen kẽ 3 lượt** (A, B, A, B, A, B) để trôi nhiệt độ / tải nền ảnh hưởng đều lên cả hai nhóm |
+| Script | `scripts/experiment_wal_repeat.ps1`, `scripts/experiment_index_repeat.ps1` |
+| Log thô | `results/experiments/` |
+
+Phải nạp sẵn 40.000 đơn vì trên DB rỗng bảng `orders` quá nhỏ để việc thiếu index có ý nghĩa — đo trên DB rỗng sẽ kết luận sai rằng "thêm index không có tác dụng".
+
+### 4.2 Ba sai lầm về phương pháp đã mắc và sửa
+
+Ghi lại đầy đủ vì chúng quyết định độ tin của bảng số ở §4.3, và vì đây chính là loại lỗi mà cổng kiểm tra tính hợp lệ ở `docs/07` §3.4 tồn tại để chặn.
+
+| # | Sai lầm | Phát hiện thế nào | Cách sửa |
+|---|---|---|---|
+| 1 | Chạy phân tích Python nặng và git commit **trong lúc đang đo** | Cùng một cấu hình cho 300 rps ở lần này và 375 rps ở lần khác | Đo lại, giữ máy hoàn toàn rảnh suốt phép đo |
+| 2 | **`journal_mode=WAL` bền vững trong file DB** — sống sót qua `DROP TABLE` và qua restart server → mọi lần "baseline" sau một cấu hình WAL thực chất vẫn đang chạy WAL | Kiểm tra sự tồn tại của file sidecar `database.sqlite-wal` trong pha baseline → thấy `True` | Thêm lệnh `db_tool.js set-delete`, ép `journal_mode` trước mỗi phép đo **và xác nhận lại**, dừng hẳn nếu không ép được |
+| 3 | JMeter **ghi tiếp** vào file `.jtl` cũ khi không xoá được → trộn dữ liệu hai lần chạy | File có timestamp trải 5,15 giờ, gồm 2 cụm cách nhau 5 tiếng (13.791 + 60 bản ghi) | Đặt tên file theo dấu thời gian; dừng hẳn nếu không xoá được file cũ |
+
+Sai lầm số 2 đáng nhớ nhất: **nó làm phép so sánh A/B trở nên vô nghĩa mà không hề báo lỗi.** Cả bốn cấu hình vẫn chạy, vẫn ra số, vẫn xếp hạng được — chỉ có điều "nhóm đối chứng" không phải đối chứng. Nếu không kiểm tra file sidecar thì đã báo cáo một kết luận sai với vẻ ngoài hoàn toàn thuyết phục.
+
+### 4.3 Kết quả A/B
+
+**Thí nghiệm 1 — bật SQLite WAL** (`journal_mode` = `delete` so với `wal`):
+
+| Lượt | Cấu hình | Throughput | `my-orders` p95 | `checkout` p95 |
+|---|---|---|---|---|
+| 1 | baseline | 286,4 req/s | 117 ms | 103 ms |
+| 1 | **WAL** | **321,1 req/s** | **90 ms** | **71 ms** |
+| 2 | baseline | 289,1 req/s | 112 ms | 102 ms |
+| 2 | **WAL** | **314,6 req/s** | **108 ms** | **86 ms** |
+| 3 | baseline | 289,3 req/s | 114 ms | 94 ms |
+| 3 | **WAL** | **328,3 req/s** | **79 ms** | **59 ms** |
+| | *trung bình baseline* | 288,3 req/s | 114,3 ms | 99,7 ms |
+| | *trung bình WAL* | **321,3 req/s** | **92,3 ms** | **72,0 ms** |
+| | **Thay đổi** | **+11,5%** | **−19,2%** | **−27,8%** |
+
+**Thí nghiệm 2 — thêm index `orders(user_id)`** (cả hai nhóm đều ở `journal_mode=delete` để chỉ còn một biến số):
+
+| Lượt | Cấu hình | Throughput | `my-orders` p95 | `checkout` p95 |
+|---|---|---|---|---|
+| 1 | baseline | 234,7 req/s ⚠️ | 180 ms ⚠️ | 167 ms ⚠️ |
+| 1 | **index** | **353,3 req/s** | **62 ms** | **56 ms** |
+| 2 | baseline | 289,7 req/s | 111 ms | 96 ms |
+| 2 | **index** | **320,5 req/s** | **96 ms** | **87 ms** |
+| 3 | baseline | 286,2 req/s | 125 ms | 111 ms |
+| 3 | **index** | **312,8 req/s** | **79 ms** | **72 ms** |
+| | *trung bình baseline, bỏ lượt 1* | 288,0 req/s | 118,0 ms | 103,5 ms |
+| | *trung bình index, bỏ lượt 1* | **316,7 req/s** | **87,5 ms** | **79,5 ms** |
+| | **Thay đổi** | **+10,0%** | **−25,8%** | **−23,2%** |
+
+⚠️ Lượt 1 của baseline là **giá trị ngoại lai do chưa làm nóng** (234,7 req/s so với 289,7 và 286,2 ở hai lượt sau) — file cache của OS còn lạnh ở phép đo đầu tiên của phiên. Đã loại khỏi phần tính trung bình và ghi rõ ở đây thay vì âm thầm bỏ đi.
+
+**Hai bằng chứng cho thấy phép đo đáng tin:**
+
+1. **Baseline rất ổn định trong từng phiên:** thí nghiệm WAL cho 286,4 / 289,1 / 289,3 req/s — lệch chỉ **1,0%**.
+2. **Baseline khớp giữa hai phiên độc lập:** thí nghiệm WAL cho 286,4–289,3 req/s; thí nghiệm index (chạy sau, riêng biệt) cho 286,2–289,7 req/s. Hai lần chạy độc lập, cùng cấu hình, **khớp nhau trong 1%**. Mức cải thiện đo được (+10% đến +11,5%) lớn hơn nhiễu này khoảng một bậc.
+
+> **Vẫn phải nói rõ một hạn chế:** giữa các *phiên* khác nhau trong ngày, cùng cấu hình baseline có lúc cho 336 req/s (phiên đo lần đầu). Vì vậy mọi kết luận ở đây **chỉ dựa trên so sánh cặp trong cùng một phiên xen kẽ**, không so số tuyệt đối giữa các phiên.
+
+### 4.4 Phân loại từng đề xuất
+
+| Đề xuất của AI | Phân loại | Căn cứ |
+|---|---|---|
+| Thêm index `orders(user_id)` | ✅ **KHẢ THI — đã kiểm chứng** | +10,0% throughput, `my-orders` p95 −25,8% |
+| Bật SQLite WAL | ✅ **KHẢ THI — đã kiểm chứng** | +11,5% throughput, `checkout` p95 −27,8% |
+| Node cluster / PM2 | ⚠️ **KHẢ THI CÓ ĐIỀU KIỆN** | Mở được trần CPU, nhưng phải sửa `userCarts` trước |
+| Tăng `UV_THREADPOOL_SIZE` | ❌ **ĐO ĐƯỢC LÀ KHÔNG CÓ TÁC DỤNG** | 374,6 so với 377,1 req/s — chênh 0,7%, nằm trong nhiễu |
+| Connection pool cho SQLite | ❌ **ẢO TƯỞNG** | SQLite là DB nhúng, không có server để pool kết nối tới |
+| Redis cache cho danh sách sản phẩm | ⚠️ **ĐÚNG KỸ THUẬT NHƯNG SAI ƯU TIÊN** | Endpoint sản phẩm không phải nút thắt |
+
+#### ✅ Thêm index `orders(user_id)` — KHẢ THI
+
+`database.js:74-81` khai báo bảng `orders` không có index nào ngoài PRIMARY KEY, trong khi `server.js:311-318` chạy `SELECT * FROM orders WHERE user_id = ? ORDER BY id DESC` trên mọi vòng lặp.
+
+Ngoài phép đo A/B, còn **hai bằng chứng độc lập** từ harness chính (đáng tin hơn vì chạy dài hơn, có reset và giám sát đầy đủ):
+
+- **Soak 15 phút:** `my-orders` trôi **×1,89** trong khi `POST /api/cart` (không chạm DB) chỉ trôi ×1,25.
+- **Calibration:** DB sạch cho 652 sample/s, DB tồn 21.404 đơn chỉ cho 301 sample/s — **chênh 2,17 lần**.
+
+Ba nguồn bằng chứng độc lập cùng chỉ một hướng. Đây là hướng tối ưu **rẻ nhất** (một câu `CREATE INDEX`) và nên làm đầu tiên.
+
+#### ✅ Bật SQLite WAL — KHẢ THI
+
+`PRAGMA journal_mode` xác nhận SUT đang ở chế độ `delete` (rollback journal): mỗi `INSERT orders` phải tạo file journal, ghi, rồi xoá — và **khoá toàn bộ file DB** trong lúc đó.
+
+Điều đáng chú ý trong số đo: WAL cải thiện **`checkout` (−27,8%) nhiều hơn `my-orders` (−19,2%)** — đúng như dự đoán về cơ chế, vì `checkout` là endpoint **ghi**, còn phần cải thiện của `my-orders` là hệ quả gián tiếp (writer không còn chặn reader nên event loop rảnh hơn).
+
+Đây là hướng phân bố công sức đối lập với index: index tối ưu đường **đọc**, WAL tối ưu đường **ghi**. Chúng độc lập nhau nên về nguyên tắc có thể cộng dồn.
+
+#### ⚠️ Node cluster — KHẢ THI CÓ ĐIỀU KIỆN
+
+Đây là hướng có **tiềm năng lớn nhất về lý thuyết**: nút thắt đã xác định là **một core CPU** (chạm 106% của một core trong khi 19 luồng logic khác rảnh hoàn toàn). Chạy 4–8 worker về nguyên tắc mở được trần này lên nhiều lần.
+
+**Nhưng không được làm ngay.** `server.js:14` khai báo `const userCarts = {}` — giỏ hàng nằm trong RAM của **một tiến trình**. Tách nhiều worker thì mỗi worker có bản `userCarts` riêng, và vì request được phân phối ngẫu nhiên, giỏ hàng sẽ **biến mất hoặc thiếu món một cách không thể tái hiện** tuỳ worker nào nhận request. Đây là kiểu lỗi tệ nhất: chỉ xuất hiện dưới tải, không tái hiện được khi debug.
+
+Thứ tự bắt buộc: **(1)** chuyển giỏ hàng sang store dùng chung hoặc xuống DB → **(2)** rồi mới bật cluster. Bước (1) đồng thời sửa luôn rò rỉ 1,76 MB/phút.
+
+#### ❌ Tăng `UV_THREADPOOL_SIZE` — ĐO ĐƯỢC LÀ KHÔNG CÓ TÁC DỤNG
+
+Cơ sở của đề xuất **có thật, không phải bịa**: `node-sqlite3` là binding C++, nó chạy truy vấn trên libuv threadpool (mặc định **4** luồng) chứ không trên luồng JS. Nghe rất hợp lý.
+
+Phép đo cặp, cùng điều kiện, chạy liền nhau (`scripts/experiment_threadpool.ps1`):
+
+| `UV_THREADPOOL_SIZE` | Throughput | `my-orders` p95 |
+|---|---|---|
+| 4 (mặc định) | 374,6 req/s | 10 ms |
+| 16 | 377,1 req/s | 11 ms |
+
+Chênh **0,7%** — nằm trong nhiễu. Kết quả này khớp với bằng chứng đã có rằng nút thắt là **luồng JS đơn**, không phải threadpool: `POST /api/cart` **không dùng threadpool lần nào** (không chạm DB) mà vẫn chậm đi cùng nhịp với mọi endpoint khác.
+
+**Xếp loại "không có tác dụng" chứ không phải "ảo tưởng"** — lập luận đúng, chỉ là nhắm sai nút thắt.
+
+#### ❌ Connection pool cho SQLite — ẢO TƯỞNG
+
+Đây là khái niệm bị **bê nguyên từ PostgreSQL/MySQL** sang một ngữ cảnh mà nó không tồn tại. SQLite là cơ sở dữ liệu **nhúng**: thư viện đọc/ghi trực tiếp vào file, **không có tiến trình server nào để mà mở pool kết nối tới**. Cái mà connection pool tiết kiệm — chi phí bắt tay TCP và handshake xác thực với DB server — ở đây bằng không.
+
+Tệ hơn, nó có thể **gây hại**: `database.js:5` mở đúng một `sqlite3.Database`, và node-sqlite3 tuần tự hoá truy vấn trên kết nối đó. Mở nhiều kết nối **ghi** đồng thời vào cùng một file chỉ làm tăng tranh chấp khoá ghi và sinh lỗi `SQLITE_BUSY` — đúng thứ mà WAL được bật để giảm bớt.
+
+Đây là ví dụ điển hồi của việc AI **khớp mẫu** ("DB chậm → thêm connection pool") mà không kiểm tra tiền đề có đúng với loại DB đang dùng hay không.
+
+#### ⚠️ Redis cache cho danh sách sản phẩm — ĐÚNG KỸ THUẬT NHƯNG SAI ƯU TIÊN
+
+Về kỹ thuật thì làm được. Nhưng số đo cho thấy các endpoint sản phẩm **không phải nút thắt**. Lúc Soak:
+
+| Endpoint | p95 |
+|---|---|
+| `GET /api/products?search` | 13 ms |
+| `GET /api/products/{id}` | 14 ms |
+| `POST /api/checkout` | **22 ms** |
+| `POST /api/apply-coupon` | **19 ms** |
+
+Cache hoá hai endpoint nhanh nhất trong khi bỏ mặc endpoint chậm nhất là phân bố công sức sai chỗ. Tệ hơn: thêm Redis đưa **thêm một chặng mạng và thêm một tiến trình** lên chính cái máy mà nút thắt là **một core CPU đang bão hoà** — hoàn toàn có thể làm chậm đi.
+
+Nếu thực sự muốn cache thì cache trong tiến trình (`Map` với TTL) sẽ hợp lý hơn nhiều ở quy mô này, mà không cần thêm hạ tầng.
+
+### 4.5 Thứ tự nên làm, theo tỉ lệ lợi ích trên công sức
+
+| Thứ tự | Việc | Công sức | Lợi ích đo được |
+|---|---|---|---|
+| 1 | `CREATE INDEX idx_orders_user_id ON orders(user_id)` | Một dòng SQL | +10,0% throughput, `my-orders` p95 −25,8% |
+| 2 | `PRAGMA journal_mode=WAL` | Một dòng cấu hình | +11,5% throughput, `checkout` p95 −27,8% |
+| 3 | Chuyển `userCarts` ra khỏi RAM tiến trình | Vừa | Chặn rò rỉ 1,76 MB/phút, và **mở đường cho bước 4** |
+| 4 | Node cluster 4–8 worker | Vừa | Mở trần CPU từ 1 core lên nhiều core (chưa đo, nhưng nút thắt đã xác định rõ) |
+| — | Connection pool, Redis, `UV_THREADPOOL_SIZE` | — | **Không làm** |

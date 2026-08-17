@@ -1,0 +1,199 @@
+2026-08-16 22:01:50,446 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2026-08-16 22:01:50,462 INFO o.a.j.JMeter: Loading user properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\user.properties
+2026-08-16 22:01:50,462 INFO o.a.j.JMeter: Loading system properties from: D:\Kiem_thu\tools\apache-jmeter-5.6.3\bin\system.properties
+2026-08-16 22:01:50,464 INFO o.a.j.JMeter: Setting JMeter property: threads=60
+2026-08-16 22:01:50,464 INFO o.a.j.JMeter: Setting JMeter property: rampup=5
+2026-08-16 22:01:50,464 INFO o.a.j.JMeter: Setting JMeter property: duration=60
+2026-08-16 22:01:50,464 INFO o.a.j.JMeter: Setting JMeter property: thinkmin=200
+2026-08-16 22:01:50,464 INFO o.a.j.JMeter: Setting JMeter property: thinkrange=300
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: Copyright (c) 1998-2024 The Apache Software Foundation
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: Version 5.6.3
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: java.version=17.0.17
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: os.name=Windows 11
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: os.arch=amd64
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: os.version=10.0
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: file.encoding=Cp1252
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: java.awt.headless=true
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: Max memory     =2147483648
+2026-08-16 22:01:50,469 INFO o.a.j.JMeter: Available Processors =20
+2026-08-16 22:01:50,472 INFO o.a.j.JMeter: Default Locale=English (EN)
+2026-08-16 22:01:50,472 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2026-08-16 22:01:50,472 INFO o.a.j.JMeter: JMeterHome=D:\Kiem_thu\tools\apache-jmeter-5.6.3
+2026-08-16 22:01:50,472 INFO o.a.j.JMeter: user.dir  =D:\Kiem_thu\HW5
+2026-08-16 22:01:50,472 INFO o.a.j.JMeter: PWD       =D:\Kiem_thu\HW5
+2026-08-16 22:01:50,481 INFO o.a.j.JMeter: IP: 192.168.1.8 Name: DESKTOP-96ARBFL FullName: 192.168.1.8
+2026-08-16 22:01:50,491 INFO o.a.j.s.FileServer: Default base='D:\Kiem_thu\HW5'
+2026-08-16 22:01:50,492 INFO o.a.j.s.FileServer: Set new base='D:\Kiem_thu\HW5\testplans'
+2026-08-16 22:01:50,641 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2026-08-16 22:01:50,655 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2026-08-16 22:01:50,655 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2026-08-16 22:01:50,655 INFO o.a.j.s.SaveService: Loading file: D:\Kiem_thu\HW5\testplans\23127195_Load_20260816.jmx
+2026-08-16 22:01:50,711 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 22:01:50,711 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 22:01:50,711 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 22:01:50,711 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2026-08-16 22:01:50,711 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2026-08-16 22:01:50,711 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2026-08-16 22:01:50,735 INFO o.a.j.JMeter: Creating summariser <summary>
+2026-08-16 22:01:50,755 INFO o.a.j.e.StandardJMeterEngine: Running the test!
+2026-08-16 22:01:50,755 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-16 22:01:50,755 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2026-08-16 22:01:50,755 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2026-08-16 22:01:50,755 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2026-08-16 22:01:50,923 INFO o.a.j.JMeter: Running test (1786892510923)
+2026-08-16 22:01:50,940 INFO o.a.j.e.StandardJMeterEngine: Starting ThreadGroup: 1 : TG - LOAD - 60 VU
+2026-08-16 22:01:50,940 INFO o.a.j.e.StandardJMeterEngine: Starting 60 threads for group TG - LOAD - 60 VU.
+2026-08-16 22:01:50,940 INFO o.a.j.e.StandardJMeterEngine: Thread will continue on error
+2026-08-16 22:01:50,941 INFO o.a.j.t.ThreadGroup: Starting thread group... number=1 threads=60 ramp-up=5 delayedStart=false
+2026-08-16 22:01:50,946 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2026-08-16 22:01:50,946 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to UTF-8
+2026-08-16 22:01:50,946 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2026-08-16 22:01:50,946 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2026-08-16 22:01:50,959 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-1
+2026-08-16 22:01:50,962 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/checkout_data.csv
+2026-08-16 22:01:50,979 INFO o.a.j.t.ThreadGroup: Started thread group number 1
+2026-08-16 22:01:50,979 INFO o.a.j.e.StandardJMeterEngine: All thread groups have been started
+2026-08-16 22:01:51,001 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/search_terms.csv
+2026-08-16 22:01:51,001 INFO o.a.j.s.FileServer: Stored: D:/Kiem_thu/HW5/data/users.csv
+2026-08-16 22:01:51,019 INFO o.a.j.p.h.s.HTTPHCAbstractImpl: Local host = DESKTOP-96ARBFL
+2026-08-16 22:01:51,023 INFO o.a.j.p.h.s.HTTPHC4Impl: HTTP request retry count = 0
+2026-08-16 22:01:51,044 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-2
+2026-08-16 22:01:51,124 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-3
+2026-08-16 22:01:51,205 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-4
+2026-08-16 22:01:51,287 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-5
+2026-08-16 22:01:51,366 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-6
+2026-08-16 22:01:51,449 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-7
+2026-08-16 22:01:51,533 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-8
+2026-08-16 22:01:51,615 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-9
+2026-08-16 22:01:51,696 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-10
+2026-08-16 22:01:51,778 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-11
+2026-08-16 22:01:51,860 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-12
+2026-08-16 22:01:51,944 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-13
+2026-08-16 22:01:52,024 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-14
+2026-08-16 22:01:52,106 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-15
+2026-08-16 22:01:52,188 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-16
+2026-08-16 22:01:52,271 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-17
+2026-08-16 22:01:52,353 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-18
+2026-08-16 22:01:52,437 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-19
+2026-08-16 22:01:52,519 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-20
+2026-08-16 22:01:52,602 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-21
+2026-08-16 22:01:52,685 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-22
+2026-08-16 22:01:52,768 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-23
+2026-08-16 22:01:52,851 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-24
+2026-08-16 22:01:52,934 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-25
+2026-08-16 22:01:53,018 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-26
+2026-08-16 22:01:53,100 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-27
+2026-08-16 22:01:53,184 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-28
+2026-08-16 22:01:53,266 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-29
+2026-08-16 22:01:53,349 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-30
+2026-08-16 22:01:53,432 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-31
+2026-08-16 22:01:53,515 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-32
+2026-08-16 22:01:53,598 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-33
+2026-08-16 22:01:53,682 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-34
+2026-08-16 22:01:53,765 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-35
+2026-08-16 22:01:53,848 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-36
+2026-08-16 22:01:53,931 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-37
+2026-08-16 22:01:54,012 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-38
+2026-08-16 22:01:54,098 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-39
+2026-08-16 22:01:54,181 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-40
+2026-08-16 22:01:54,261 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-41
+2026-08-16 22:01:54,345 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-42
+2026-08-16 22:01:54,427 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-43
+2026-08-16 22:01:54,512 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-44
+2026-08-16 22:01:54,595 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-45
+2026-08-16 22:01:54,679 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-46
+2026-08-16 22:01:54,761 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-47
+2026-08-16 22:01:54,842 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-48
+2026-08-16 22:01:54,926 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-49
+2026-08-16 22:01:55,010 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-50
+2026-08-16 22:01:55,092 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-51
+2026-08-16 22:01:55,175 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-52
+2026-08-16 22:01:55,259 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-53
+2026-08-16 22:01:55,341 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-54
+2026-08-16 22:01:55,424 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-55
+2026-08-16 22:01:55,507 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-56
+2026-08-16 22:01:55,591 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-57
+2026-08-16 22:01:55,674 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-58
+2026-08-16 22:01:55,756 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-59
+2026-08-16 22:01:55,839 INFO o.a.j.t.JMeterThread: Thread started: TG - LOAD - 60 VU 1-60
+2026-08-16 22:02:00,002 INFO o.a.j.r.Summariser: summary +   2110 in 00:00:09 =  232.5/s Avg:    28 Min:     0 Max:   168 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 22:02:30,002 INFO o.a.j.r.Summariser: summary +  10535 in 00:00:30 =  351.1/s Avg:    21 Min:     0 Max:   160 Err:     0 (0.00%) Active: 60 Started: 60 Finished: 0
+2026-08-16 22:02:30,003 INFO o.a.j.r.Summariser: summary =  12645 in 00:00:39 =  323.6/s Avg:    22 Min:     0 Max:   168 Err:     0 (0.00%)
+2026-08-16 22:02:50,493 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-21
+2026-08-16 22:02:50,525 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-27
+2026-08-16 22:02:50,528 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-53
+2026-08-16 22:02:50,562 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-13
+2026-08-16 22:02:50,605 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-55
+2026-08-16 22:02:50,610 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-52
+2026-08-16 22:02:50,613 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-3
+2026-08-16 22:02:50,631 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-51
+2026-08-16 22:02:50,640 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-44
+2026-08-16 22:02:50,678 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-45
+2026-08-16 22:02:50,687 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-8
+2026-08-16 22:02:50,687 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-54
+2026-08-16 22:02:50,688 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-4
+2026-08-16 22:02:50,690 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-18
+2026-08-16 22:02:50,698 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-42
+2026-08-16 22:02:50,731 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-22
+2026-08-16 22:02:50,732 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-34
+2026-08-16 22:02:50,734 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-25
+2026-08-16 22:02:50,744 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-7
+2026-08-16 22:02:50,756 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-24
+2026-08-16 22:02:50,757 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-46
+2026-08-16 22:02:50,764 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-11
+2026-08-16 22:02:50,765 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-15
+2026-08-16 22:02:50,766 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-38
+2026-08-16 22:02:50,777 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-20
+2026-08-16 22:02:50,791 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-6
+2026-08-16 22:02:50,792 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-23
+2026-08-16 22:02:50,792 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-31
+2026-08-16 22:02:50,801 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-19
+2026-08-16 22:02:50,803 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-14
+2026-08-16 22:02:50,807 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-50
+2026-08-16 22:02:50,826 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-58
+2026-08-16 22:02:50,831 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-10
+2026-08-16 22:02:50,831 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-2
+2026-08-16 22:02:50,836 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-57
+2026-08-16 22:02:50,876 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-39
+2026-08-16 22:02:50,885 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-1
+2026-08-16 22:02:50,885 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-56
+2026-08-16 22:02:50,887 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-49
+2026-08-16 22:02:50,891 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-40
+2026-08-16 22:02:50,892 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-48
+2026-08-16 22:02:50,892 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-36
+2026-08-16 22:02:50,899 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-9
+2026-08-16 22:02:50,908 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-26
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-59
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-41
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-30
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-33
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-17
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-17
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-5
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-5
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-28
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-28
+2026-08-16 22:02:50,964 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-47
+2026-08-16 22:02:50,974 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-37
+2026-08-16 22:02:50,974 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-37
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-29
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-29
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-16
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-16
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-35
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-35
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-43
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-43
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-32
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-32
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-12
+2026-08-16 22:02:50,976 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-12
+2026-08-16 22:02:50,990 INFO o.a.j.t.JMeterThread: Stopping because end time detected by thread: TG - LOAD - 60 VU 1-60
+2026-08-16 22:02:50,994 INFO o.a.j.t.JMeterThread: Thread finished: TG - LOAD - 60 VU 1-60
+2026-08-16 22:02:50,994 INFO o.a.j.e.StandardJMeterEngine: Notifying test listeners of end of test
+2026-08-16 22:02:50,994 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/checkout_data.csv
+2026-08-16 22:02:50,994 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/search_terms.csv
+2026-08-16 22:02:50,994 INFO o.a.j.s.FileServer: Close: D:/Kiem_thu/HW5/data/users.csv
+2026-08-16 22:02:50,995 INFO o.a.j.r.Summariser: summary +   7502 in 00:00:21 =  357.4/s Avg:    17 Min:     0 Max:   153 Err:     0 (0.00%) Active: 0 Started: 60 Finished: 60
+2026-08-16 22:02:50,995 INFO o.a.j.r.Summariser: summary =  20147 in 00:01:00 =  335.4/s Avg:    20 Min:     0 Max:   168 Err:     0 (0.00%)

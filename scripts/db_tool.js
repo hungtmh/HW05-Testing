@@ -59,8 +59,19 @@ switch (cmd) {
 
   case "set-wal":
     // journal_mode la thuoc tinh BEN VUNG cua file DB: dat mot lan la con mai,
-    // ke ca sau khi DROP TABLE. Vi vay phai dat lai sau moi lan reset SUT.
+    // ke ca sau khi DROP TABLE va sau khi khoi dong lai server.
     db.get("PRAGMA journal_mode=WAL", [], (e, r) => {
+      if (e) return done(e);
+      console.log(r.journal_mode);
+      done();
+    });
+    break;
+
+  case "set-delete":
+    // BAT BUOC goi truoc moi phep do "baseline". Vi journal_mode ben vung trong
+    // file DB, neu mot cau hinh truoc do da bat WAL thi TAT CA cac lan do sau
+    // deu am tham chay tren WAL, va phep so sanh A/B tro nen vo nghia.
+    db.get("PRAGMA journal_mode=DELETE", [], (e, r) => {
       if (e) return done(e);
       console.log(r.journal_mode);
       done();
