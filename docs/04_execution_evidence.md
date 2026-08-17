@@ -133,17 +133,43 @@ Mỗi lần chạy có đủ 5 artefact:
 
 | | **Load** | **Stress** | **Spike** | **Soak** |
 |---|---|---|---|---|
-| Bắt đầu | 21:14:32 | 21:21:00 | *(xem tóm tắt)* | *(xem tóm tắt)* |
+| Bắt đầu | 21:14:32 | 21:21:00 | 21:28:49 | 21:33:34 |
 | Thời lượng | 304 s | 366 s | 245 s | 906 s |
 | VU tối đa | 60 | 500 | 340 (40 nền + 300 sốc) | 150 |
-| Request HTTP | 18.749 | 108.740 | *(xem §4.4)* | *(xem §4.5)* |
-| Lỗi | **0 (0,00%)** | **0 (0,00%)** | *(xem §4.4)* | *(xem §4.5)* |
-| p95 tổng | **9 ms** | 442 ms | *(xem §4.4)* | *(xem §4.5)* |
-| Throughput ổn định | 69,6 req/s | 458 req/s (đỉnh) | *(xem §4.4)* | *(xem §4.5)* |
-| Đơn hàng phát sinh | 2.663 | 15.402 | *(xem §4.4)* | *(xem §4.5)* |
-| Backend RSS đầu → đỉnh | 69,7 → 106,0 MB | 69,4 → 156,7 MB | *(xem §4.4)* | *(xem §4.5)* |
-| Backend CPU đỉnh (toàn hệ thống / một core) | 1,2% / **24%** | 5,3% / **106%** | *(xem §4.4)* | *(xem §4.5)* |
-| JMeter CPU trung bình | 0,4% | 0,8% | *(xem §4.4)* | *(xem §4.5)* |
+| Request HTTP | 18.749 | 108.740 | 43.363 | 153.366 |
+| Lỗi | **0 (0,00%)** | **0 (0,00%)** | **0 (0,00%)** | **0 (0,00%)** |
+| p95 tổng | **9 ms** | 442 ms | 513 ms | 16 ms |
+| p99 tổng | 15 ms | 639 ms | 654 ms | 27 ms |
+| Throughput ổn định | 69,6 req/s | 458 req/s (đỉnh) | 621 req/s (lúc sốc) | 173,4 req/s |
+| Đơn hàng phát sinh | 2.663 | 15.402 | 6.084 | 21.865 |
+| Backend RSS đầu → đỉnh | 69,7 → 106,0 MB | 69,4 → 156,7 MB | 70,1 → 146,0 MB | 69,7 → 130,0 MB |
+| Backend CPU đỉnh (toàn hệ thống / một core) | 1,2% / **24%** | 5,3% / **106%** | 5,7% / **114%** | 2,7% / **54%** |
+| JMeter CPU trung bình | 0,4% | 0,8% | 0,6% | 0,4% |
+
+**Tổng cộng: 324.218 request HTTP, 0 lỗi.**
+
+### 4.2 Spike — ba pha trong một lần chạy
+
+| Pha | Khoảng | VU | Throughput | Avg | p95 |
+|---|---|---|---|---|---|
+| Ổn định | 0–90 s | 40 | 46 req/s | 3,6 ms | 9 ms |
+| **Sốc** | 90–150 s | 340 | 621 req/s | 311 ms | 604 ms |
+| Hồi phục | 150–155 s | 40 | 44 req/s | 8,0 ms | 23 ms |
+| Đã hồi phục | 160–165 s | 40 | 48 req/s | 3,6 ms | 9 ms |
+
+**Thời gian hồi phục: 10–15 giây.**
+
+### 4.3 Stress — đường cong theo độ đồng thời
+
+Dựng lại từ cột `allThreads` của log thô (`analyze_jtl.py --concurrency-buckets 50`):
+
+| VU | Throughput | Avg | p95 |
+|---|---|---|---|
+| 250–299 | 45,0 req/s | 11,6 ms | 29 ms |
+| 300–349 | 62,7 req/s | 17,9 ms | 55 ms |
+| **350–399** | 82,9 req/s | 48,3 ms | **147 ms** ← điểm gối |
+| 400–449 | 112,6 req/s | 104,5 ms | 276 ms |
+| 450–499 | 164,1 req/s | 157,0 ms | 443 ms |
 
 > **Cách đọc cột CPU:** cột giám sát ghi CPU theo **phần trăm toàn bộ 20 luồng logic**. Vì backend là Node đơn luồng, trần lý thuyết của nó là 1/20 = **5%**. Nhân với 20 để ra "phần trăm của một core". Con số 5,3% ở Stress tương đương **106% một core** — tức đã bão hoà hoàn toàn. Đây là chỉ số **cực dễ bị đọc sai thành "server đang rảnh"**; xem `docs/06` §2.
 
